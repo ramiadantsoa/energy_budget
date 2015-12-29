@@ -1,0 +1,40 @@
+\title{Energy budget for insects}
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{mathabx}
+\usepackage{graphics}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{tabu}
+\usepackage[english]{babel}
+\usepackage{natbib}
+\bibliographystyle{evolution}
+\usepackage{rotating}
+\usepackage[capitalize, sort&compress]{cleveref}
+\usepackage{float}
+%\newcommand{\crefrangeconjunction}{--}
+%\crefname{section}{Sect.}{Sects.}
+%\crefname{equation}{Eq.}{Eqs.}
+%\crefformat{equation}{Eq.~#2#1#3}
+%\crefrangeformat{equation}{Eqs.~#3#1#4--#5#2#6}
+%\crefmultiformat{equation}{Eqs.~#2#1#3}{--#2#1#3}{, #2#1#3}{ and~#2#1#3}
+ 
+% for comments visible in the compiled pdf
+%\usepackage{color}
+%\definecolor{orange}{rgb}{0.8,0.4,0}
+%\newcommand{\eeg}[1]{{\em \color{orange} #1}}
+
+% Tell latex how it can introduce linebreaks if necessary.
+\hyphenation{Bar-thol-o-mew}
+
+\begin{document}
+\maketitle
+
+\input{./1_Introduction.tex}
+\input{./2_Material_and_methods.tex}
+\input{./3_Results_preliminary.tex}
+
+%\input{./Appendix_warm-up_derivation.tex }
+
+\bibliography{ref2}
+\end{document}

@@ -1,0 +1,173 @@
+\section*{Material and methods}
+In the next sections, we describe how we modeled daily energy budget as a function of environmental temperature and body size.
+We define environmental temperature as the temperature felt by the individual and include humidity, wind speed  and so on rather than the ambient temperature.
+The daily energy demand is partitioned into the energy expended: when inactive, when foraging (and assimilating food), and during warm-up.
+The daily energy gained is a function of body size, modeled as a power law, and the density of energy contained in the food. 
+
+\subsection*{Environment}
+\subsubsection*{Environmental temperature $T_e$}
+The environmental temperature is modeled as a piecewise linear function.
+The environmental temperature reaches a minimum at sunrise then gradually increases and peaks in the afternoon (for simplicity we assumed it peaks exactly halfway between noon and sunset).
+After the peak, temperature decreases gradually until sunset, then decreases even more from sunset until the next sunrise.
+We assume that temperature at sunrise is the same as the temperature at the next sunrise so that during a 24-hour period  temperature initial is the same as temperature final (constant temperature is obtained  by assuming that the peak equals the temperature at sunrise). 
+
+\subsubsection*{Time at sunrise and sunset}
+Time at sunrise is obtained for \citet{Campbell2012} by looking at the zenith angle ($\psi$) at time $t$ and is
+\begin{equation}  \label{eq:psi}
+\cos(\psi) = \sin(\phi) \sin(\delta) + \cos(\phi) \cos(\delta) \cos[15 (t- t_0)] 
+\end{equation}
+Here, $\phi$ denotes latitude, $\delta$ denotes solar declination which varies between 23.45$^\circ$ and  -23.45$^\circ$ at summer and winter solstice 
+($\delta$ as in equation 11.2 in \citet{Campbell2012} and only depends of the day of the year). 
+$t_0$ represents the time of solar noon and since we do not span across longitude, we fix $t_0 = 12$.
+
+\subsubsection*{Solar radiation}
+For simplicity, we assume that solar radiation is \[SR = S_0 \cos(\psi) \] where $S_0 = 1361 \mbox{W.m}^{-2}$. 
+ 
+\subsection*{Warm-up}
+Insects are heterotherm meaning that their body temperature changes with the environmental temperature. 
+However, active foraging is only possible if thoracic muscle is above a certain temperature $T_w$.
+It depends on body mass and is  modeled as 
+\begin{equation} \label{eq:Tw}
+	T_w(z_{th}) = c_0+ c_1 z_{th}.
+\end{equation}
+$z_{th}$ is the mass of the thorax and $c_0$ and $c_1$ two free parameters.
+
+When it is cold, the individual has to warm-up.
+Some insects (like bees) can generate heat by shivering, these are called endothermic insects.
+Another group of insects require external source of energy to warm-up, these are called ectothermic insects.
+Their thoracic temperature rises by absorbing solar radiation (e.g., by basking). 
+  
+We describe the change in temperature in two parts of the body (thorax and the rest-of-the-body) as a function of solar radiation and environmental temperature during warm-up (for ecothermic and endothermic). 
+Change in thoracic temperature $T_{th}$ is 
+\begin{equation} \label{eq:dTh}
+	\frac{dT_{th}}{dt} = \frac{1}{s z_{th}} (z_{th} e f[T_{th}] +  A_{th} K_1(T_r - T_{th}))
+\end{equation}
+where $s$ is the specific heat capacity, $A_{th}$ is total surface of the thorax (we show how we calculate $A_{th}$ below), and $K_1$ the conductance between the thorax and the rest-of-the-body.
+(Endothermic is not presented yet so I describe $f$ later).
+For free convection, the change in rest-of-the-body temperature $T_r$ is
+\begin{equation} \label{eq:dTr1}
+	\frac{dT_{r}}{dt} = \frac{1}{s z_{r}} \left( - A_{th} K_1(T_r - T_{th}) + A_r \left[ - c_p K_2 (T_r- T_e)^{1.25} (1/V)^{1/12}- \sigma \varepsilon T_r^4 + \sigma \varepsilon T_e^4  + r_3 SR  \right] \right),
+\end{equation}
+and for laminar convection
+\begin{equation} \label{eq:dTr2}
+	\frac{dT_{r}}{dt} = \frac{1}{s z_{r}} \left( - A_{th} K_1(T_r - T_{th}) + A_r \left[ - K_2 c_p  1.4 \times 0.135 \sqrt{u/V^{1/3}} (T_r- T_e) - \sigma \varepsilon T_r^4 + \sigma \varepsilon T_e^4  + r_3 SR  \right] \right)
+\end{equation}
+where $K_1$ is defined above, $c_p$ is specific capacity of the air. 
+$K_2$ is a constant controlling convection between the body and the air \citep{Campbell2012}.
+$\varepsilon = 0.935$  is the emissivity of gray body.
+The last term of \cref{eq:dTr1} and \cref{eq:dTr2} is an approximation of more the detailed equation in \citet{Campbell2012}.
+Here, we ignore view factors, reflected radiation and so on, and pool every source of radiation in $ \sigma \varepsilon T_e^4$ and SR. 
+Parameters $r_3$ is used to scale and summarize of absorbed solar radiation.
+
+
+\subsection*{Energetic cost and gain}
+\subsubsection*{Cost: resting metabolic rate}
+We model the resting metabolic rate by
+\begin{equation} \label{eq:eb}
+	e_b(z, t) = a_1 z^{b_1} e^{-E/[k (T_b(t)+ 273.15)]}
+\end{equation}
+where $z$ is body mass, $T_b(t)$ is the body temperature, at time $t$ in Celsius, $E$ and $k$ are respectively the activation energy and the Boltzman constant, $a_1$ is and $b_1$ are some constants which will be called respectively coefficient and exponent.
+To model the effect of temperature, we could have used $Q_{10}$, which scales the change in reaction rates for an increase of 10 degree Celsius \citep{Precht1973}, but since the value of $Q_{10}$ can be chosen to match \cref{eq:eb} we prefer the first option to reduce the number of free parameters.
+At rest, the body temperature of the individual matches the environmental temperature \citep{Bartholomew1978} and so $T_b$ in \cref{eq:eb} can be replaced by $T_e(t)$ which is the environmental temperature at time $t$.
+
+\subsubsection*{Cost: active metabolic rate}
+We assume the same functional form as that of the resting metabolic rate.
+\begin{equation} \label{eq:ea}
+	e_a(z,t) = a_2 z^{b_2}  e^{-E/[k (max(T_w(z_{th}), T_e(t))+ 273.15)]}.
+\end{equation}
+The effect of temperature is the same as in \cref{eq:eb} except the use of the function $max$.
+This is a rough approximation such that when the environmental temperature is too high, there is an additional cost of foraging---say the additional energy used to avoid overheating. 
+The cost of foraging is naturally higher than cost of resting and is expressed by higher value of $a_2$, $b_2$, and stronger effect of temperature.
+
+\subsection*{Gain: foraging}
+We assume that foraging rate $g(z)$, defined as the amount of resource acquired per unit of time (mass), is a function of body mass modeled as a power law. 
+\[
+	g(z) = a_3 z^{b_3}.
+\] 
+We assume that $g(z)$ is independent of body and environmental temperature.
+Naturally, we assume that larger individuals collect more resources than smaller ones per unit of time and thus $b_3$  is always strictly positive.
+We assume that $b_3$ can be either smaller or larger than one.
+When $b_3 > 1$ so that per unit of mass, large individuals gather more resources \citep[e.g.][]{Nervo2014}.
+When $b_3 < 1$, smaller individuals are more efficient, say because of increased agility. % resource distribution. At worse, we can assume than \varepsilon is also a function of z.
+
+The rate of energy gain is  
+\begin{equation} \label{eq:eg}
+	e_g(z) = a_3 z^{b_3} \times \varepsilon  = g(z) \times \varepsilon.
+\end{equation}
+$\varepsilon$ represents the absolute energy gained per unit of resource mass when the cost of processing the food, egestion, and excretion are subtracted. 
+The total energy gained $E_g$ is constrained by foraging time and resource availability.
+If time is constraining, $E_g(z, t_f) = t_f \times e_g(z)$.
+If the amount of resource available $R$  is constraining, we assume that $t_f = R/g(z)$ and again use the previous relationship to calculate $E_g$.
+In addition, we limit the amount of resource R and individual can acquire which will be 250 times its own body mass. %sensitivity to 250.
+
+  
+\subsection*{Net energy budget}
+The 24-hour period is partitioned into rest, warm-up and foraging.
+We assume continuous activity here, thus requires only one warm-up phase. 
+The total energy used is then
+\begin{equation} \label{eq:et}
+	E_t(z, t_f) = \int_0^{t_i} e_b(z, t) dt +  E_w(z,t_i, t_w) + \int_{t_i+ t_w}^{t_i +t_w + t_f} e_a(z,t) dt + \int_{t_i+t_w+t_f}^{24\times 3600} e_b(z, t) dt 
+\end{equation}
+$e_b$ is defined in \cref{eq:eb}  and $e_a$ in \cref{eq:ea}.
+$t_w$  and $E_w$ are defined in the appendix (well not yet)  but $E_w= 0$ for ectothermic insects.
+  
+If the individual cannot reach its minimum thoracic temperature for warm-up, then it is forced to rest (assume the individual is smart).
+Otherwise, the net energy gain is obtained from the  difference between energy gain from foraging and total energy expended, i.e.
+\[ 
+	E_n(z, t_f) = E_g(z,t_f) - E_t(z, t_f).
+\]
+
+Here, performance is defined by the daily net energy gain $E_n$. 
+We call thermal niche the range of temperature where $E_n$ is positive and thus focus on positive values of $E_n$. 
+For simplicity, we define optimal body mass  as the value of $z$ that maximizes $E_n$, and for a given $z$, the optimal environmental temperature is the value of $T_e$ that maximizes $E_n$.
+We explored the influences of two internal parameters: $b_3$ (\cref{eq:eg}) which scales the effect of body size on resource allocation and conductance $K_1$ and $K_2$ which defines the passive loss of heat during warm-up, convection, and two environmental variables: environmental temperature $T_e$ and the amount of resource available $R$.
+
+%\begin{sidewaystable}
+%\caption{Values and ranges of parameter used }
+%\begin{tabular}{l l l l l}
+%\hline
+%Definition& Notation & Value or range & Unit & References \\ 
+%\hline
+%Conductance & $C$ & $5- 70 \times 10^{-7}$ &  cal/$^{\circ}$C s mm$^2$ &  \citet{Heinrich1975} \\
+%Lowest operative temperature& $c_0$ & 28 & $^{\circ} \rm{C}$ &  \citet{Bartholomew1977}\\
+%Slope of the increase in operative temperature & $c_1$ & 1.5 &  &  \citet{Bartholomew1977} \\
+%Slope of increase in frequency of contraction & $a_w$ & 0.25 &  &  \\
+%Specific heat & $s$ & 0.8 & cal/g $^{\circ} C$ & \\
+%Muscle density & $\delta$ & $1.06 \times 10^{-3}$ & g/mm$^3$ & \\
+%Energy per contraction & $u_w$ & 0.01 & cal/g &\citet{Kammer1974} \\
+%Resting coefficient at at 22 $^{\circ}$ C for one gram& $a_1$ &  $10^{-4}- 6 \times 10^{-3}$ & cal/ g s & \citet{Kammer1974}\\
+%& & & & \citet{Bartholomew1977b}\\
+%& & & & \citet{Bartholomew1981} \\
+%Allometric exponent of resting & $b_1$ & 0.75 & & \citet{Brown2004} \\
+%Active coefficient for one gram & $a_2$ & $10^{-3} - 2 \times 10^{-1}$  & cal/g s & \citet{Bartholomew1977}\\
+%& &  & & \citet{Bartholomew1977b}\\
+%& &&& \citet{Bartholomew1981} \\
+%Allometric exponent of activity &  $b_2$ & 0.75 - 1.25& &  \citet{Heinrich1975}\\
+%& & &  & \citet{Bartholomew1977}\\
+%& &  &  & \citet{Bartholomew1977b}\\
+%& & & & \citet{Bartholomew1981}\\
+%Allometric coefficient of resource collection & $a_3$ & 0.0083 xxx& g/s & \citet{Ortega-Martinez2014}\\
+%Allometric exponent of resource collection & $b_3$ & 0.5-1.5& & \citet{Nervo2014} \\
+%Energy density per gram of resource &$\varepsilon$ & 4 &  cal/g & \citet{Nibaruta1980} \\ % Energy density per gram  dry dung (40-80\%) of total weight
+%& & & &  \citet{Gittings1998} \\
+%\hline
+%\label{table:1}
+%\end{tabular}
+%\end{sidewaystable}
+
+
+
+% T: note that I did not explore $b_2$ but looked at $a_2$. Fixing the former is important to get some sort of background result although I think (not deep thinking) that changing $b_2$ will give the similar results by adjusting other parameters.
+%Just a draft to see how things may or will be added
+%\subsubsection*{Fecundity rate}
+%The remaining energy is then converted to offspring according to the same power law $a_3 z^{b_4}$.
+%The fecundity rate can mean the total energy needed to reach adult size.
+%%I am not sure but do juvenile bees need to forage or they stay inside the hive until they are mature
+%% http://www.beesource.com/resources/usda/honey-bee-life-history/
+%
+%%\subsubsection*{Survival}
+%%It is possible to include two mortality rates both for juvenile and adult.
+%%I don't think it will make much difference though (maybe wrong intuition) :D
+%
+%% E: Your Introduction actually sort of convinced me that simply using e_r as the performance metric may be better.  Could mention some of the complications in converting energy to fitness, but then say that many of them depend enough on the ecological context that the conversion will not be considered here.
+%% E: Alternatively, perhaps survival effects are needed to get interesting-enough answers...
