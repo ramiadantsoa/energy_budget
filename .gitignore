@@ -49,3 +49,7 @@ main.pdf
 *.blg
 *.gz
 *.bak
+NSF.pdf
+NSF_IOT.pdf
+
+#should ignore this or that folder
