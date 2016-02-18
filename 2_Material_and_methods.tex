@@ -5,6 +5,8 @@ The daily energy demand is partitioned into the energy expended: when inactive, 
 The daily energy gained is a function of body size, modeled as a power law, and the density of energy contained in the food. 
 
 \subsection*{Environment}
+% E: A small figure may be most effective here.  Show real example data from somewhere, your fancy trigonometric function, and your piecewise linear approximation.
+
 \subsubsection*{Environmental temperature $T_e$}
 The environmental temperature is modeled as a piecewise linear function.
 The environmental temperature reaches a minimum at sunrise then gradually increases and peaks in the afternoon (for simplicity we assumed it peaks exactly halfway between noon and sunset).
@@ -34,6 +36,7 @@ $z_{th}$ is the mass of the thorax and $c_0$ and $c_1$ two free parameters.
 
 When it is cold, the individual has to warm-up.
 Some insects (like bees) can generate heat by shivering, these are called endothermic insects.
+% E: give more examples, since everyone we talk to says that endothermy is a freak occurrence in insects
 Another group of insects require external source of energy to warm-up, these are called ectothermic insects.
 Their thoracic temperature rises by absorbing solar radiation (e.g., by basking). 
   
@@ -48,6 +51,7 @@ For free convection, the change in rest-of-the-body temperature $T_r$ is
 \begin{equation} \label{eq:dTr1}
 	\frac{dT_{r}}{dt} = \frac{1}{s z_{r}} \left( - A_{th} K_1(T_r - T_{th}) + A_r \left[ - c_p K_2 (T_r- T_e)^{1.25} (1/V)^{1/12}- \sigma \varepsilon T_r^4 + \sigma \varepsilon T_e^4  + r_3 SR  \right] \right),
 \end{equation}
+% E: latex note: https://www.ctan.org/pkg/amsmath  See the User Guide, specifically pages 4-6 for long equations
 and for laminar convection
 \begin{equation} \label{eq:dTr2}
 	\frac{dT_{r}}{dt} = \frac{1}{s z_{r}} \left( - A_{th} K_1(T_r - T_{th}) + A_r \left[ - K_2 c_p  1.4 \times 0.135 \sqrt{u/V^{1/3}} (T_r- T_e) - \sigma \varepsilon T_r^4 + \sigma \varepsilon T_e^4  + r_3 SR  \right] \right)
@@ -60,20 +64,22 @@ Here, we ignore view factors, reflected radiation and so on, and pool every sour
 Parameters $r_3$ is used to scale and summarize of absorbed solar radiation.
 
 
-\subsection*{Energetic cost and gain}
+\subsection*{Energetic cost and gain} % E: just cost here?  gain is its own subsection below
 \subsubsection*{Cost: resting metabolic rate}
 We model the resting metabolic rate by
 \begin{equation} \label{eq:eb}
 	e_b(z, t) = a_1 z^{b_1} e^{-E/[k (T_b(t)+ 273.15)]}
 \end{equation}
 where $z$ is body mass, $T_b(t)$ is the body temperature, at time $t$ in Celsius, $E$ and $k$ are respectively the activation energy and the Boltzman constant, $a_1$ is and $b_1$ are some constants which will be called respectively coefficient and exponent.
+% E: need some basic citations for this metabolic scaling, of course
 To model the effect of temperature, we could have used $Q_{10}$, which scales the change in reaction rates for an increase of 10 degree Celsius \citep{Precht1973}, but since the value of $Q_{10}$ can be chosen to match \cref{eq:eb} we prefer the first option to reduce the number of free parameters.
 At rest, the body temperature of the individual matches the environmental temperature \citep{Bartholomew1978} and so $T_b$ in \cref{eq:eb} can be replaced by $T_e(t)$ which is the environmental temperature at time $t$.
+
 
 \subsubsection*{Cost: active metabolic rate}
 We assume the same functional form as that of the resting metabolic rate.
 \begin{equation} \label{eq:ea}
-	e_a(z,t) = a_2 z^{b_2}  e^{-E/[k (max(T_w(z_{th}), T_e(t))+ 273.15)]}.
+	e_a(z,t) = a_2 z^{b_2}  e^{-E/[k (\max(T_w(z_{th}), T_e(t))+ 273.15)]}.
 \end{equation}
 The effect of temperature is the same as in \cref{eq:eb} except the use of the function $max$.
 This is a rough approximation such that when the environmental temperature is too high, there is an additional cost of foraging---say the additional energy used to avoid overheating. 
@@ -100,7 +106,8 @@ If time is constraining, $E_g(z, t_f) = t_f \times e_g(z)$.
 If the amount of resource available $R$  is constraining, we assume that $t_f = R/g(z)$ and again use the previous relationship to calculate $E_g$.
 In addition, we limit the amount of resource R and individual can acquire which will be 250 times its own body mass. %sensitivity to 250.
 
-  
+% E: This is the section where the formulation is most "made up."  I think it's important at least to provide a biological motivation/justification for this functional form, e.g., suggesting scenarios of resource distribution or foraging behavior that make b_3 larger or smaller.  (And maybe acknowledging situations in which a power law is inappropriate.)
+ 
 \subsection*{Net energy budget}
 The 24-hour period is partitioned into rest, warm-up and foraging.
 We assume continuous activity here, thus requires only one warm-up phase. 
