@@ -1,44 +1,66 @@
 \section*{Introduction}
-\begin{itemize}
-\item A broad introduction to species' niche. 
-One  cornerstone in ecological thinking was the concept of the niche of species.
-In its simplest form, it is the set condition where that species can subsist.
-`Popularized' by Hutchinson, calling it hypervolume where each dimension represents one factor. 
-The modern framework now synthesizes Grinnell and Eltonian niche that includes both the requirement of the species and its impact on the environment.
-Maybe talk about fitness and how it relates to niche?
-%I will basically blabla about niches.
+Niche is one of the most important concepts in ecology.
+It links how an individual interacts with its external environment and thus determines its temporal and spatial distribution and abundance.
+The niche concept became popular with the work of Hutchinson who defined niche as hypervolume in an n-dimensional space.
+Each dimension represent one factor, e.g., temperature, seed size (refs).
+What factor means has created confusions in the past but modern synthesis treat a factor as a requirement (Grinellian niche) or the impact (Eltonian niche) of the individual (Chase and Leibold).
+Regardless of the interpretation, the geometrical abstraction helps to visualize two important properties of the niche.
+First, the location (center) of the volume in the space that defines where performance is maximal.
+Second, the width of the volume that defines the range of conditions an individual deals with. 
+Defining these two properties for a given species has become a central focus for both empirical and theoretical works.
+%Whereas the definition is useful, it is rather abstract in the sense that the value of n is unknow, or even what is called a resource, how to count it (Abrams1988).
 %
-\item A quest for measuring species' niche.
-This is relevant in modern days where environment is changing so fast and will determine is the species will persist or not.  
-For instance, it is much used in climate modeling.
-The niche of species is basically inferred from its current distribution.
-Future distribution is then inferred by overlaying the future scenario of environmental changes and the niche.
-In physiology, niche has been studied more rigorously. 
-For a given of environmental variable, for instance temperature, the performance is measured.
-In general, they have found that it takes an inverse U-shaped for temperature.
-%The order does not matter here
 
-\item A quest for constructing species' niche.
-Another approach of understanding niche is to understand the underlying mechanisms that shape the niche of a species.
-A good approach is to define performance in term of energetic gain.
-Indeed several models have used energy budget model to reconstruct the niche of a species.
-Talk about Buckley.
-Other models that follows the same idea includes the dynamic energy budget of Kooijman, and niche Mapper of Porter.
+Most of the approach are Grinellian that treats a factor as a resource or conditions.
+Empirical studies derived the niche of the species by correlating current occurrence with the environmental conditions it occurs in. 
+This approach  is one of the most important tools in predicting the effect of climate change on species' future distribution and persistence (refs.).
+It is done by intersecting the future conditions with the previously measured niche.
+A more direct empirical method is to measure experimentally the performance of individuals (refs).
+In the approach, one focuses on few dimensions, in fact usually one variable and thus only a slice of the hypervolume.
+One of the best example is measuring performance along temperature gradient. 
+In general, they have found performance responds in a non-monotonic way to temperature (refs).
+Fitting a line, they have found the the left of the peak, i.e. towards colder temperature it is a log normally distributed.
+On the right, it is polynomial (refs).
+%I can make more comments about these approach but maybe it is best to leave that in the discussion if needed
+
+At the other end of the spectrum mathematical models make assumptions about niche rather than deriving it. 
+MacArthur and Levins assumed that resource utilization curve follows a normal distribution, such choice is for mathematical convenience. 
+A promising approach in deriving the niche is to use an energetic approach (refs).
+These energy budget model aim to quantify the net energy gain of an individual by modeling the energetic gain through foraging minus the cost for maintenance and survival.
+It is mechanistic in the sense that energy blabla but it also rooted from empirical results in physiology such as metabolic rate or growth rate.
+Energy is used a main currency to delimit the niche. 
+Obviously, if an individual has a negative gain in a given environment, it will not be able to persist there.
+
+Current energy budget model contains highly detailed mechanisms.
+Koiijiman Dynamic Energy Budget is daunting.
+Buckley 2008 used studied the 
+Kearney and ...
+%Interestingly, the prediction between climate niche modeling and energy modeling seems to give congruent results.
+In short only applies to well studied species. 
+The inform and focus more about the species than the processes.
+
+In this work we aim to build an energy budget model that give emphasizes to role of the processes that shapes the niche rather than on specific species.
+Our goal is to return to the two main characteristics of the niche that is the niche breadth and the optimal conditions.
+To give an empirical basis to our model we chose body size as the intrinsic variable, temperature as the abiotic factor, and resource density as the biotic factor.
+Body size and temperature are one of the most important ecological traits and abiotic factors, respectively.
+In addition, body size and temperature are good variables that explains the metabolism of an individual (refs).
+Resource availability directly influences the the energetic input. 
+Furthermore, response to temperature and links to direct conservation problems that are climate change and habitat destruction.
+Our goal is to explore how niche can vary as a function of the body size, under what conditions niche breadth becomes broader or narrower, under what conditions performance is maximal for a given body size and as a whole to potential of energy budget in explaining the property of the niche.
 
 % E: One way to phrase distinctions is an empirically-derived niche vs a theoretically-derived niche.  Buckley is maybe somewhere in between, but towards the empirical end.  The huge empire of GIS-style niche modeling is obviously empirical/statistical.  Could also discuss May/Macarthur-style math modeling, which is more "neutral" and incorporates less biological detail than your approach.  This last comparison may help empirical biologists like your model more (comparing against neutral math approach, in addition to comparing against data approach).
 
-\item The problem is that the conclusions from these approaches do not translate to other species.
-This is because the models above require a lot of data.
-Furthermore, the complexity of the processes hinders a clear understanding of how the underlying processes influence the niche.
-In this work, we aim to construct an energy budget model and explore the role of physiological processes, behavior, intrinsic and extrinsic factor in shaping species' (fundamental) niche.
+%The problem is that the conclusions from these approaches do not translate to other species.
+%This is because the models above require a lot of data.
+%Furthermore, the complexity of the processes hinders a clear understanding of how the underlying processes influence the niche.
+%In this work, we aim to construct an energy budget model and explore the role of physiological processes, behavior, intrinsic and extrinsic factor in shaping species' (fundamental) niche.
 %This needs to be strengthen
 % E: Could add here what we do (and don't) learn from this view of the niche.  For example, we don't really learn/predict exactly how the performance of a species or individual will change with environment.  You do get quantitative answers about this from the model, but with so many extra factors omitted, I think the precise values are not the point.  What you *do* get is the ability to compare things from the angle of process.  For example, when does optimal body size increase or decrease with temperature, all else being equal?  What makes niche width broader or narrower?  In grant-writing language, this is "what becomes possible."  (It seems that I repeatedly return to this stance that quantitative models are especially good for qualitative comparisons, and that this is an important selling point for distinguishing the importance of your work.  But you need not agree.)
 
-\item We focus on body size as an intrinsic factor,  temperature as abiotic variable, and resource abundance as biotic variable (2-dimensional volume from Hutchinson perspective).
-Why choosing these factors: there is a general relation between body size, temperature, and metabolic cost allowing us to root the model with empirical results.
-From a conservation standpoint, focusing on temperature allows to study the effect of global warming, and focusing on resource abundance allows to study the effect of habitat loss and fragmentation.
-The model is best suited for insects, income breeder.
-\end{itemize}
+%We focus on body size as an intrinsic factor,  temperature as abiotic variable, and resource abundance as biotic variable (2-dimensional volume from Hutchinson perspective).
+%Why choosing these factors: there is a general relation between body size, temperature, and metabolic cost allowing us to root the model with empirical results.
+%From a conservation standpoint, focusing on temperature allows to study the effect of global warming, and focusing on resource abundance allows to study the effect of habitat loss and fragmentation.
+%The model is best suited for insects, income breeder.
 
 % E: Your introduction has evolved.  It is now focused more on where your model falls with respect to thinking about niches, rather than Bergmann's rule etc.  I like your current strategy.  (But maybe I am too easily swayed by whatever you write, regardless!)  It gets the reader's expectations in exactly the right place.  And then the larger biological insights that emerge are payoff for the Discussion---a bonus rather than your goal to begin with.
 
