@@ -52,7 +52,7 @@ main.pdf
 
 #should ignore this or that folder
 analyses_fig/*/
-ms_fig/
+ms_fig/*
 
 *.jpg
 *.jpeg
