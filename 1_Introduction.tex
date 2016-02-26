@@ -1,134 +1,41 @@
 \section*{Introduction}
 Niche is one of the most important concepts in ecology.
-It links how an individual interacts with its external environment and thus determines its temporal and spatial distribution and abundance.
-The niche concept became popular with the work of Hutchinson who defined niche as hypervolume in an n-dimensional space.
-Each dimension represent one factor, e.g., temperature, seed size (refs).
-What factor means has created confusions in the past but modern synthesis treat a factor as a requirement (Grinellian niche) or the impact (Eltonian niche) of the individual (Chase and Leibold).
-Regardless of the interpretation, the geometrical abstraction helps to visualize two important properties of the niche.
-First, the location (center) of the volume in the space that defines where performance is maximal.
-Second, the width of the volume that defines the range of conditions an individual deals with. 
+Niche links how an individual interacts with its external environment and thus determines its temporal and spatial distribution and abundance.
+The niche concept became popular with the work of Hutchinson who defined species' niche as a hypervolume in an n-dimensional space (ref).
+Although the exact meaning of what a dimension is unclear (e.g., Abrams, Chase and Leibold), the geometrical abstraction helps to visualize two important properties of the niche.
+First, the location (center) of the hypervolume in the space that defines where performance is maximal.
+Second, the width of the hypervolume that defines the range of conditions an individual can persist in. 
 Defining these two properties for a given species has become a central focus for both empirical and theoretical works.
-%Whereas the definition is useful, it is rather abstract in the sense that the value of n is unknow, or even what is called a resource, how to count it (Abrams1988).
-%
 
-Most of the approach are Grinellian that treats a factor as a resource or conditions.
-Empirical studies derived the niche of the species by correlating current occurrence with the environmental conditions it occurs in. 
-This approach  is one of the most important tools in predicting the effect of climate change on species' future distribution and persistence (refs.).
-It is done by intersecting the future conditions with the previously measured niche.
-A more direct empirical method is to measure experimentally the performance of individuals (refs).
-In the approach, one focuses on few dimensions, in fact usually one variable and thus only a slice of the hypervolume.
-One of the best example is measuring performance along temperature gradient. 
-In general, they have found performance responds in a non-monotonic way to temperature (refs).
-Fitting a line, they have found the the left of the peak, i.e. towards colder temperature it is a log normally distributed.
-On the right, it is polynomial (refs).
-%I can make more comments about these approach but maybe it is best to leave that in the discussion if needed
 
-At the other end of the spectrum mathematical models make assumptions about niche rather than deriving it. 
-MacArthur and Levins assumed that resource utilization curve follows a normal distribution, such choice is for mathematical convenience. 
-A promising approach in deriving the niche is to use an energetic approach (refs).
-These energy budget model aim to quantify the net energy gain of an individual by modeling the energetic gain through foraging minus the cost for maintenance and survival.
-It is mechanistic in the sense that energy blabla but it also rooted from empirical results in physiology such as metabolic rate or growth rate.
-Energy is used a main currency to delimit the niche. 
-Obviously, if an individual has a negative gain in a given environment, it will not be able to persist there.
+Empirical studies derived the niche of the species by correlating current occurrence with the environmental conditions it occurs. 
+This approach is one of the most important tools for predicting the effect of climate change on species' future distribution and persistence simply by intersecting the future environmental conditions with the previously measured niche (refs.).
+A more direct empirical approach is to measure experimentally the performance of individuals (refs).
+In that approach, one focuses usually one dimension---a slice of the hypervolume.
+One of the best example is to measure performance along temperature gradient. 
+In general, species responds in a non-monotonic way to temperature and is often skewed to the left (refs).
 
-Current energy budget model contains highly detailed mechanisms.
-Koiijiman Dynamic Energy Budget is daunting.
-Buckley 2008 used studied the 
-Kearney and ...
-%Interestingly, the prediction between climate niche modeling and energy modeling seems to give congruent results.
-In short only applies to well studied species. 
-The inform and focus more about the species than the processes.
+At the other end of the spectrum, mathematical models make assumptions about niche rather than deriving it. 
+MacArthur and Levins assumed that resource utilization curve follows a normal distribution, such choice is often for mathematical convenience although the best statistical fit for some performances is a normal distribution (Angiletta2006). 
+A good mix between theoretical and empirical approach is to use energy to construct the niche (refs).
+These energy budget models aim to quantify the net energy gain of an individual by modeling the energetic gain through foraging minus the cost for maintenance and survival.
+It is mechanistic and realistic in the sense that energy is modeled even at the molecular level and use first principles in thermodynamics, morphology, physiology and ecology.
+These principles often have been validated or derived from empirical results (e.g., Peters, Brown).
+Using energy is used as a main currency to understand the niche is a first good approximation since an individual with a negative gain will not persist in that environment.
 
-In this work we aim to build an energy budget model that give emphasizes to role of the processes that shapes the niche rather than on specific species.
-Our goal is to return to the two main characteristics of the niche that is the niche breadth and the optimal conditions.
-To give an empirical basis to our model we chose body size as the intrinsic variable, temperature as the abiotic factor, and resource density as the biotic factor.
-Body size and temperature are one of the most important ecological traits and abiotic factors, respectively.
-In addition, body size and temperature are good variables that explains the metabolism of an individual (refs).
-Resource availability directly influences the the energetic input. 
-Furthermore, response to temperature and links to direct conservation problems that are climate change and habitat destruction.
-Our goal is to explore how niche can vary as a function of the body size, under what conditions niche breadth becomes broader or narrower, under what conditions performance is maximal for a given body size and as a whole to potential of energy budget in explaining the property of the niche.
+Current energy budget model contains highly detailed mechanisms and often focus on understanding particular species (refs).
+As consequence they only apply to well-studied species that have enough data to feed the model.
+Buckley (ref) developed an ecophysiological model to predict future distribution of two lizards (\textit{Sceloporus undulatus} and \textit{S. gracious}).
+In that model data relating to resting metabolic rate, metabolic scope, velocity, average egg production per year, energy required to produce eggs and more are available.
+Although these models are able to reproduce empirical patterns, the role of the numerous variables influencing the pattern is unknown.
+These models are thus pattern rather than process-oriented models.
+%T: I am bit hesitant to `critize' the model simply because they are so complicated.  A program called Niche Mapper is actually patented and I cannot find documentation and modeling assumptions. I am wondering if you can find a way of expressing my problem in a respectable way? 
 
-% E: One way to phrase distinctions is an empirically-derived niche vs a theoretically-derived niche.  Buckley is maybe somewhere in between, but towards the empirical end.  The huge empire of GIS-style niche modeling is obviously empirical/statistical.  Could also discuss May/Macarthur-style math modeling, which is more "neutral" and incorporates less biological detail than your approach.  This last comparison may help empirical biologists like your model more (comparing against neutral math approach, in addition to comparing against data approach).
-
-%The problem is that the conclusions from these approaches do not translate to other species.
-%This is because the models above require a lot of data.
-%Furthermore, the complexity of the processes hinders a clear understanding of how the underlying processes influence the niche.
-%In this work, we aim to construct an energy budget model and explore the role of physiological processes, behavior, intrinsic and extrinsic factor in shaping species' (fundamental) niche.
-%This needs to be strengthen
-% E: Could add here what we do (and don't) learn from this view of the niche.  For example, we don't really learn/predict exactly how the performance of a species or individual will change with environment.  You do get quantitative answers about this from the model, but with so many extra factors omitted, I think the precise values are not the point.  What you *do* get is the ability to compare things from the angle of process.  For example, when does optimal body size increase or decrease with temperature, all else being equal?  What makes niche width broader or narrower?  In grant-writing language, this is "what becomes possible."  (It seems that I repeatedly return to this stance that quantitative models are especially good for qualitative comparisons, and that this is an important selling point for distinguishing the importance of your work.  But you need not agree.)
-
-%We focus on body size as an intrinsic factor,  temperature as abiotic variable, and resource abundance as biotic variable (2-dimensional volume from Hutchinson perspective).
-%Why choosing these factors: there is a general relation between body size, temperature, and metabolic cost allowing us to root the model with empirical results.
-%From a conservation standpoint, focusing on temperature allows to study the effect of global warming, and focusing on resource abundance allows to study the effect of habitat loss and fragmentation.
-%The model is best suited for insects, income breeder.
-
-% E: Your introduction has evolved.  It is now focused more on where your model falls with respect to thinking about niches, rather than Bergmann's rule etc.  I like your current strategy.  (But maybe I am too easily swayed by whatever you write, regardless!)  It gets the reader's expectations in exactly the right place.  And then the larger biological insights that emerge are payoff for the Discussion---a bonus rather than your goal to begin with.
-
-% %This section needs references   
-%Body size is considered as one of the most important traits of an organism and is strongly associated with fitness.
-%The size of an individual is influenced by myriad of factors, biotic and abiotic acting at both ecological and evolutionary time scales. 
-%At any trophic level, biotic factors exert pressure on the size of an organism in which being smaller or larger might be advantageous.  
-%One on hand, small individuals need less resource for survival, have lower risk of infection and detectability by predators.
-%On the other hand, large individuals have competitive advantages say in resource acquisition, mate selection, or even stand up against predator.
-%For instance, the last one supports a pattern called  Island's rule where individuals are smaller on islands because of relaxed pressure from predation. 
-%
-%Temperature, humidity, photoperiodism are among the most important abiotic factors that influence body size \citep{Angilletta2009}. 
-%Variation of body size along temperature gradient has been studied extensively.
-%Individuals  grow larger (temperature-size rule), are larger (Bergmann's rule) or have smaller surface-to-volume ratio (Allen's rule) in colder environment. 
-%The simultaneous effects of these factors have produced a vast range of body size. 
-%Body mass varies tremendously even within a single taxonomic group.
-%For example, mass spans eight orders of magnitude in fishes \citep{Kottelat2006}, seven in insects \citep{Chown2010}, and four in each of birds and mammals \citep{Blackburn1994, Smith2004}.
-%Within those ranges, the frequency distribution of body mass is by far not uniform and is generally right skewed even after logarithmic transformation \citep{Brown1993, Chown2010}.
-%If optimal mass is interpreted as the mode of the distribution (say the majority species adopts that mass  because the benefits are maximized), these data suggest that neither the smallest nor the largest is optimal.
-%For instance, for mammals in North America in which body size range from 2 grams to more than 1 ton, the mode of the distribution is about 100 grams \citep{Brown1993}. 
-%
-%Many models were constructed to understand the influence of different mechanisms in determining the body size of an organism.
-%There are two general classes: growth-model and maturity-model.
-%The first class includes models that look at the change in body size through time and solve for the optimal body size at maturity \citep{Bertalanffy1957, Reiss1991, West2001, Kozlowski2004}.
-%The most famous is the model by \citet{Bertalanffy1957} which assumes that the rate of growth depends on the difference between rate of catabolism and anabolism and thus growth ceases when catabolism and anabolism are equal.
-%Other model assumes that as individual matures, the proportion of energy allocated to reproduction increases at the expense of those used to growth \citep{Kozlowski2004}. 
-%These  models allow a better understanding of life-history and how resources are allocated to growth and reproduction, and in general fit quite well the observed growth curve \citep{Kozlowski2004}. 
-%
-%On the other hand, maturity-models look at the influence of body size on fitness (more generally on performance) and focus on reproducing observed distribution of adult body size.
-%The model of \citet{ Brown1993} probably has received the most attention \citep{Kozlowski1996, Brown1996b, Chown1997,  Perrin1998, Bokma2001}.
-%The optimal body mass is interpreted as the one with the highest reproductive output.
-%The reproductive output of a given body mass is defined as the remaining energy after subtracting the cost of maintenance from the total amount of resource acquired  \citep{Brown1993}.
-%Despite the inherent problem in the  values  and interpretation of the parameters, the trade-off between resource acquisition and energetic cost  of maintenance (law of conservation of energy) remains a consistent framework to study the consequences of body size on performance (in general fitness).
-%A detailed framework called Dynamic Energy Budget combines both classes and uses, as then name refers, energy as main variable that can be allocated to growth and the rest for work and reproduction \citep{Kooijman2009}.
-%
-%The relationship between body mass and other life-history variable, physiology, and even demographic parameters has been modeled using the form $a z^{b},$ $z$ being body mass, and $a \mbox{ and } b$ some parameters called respectively coefficient and exponent \citep{Peters1986}.
-%In the growth-model, the rate of anabolism, catabolism, resource acquisition and the cost of maintenance are quantified by such function. 
-%For instance, in the von Bertalanffy model, $b = 2/3$ for catabolism and 1 for anabolism. 
-%One of the most widely accepted relationship is between resting metabolic rate and body mass. 
-%Empirical estimates for many taxonomic groups yield the same values of $b = 0.75$ \citep{Hemmingsen1960, Peters1986, Gillooly2001}.
-%However, the coefficient $a$ varies for homotherms, poikilotherms and unicellular \citep{Hemmingsen1960}. 
-%Although there is a debate about the value of the coefficient and the exponent, the power law is the most widely used functional form to represent the effect of body mass on a given process.  
-%
-%Temperature is considered as a key variable that influences the size and the performance of an organism \citep{Angilletta2009}.
-%In the growth-model, the effect of temperature has been explored especially in trying to understand why ectotherms grow larger in cold environment \citep{VandH1996,Kozlowski2004, Walters2006}.
-%In contrast, maturity-models including the detailed DEB does not explicitly address the influence of temperature.
-%% E: insert a linkage here, e.g., "The model of Buckley (2008) is [the best at][unusual in] considering both adult size and temperature."
-%\citet{Buckley2008} constructed a bioenergetic model that includes energetic cost at rest and during activity (predation) for two species of North American lizard.
-%It differs from previous model by the level of details (e.g. maximal velocity, fecundity and survival rate of the lizards were available) such that the author was able to parametrize the model and predict range shift assuming increase in environmental temperature \citep{Buckley2008}.
-%The model also uses the conservation of energy principle such that net energy gain defines performance.
-%
-%Lizards have been extensively studied and used as a model system to understand how ectotherms respond to temperature \citep{Angilletta2009}.
-%For endotherms, mammals and birds have received most of the attention \citep{Peters1986,Nagy2005}.
-%Insects are the most speciose terrestrial species and although most of them are ectothermic, certain group like bees, moths, or dung beetles are endothermic.
-%The capacity to increase body temperature through thermogenesis has been measured in those groups \citep{Kammer1974, Bartholomew1977b, Bartholomew1977, Bartholomew1981, Stone1989}.
-%When insects are at rest, the body and ambient temperature are equal  \citep{Bartholomew1978}.
-%When ambient temperature is low, the ability to raise body temperature is essential for foraging, and thus is an important component of fitness.
-%Small individual has lower endothermic capacity because of high surface to volume ratio---most of endogenous heat produced is lost through passive conduction conductance.  
-%The performance of an endothermic insect in a given environment (mating or resource acquisition) thus depends on the ability to thermoregulate which in turn is a function of body size.
-%% E: Sorry to see the dung beetle details go, but I think it does read better now.
-%
-%In this work, we build a model that examines the consequences of body mass scaling for insects.
-%We focus on the daily energetic gain and cost with respect to one abiotic factor: temperature and one biotic factor: resource availability.
-%The energy expended during a day is partitioned into 3 terms: the capacity and the energy needed for thermoregulation, the energy used for resource acquisition and assimilation, and the energy used at rest.
-%The remaining energy, obtained by subtracting the cost above from the total gain, are then used for reproduction (and growth, and possibly survival).
-%%Demographic parameters such as fecundity and mortality also depend on body mass and uses the same allometric scaling.
-%In conclusion, the aim to produce fitness curve along temperature gradient and explore how the curve changes with body size, and to understand how sensitive the performances are with respect to different values of $a$ and $b$.
-%% E: Careful with words here.  A fitness curve is a function of size.  And it can also be a function of environment, sometimes called a generalized fitness surface.
-%
-%% A note for the future:  Near the end of the Intro, present the main questions that motivate this model and will be answered.  This will prime the reader, and refocus attention on temperature as the primary abiotic variable of interest.
-%% E: Your ending now is pretty good.  But it could still be slightly rephrased to be a bit more question-like.  "We ask how body mass and temperature interact to determine..."
+% T: I am also not very happy with the structure of the following paragraph. Not sure what to include? I would like to keep it as simple as possible and pour the needed details in the Material and methods.
+In this work, we build an energy budget model that give emphasizes to role of the processes that shapes the niche rather than on specific species.
+We chose body size as the intrinsic trait, temperature as the abiotic factor, and resource density as the biotic factor.
+Body size and temperature are one of the most important ecological traits and abiotic factors, respectively (refs).
+In addition, body size and temperature correlates the metabolic cost of an individual (refs).
+Resource availability is the main driver of energetic input. 
+Our goal is to investigate the role of physiological, ecological and behavioral mechanisms as well as the parameter values they take in defining to the two main characteristics of the niche that is the niche breadth and the location of the optimal conditions.
+In practice, we ask how niche vary as a function of the body size, under what conditions niche breadth becomes broader or narrower as a function of body size and temperature, what conditions will maximize the performance for a given body size.
