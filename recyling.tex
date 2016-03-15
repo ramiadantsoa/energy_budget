@@ -1,0 +1,184 @@
+%----------------------------------
+Introduction
+%----------------------------------
+
+% E: One way to phrase distinctions is an empirically-derived niche vs a theoretically-derived niche.  Buckley is maybe somewhere in between, but towards the empirical end.  The huge empire of GIS-style niche modeling is obviously empirical/statistical.  Could also discuss May/Macarthur-style math modeling, which is more "neutral" and incorporates less biological detail than your approach.  This last comparison may help empirical biologists like your model more (comparing against neutral math approach, in addition to comparing against data approach).
+
+%The problem is that the conclusions from these approaches do not translate to other species.
+%This is because the models above require a lot of data.
+%Furthermore, the complexity of the processes hinders a clear understanding of how the underlying processes influence the niche.
+%In this work, we aim to construct an energy budget model and explore the role of physiological processes, behavior, intrinsic and extrinsic factor in shaping species' (fundamental) niche.
+%This needs to be strengthen
+% E: Could add here what we do (and don't) learn from this view of the niche.  For example, we don't really learn/predict exactly how the performance of a species or individual will change with environment.  You do get quantitative answers about this from the model, but with so many extra factors omitted, I think the precise values are not the point.  What you *do* get is the ability to compare things from the angle of process.  For example, when does optimal body size increase or decrease with temperature, all else being equal?  What makes niche width broader or narrower?  In grant-writing language, this is "what becomes possible."  (It seems that I repeatedly return to this stance that quantitative models are especially good for qualitative comparisons, and that this is an important selling point for distinguishing the importance of your work.  But you need not agree.)
+
+%We focus on body size as an intrinsic factor,  temperature as abiotic variable, and resource abundance as biotic variable (2-dimensional volume from Hutchinson perspective).
+%Why choosing these factors: there is a general relation between body size, temperature, and metabolic cost allowing us to root the model with empirical results.
+%From a conservation standpoint, focusing on temperature allows to study the effect of global warming, and focusing on resource abundance allows to study the effect of habitat loss and fragmentation.
+%The model is best suited for insects, income breeder.
+
+% E: Your introduction has evolved.  It is now focused more on where your model falls with respect to thinking about niches, rather than Bergmann's rule etc.  I like your current strategy.  (But maybe I am too easily swayed by whatever you write, regardless!)  It gets the reader's expectations in exactly the right place.  And then the larger biological insights that emerge are payoff for the Discussion---a bonus rather than your goal to begin with.
+
+% %This section needs references   
+%Body size is considered as one of the most important traits of an organism and is strongly associated with fitness.
+%The size of an individual is influenced by myriad of factors, biotic and abiotic acting at both ecological and evolutionary time scales. 
+%At any trophic level, biotic factors exert pressure on the size of an organism in which being smaller or larger might be advantageous.  
+%One on hand, small individuals need less resource for survival, have lower risk of infection and detectability by predators.
+%On the other hand, large individuals have competitive advantages say in resource acquisition, mate selection, or even stand up against predator.
+%For instance, the last one supports a pattern called  Island's rule where individuals are smaller on islands because of relaxed pressure from predation. 
+%
+%Temperature, humidity, photoperiodism are among the most important abiotic factors that influence body size \citep{Angilletta2009}. 
+%Variation of body size along temperature gradient has been studied extensively.
+%Individuals  grow larger (temperature-size rule), are larger (Bergmann's rule) or have smaller surface-to-volume ratio (Allen's rule) in colder environment. 
+%The simultaneous effects of these factors have produced a vast range of body size. 
+%Body mass varies tremendously even within a single taxonomic group.
+%For example, mass spans eight orders of magnitude in fishes \citep{Kottelat2006}, seven in insects \citep{Chown2010}, and four in each of birds and mammals \citep{Blackburn1994, Smith2004}.
+%Within those ranges, the frequency distribution of body mass is by far not uniform and is generally right skewed even after logarithmic transformation \citep{Brown1993, Chown2010}.
+%If optimal mass is interpreted as the mode of the distribution (say the majority species adopts that mass  because the benefits are maximized), these data suggest that neither the smallest nor the largest is optimal.
+%For instance, for mammals in North America in which body size range from 2 grams to more than 1 ton, the mode of the distribution is about 100 grams \citep{Brown1993}. 
+%
+%Many models were constructed to understand the influence of different mechanisms in determining the body size of an organism.
+%There are two general classes: growth-model and maturity-model.
+%The first class includes models that look at the change in body size through time and solve for the optimal body size at maturity \citep{Bertalanffy1957, Reiss1991, West2001, Kozlowski2004}.
+%The most famous is the model by \citet{Bertalanffy1957} which assumes that the rate of growth depends on the difference between rate of catabolism and anabolism and thus growth ceases when catabolism and anabolism are equal.
+%Other model assumes that as individual matures, the proportion of energy allocated to reproduction increases at the expense of those used to growth \citep{Kozlowski2004}. 
+%These  models allow a better understanding of life-history and how resources are allocated to growth and reproduction, and in general fit quite well the observed growth curve \citep{Kozlowski2004}. 
+%
+%On the other hand, maturity-models look at the influence of body size on fitness (more generally on performance) and focus on reproducing observed distribution of adult body size.
+%The model of \citet{ Brown1993} probably has received the most attention \citep{Kozlowski1996, Brown1996b, Chown1997,  Perrin1998, Bokma2001}.
+%The optimal body mass is interpreted as the one with the highest reproductive output.
+%The reproductive output of a given body mass is defined as the remaining energy after subtracting the cost of maintenance from the total amount of resource acquired  \citep{Brown1993}.
+%Despite the inherent problem in the  values  and interpretation of the parameters, the trade-off between resource acquisition and energetic cost  of maintenance (law of conservation of energy) remains a consistent framework to study the consequences of body size on performance (in general fitness).
+%A detailed framework called Dynamic Energy Budget combines both classes and uses, as then name refers, energy as main variable that can be allocated to growth and the rest for work and reproduction \citep{Kooijman2009}.
+%
+%The relationship between body mass and other life-history variable, physiology, and even demographic parameters has been modeled using the form $a z^{b},$ $z$ being body mass, and $a \mbox{ and } b$ some parameters called respectively coefficient and exponent \citep{Peters1986}.
+%In the growth-model, the rate of anabolism, catabolism, resource acquisition and the cost of maintenance are quantified by such function. 
+%For instance, in the von Bertalanffy model, $b = 2/3$ for catabolism and 1 for anabolism. 
+%One of the most widely accepted relationship is between resting metabolic rate and body mass. 
+%Empirical estimates for many taxonomic groups yield the same values of $b = 0.75$ \citep{Hemmingsen1960, Peters1986, Gillooly2001}.
+%However, the coefficient $a$ varies for homotherms, poikilotherms and unicellular \citep{Hemmingsen1960}. 
+%Although there is a debate about the value of the coefficient and the exponent, the power law is the most widely used functional form to represent the effect of body mass on a given process.  
+%
+%Temperature is considered as a key variable that influences the size and the performance of an organism \citep{Angilletta2009}.
+%In the growth-model, the effect of temperature has been explored especially in trying to understand why ectotherms grow larger in cold environment \citep{VandH1996,Kozlowski2004, Walters2006}.
+%In contrast, maturity-models including the detailed DEB does not explicitly address the influence of temperature.
+%% E: insert a linkage here, e.g., "The model of Buckley (2008) is [the best at][unusual in] considering both adult size and temperature."
+%\citet{Buckley2008} constructed a bioenergetic model that includes energetic cost at rest and during activity (predation) for two species of North American lizard.
+%It differs from previous model by the level of details (e.g. maximal velocity, fecundity and survival rate of the lizards were available) such that the author was able to parametrize the model and predict range shift assuming increase in environmental temperature \citep{Buckley2008}.
+%The model also uses the conservation of energy principle such that net energy gain defines performance.
+%
+%Lizards have been extensively studied and used as a model system to understand how ectotherms respond to temperature \citep{Angilletta2009}.
+%For endotherms, mammals and birds have received most of the attention \citep{Peters1986,Nagy2005}.
+%Insects are the most speciose terrestrial species and although most of them are ectothermic, certain group like bees, moths, or dung beetles are endothermic.
+%The capacity to increase body temperature through thermogenesis has been measured in those groups \citep{Kammer1974, Bartholomew1977b, Bartholomew1977, Bartholomew1981, Stone1989}.
+%When insects are at rest, the body and ambient temperature are equal  \citep{Bartholomew1978}.
+%When ambient temperature is low, the ability to raise body temperature is essential for foraging, and thus is an important component of fitness.
+%Small individual has lower endothermic capacity because of high surface to volume ratio---most of endogenous heat produced is lost through passive conduction conductance.  
+%The performance of an endothermic insect in a given environment (mating or resource acquisition) thus depends on the ability to thermoregulate which in turn is a function of body size.
+%% E: Sorry to see the dung beetle details go, but I think it does read better now.
+%
+%In this work, we build a model that examines the consequences of body mass scaling for insects.
+%We focus on the daily energetic gain and cost with respect to one abiotic factor: temperature and one biotic factor: resource availability.
+%The energy expended during a day is partitioned into 3 terms: the capacity and the energy needed for thermoregulation, the energy used for resource acquisition and assimilation, and the energy used at rest.
+%The remaining energy, obtained by subtracting the cost above from the total gain, are then used for reproduction (and growth, and possibly survival).
+%%Demographic parameters such as fecundity and mortality also depend on body mass and uses the same allometric scaling.
+%In conclusion, the aim to produce fitness curve along temperature gradient and explore how the curve changes with body size, and to understand how sensitive the performances are with respect to different values of $a$ and $b$.
+%% E: Careful with words here.  A fitness curve is a function of size.  And it can also be a function of environment, sometimes called a generalized fitness surface.
+%
+%% A note for the future:  Near the end of the Intro, present the main questions that motivate this model and will be answered.  This will prime the reader, and refocus attention on temperature as the primary abiotic variable of interest.
+%% E: Your ending now is pretty good.  But it could still be slightly rephrased to be a bit more question-like.  "We ask how body mass and temperature interact to determine..."
+
+
+
+%-----------------------------------------
+Material and methods
+%------------------------------------------
+
+%The total energy gained $E_g$ is constrained by foraging time and resource availability.
+%If time is constraining, $E_g(z, t_f) = t_f \times e_g(z)$.
+%If the amount of resource available $R$  is constraining, we assume that $t_f = R/g(z)$ and again use the previous relationship to calculate $E_g$.
+%In addition, we limit the amount of resource R and individual can acquire which will be 250 times its own body mass. %sensitivity to 250.
+
+% E: This is the section where the formulation is most "made up."  I think it's important at least to provide a biological motivation/justification for this functional form, e.g., suggesting scenarios of resource distribution or foraging behavior that make b_3 larger or smaller.  (And maybe acknowledging situations in which a power law is inappropriate.)
+
+
+%
+%In the next sections, we describe how we modeled daily energy budget as a function of environmental temperature and body size.
+%We define environmental temperature as the temperature felt by the individual and include humidity, wind speed  and so on rather than the ambient temperature.
+%The daily energy demand is partitioned into the energy expended: when inactive, when foraging (and assimilating food), and during warm-up.
+%The daily energy gained is a function of body size, modeled as a power law, and the density of energy contained in the food. 
+
+%\subsection*{Environment}
+%% E: A small figure may be most effective here.  Show real example data from somewhere, your fancy trigonometric function, and your piecewise linear approximation.
+%
+%\subsubsection*{Environmental temperature $T_e$}
+%The environmental temperature is modeled as a piecewise linear function.
+%The environmental temperature reaches a minimum at sunrise then gradually increases and peaks in the afternoon (for simplicity we assumed it peaks exactly halfway between noon and sunset).
+%After the peak, temperature decreases gradually until sunset, then decreases even more from sunset until the next sunrise.
+%We assume that temperature at sunrise is the same as the temperature at the next sunrise so that during a 24-hour period  temperature initial is the same as temperature final (constant temperature is obtained  by assuming that the peak equals the temperature at sunrise). 
+%
+%\subsubsection*{Time at sunrise and sunset}
+%Time at sunrise is obtained for \citet{Campbell2012} by looking at the zenith angle ($\psi$) at time $t$ and is
+%\begin{equation}  \label{eq:psi}
+%\cos(\psi)s = \sin(\phi) \sin(\delta) + \cos(\phi) \cos(\delta) \cos[15 (t- t_0)] 
+%\end{equation}
+%Here, $\phi$ denotes latitude, $\delta$ denotes solar declination which varies between 23.45$^\circ$ and  -23.45$^\circ$ at summer and winter solstice 
+%($\delta$ as in equation 11.2 in \citet{Campbell2012} and only depends of the day of the year). 
+%$t_0$ represents the time of solar noon and since we do not span across longitude, we fix $t_0 = 12$.
+%
+%\subsubsection*{Solar radiation}
+%For simplicity, we assume that solar radiation is \[SR = S_0 \cos(\psi) \] where $S_0 = 1361 \mbox{W.m}^{-2}$. 
+ 
+
+
+
+
+
+%\begin{sidewaystable}
+%\caption{Values and ranges of parameter used }
+%\begin{tabular}{l l l l l}
+%\hline
+%Definition& Notation & Value or range & Unit & References \\ 
+%\hline
+%Conductance & $C$ & $5- 70 \times 10^{-7}$ &  cal/$^{\circ}$C s mm$^2$ &  \citet{Heinrich1975} \\
+%Lowest operative temperature& $c_0$ & 28 & $^{\circ} \rm{C}$ &  \citet{Bartholomew1977}\\
+%Slope of the increase in operative temperature & $c_1$ & 1.5 &  &  \citet{Bartholomew1977} \\
+%Slope of increase in frequency of contraction & $a_w$ & 0.25 &  &  \\
+%Specific heat & $s$ & 0.8 & cal/g $^{\circ} C$ & \\
+%Muscle density & $\delta$ & $1.06 \times 10^{-3}$ & g/mm$^3$ & \\
+%Energy per contraction & $u_w$ & 0.01 & cal/g &\citet{Kammer1974} \\
+%Resting coefficient at at 22 $^{\circ}$ C for one gram& $a_1$ &  $10^{-4}- 6 \times 10^{-3}$ & cal/ g s & \citet{Kammer1974}\\
+%& & & & \citet{Bartholomew1977b}\\
+%& & & & \citet{Bartholomew1981} \\
+%Allometric exponent of resting & $b_1$ & 0.75 & & \citet{Brown2004} \\
+%Active coefficient for one gram & $a_2$ & $10^{-3} - 2 \times 10^{-1}$  & cal/g s & \citet{Bartholomew1977}\\
+%& &  & & \citet{Bartholomew1977b}\\
+%& &&& \citet{Bartholomew1981} \\
+%Allometric exponent of activity &  $b_2$ & 0.75 - 1.25& &  \citet{Heinrich1975}\\
+%& & &  & \citet{Bartholomew1977}\\
+%& &  &  & \citet{Bartholomew1977b}\\
+%& & & & \citet{Bartholomew1981}\\
+%Allometric coefficient of resource collection & $a_3$ & 0.0083 xxx& g/s & \citet{Ortega-Martinez2014}\\
+%Allometric exponent of resource collection & $b_3$ & 0.5-1.5& & \citet{Nervo2014} \\
+%Energy density per gram of resource &$\varepsilon$ & 4 &  cal/g & \citet{Nibaruta1980} \\ % Energy density per gram  dry dung (40-80\%) of total weight
+%& & & &  \citet{Gittings1998} \\
+%\hline
+%\label{table:1}
+%\end{tabular}
+%\end{sidewaystable}
+
+
+
+% T: note that I did not explore $b_2$ but looked at $a_2$. Fixing the former is important to get some sort of background result although I think (not deep thinking) that changing $b_2$ will give the similar results by adjusting other parameters.
+%Just a draft to see how things may or will be added
+%\subsubsection*{Fecundity rate}
+%The remaining energy is then converted to offspring according to the same power law $a_3 z^{b_4}$.
+%The fecundity rate can mean the total energy needed to reach adult size.
+%%I am not sure but do juvenile bees need to forage or they stay inside the hive until they are mature
+%% http://www.beesource.com/resources/usda/honey-bee-life-history/
+%
+%%\subsubsection*{Survival}
+%%It is possible to include two mortality rates both for juvenile and adult.
+%%I don't think it will make much difference though (maybe wrong intuition) :D
+%
+%% E: Your Introduction actually sort of convinced me that simply using e_r as the performance metric may be better.  Could mention some of the complications in converting energy to fitness, but then say that many of them depend enough on the ecological context that the conversion will not be considered here.
+%% E: Alternatively, perhaps survival effects are needed to get interesting-enough answers...
