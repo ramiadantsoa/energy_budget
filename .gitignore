@@ -56,3 +56,7 @@ ms_fig/
 
 *.jpg
 *.jpeg
+
+#specific files
+lifting_data.xlsx
+weightlift_data.nb
