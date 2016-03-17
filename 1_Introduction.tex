@@ -1,51 +1,52 @@
 \section*{Introduction}
 Niche is one of the most important concepts in ecology.
-Niche was popularized by Hutchinson \citet{Hutchinson1957} who defined the niche as a hypervolume in a n-dimensional space.
+Niche was popularized by \citet{Hutchinson1957} who described species' niche as a hypervolume in a n-dimensional space.
 The concept was set aside by ecologists but recently started to play a more dominant role again.% (or revival, resurgence).
-This is partly due terminological clarifications, for instance the distinction between the Grinellian and Eltonian niche \citep{Chase2003} but also because of the crucial need to predict response to current rapid human-induced environmental changes \citep[e.g.,][]{Kearney2009}.
-The geometrical abstraction of the niche illustrates one key property of the niche which is niche breadth.
-In fact species with narrow niche breadth is more vulnerable to environmental changes \citep{Henle2006}.
-Understanding niche breadth has been investigated quite disparately in empirical and theoretical study.
+This is partly due terminological clarifications, for instance the distinction between the Grinellian and Eltonian niche \citep{Chase2003} but also because of the crucial need to predict species' response to current rapid human-induced environmental changes \citep[e.g.,][]{Parmesan2006, Kearney2009}.
+The geometrical abstraction by \citet{Hutchinson1957} was particularly useful to illustrate one key property of the niche: its breadth.
+In fact species with narrow niche breadth is more vulnerable to environmental changes \citep{Henle2004}.
+Niche breadth has been investigated quite disparately in empirical and theoretical study.
 
 %another way to present is to talk about spectrum, this is at the one end, although not necessarily true for 
 The principal goal in empirical study is to quantify the performance of a given species along few niche axes.
 There are generally three main approaches.
-The first one is experimental and consist of placing (or transplanting) individual along a principal environmental gradient and measure the fitness (or performance or a proxy of fitness) \citep{Birch1953, Elliot1982,Angert2006,Frazier2006}.
+The first one is to use experimental settings.
+It consists of placing (or transplanting) individual along a principal environmental gradient and measure the fitness (or performance or a proxy of fitness) \citep{Birch1953, Elliott1982, Angert2005, Frazier2006}.
 %The problem is that it is quite tedious to do (can be slow, requires more resources, applicable to only few species
-The second approach is to mechanistically construct how an individual trait interacts with the environment \citep{Kooijiman2009, Kearney2009, Buckley2009}.%Marr-Pirt or Monod model for early energy budget model
-They are rooted aim to track energy flow, thus called energy budget model, and are based on detailed physiological, thermodynamic and behavioral processes. 
-The main problem with these two approaches is that they are tedious and applies to few species.
+The second approach is to mechanistically construct how an individual trait interacts with the environment using a bottom-up approach \citep{Kooijman2009, Kearney2009, Buckley2008}.%Marr-Pirt or Monod model for early energy budget model
+The main approach is called energy budget model and is based on detailed physiological, thermodynamic and behavioral processes. 
+The main problem with these two approaches is that they are tedious and applies to few well-studied species.
 %called brute force by Holt, some key parameters are still needs to be measured and is not often easy to get them (Nisbet2000). 
-The third approach is to use statistical methods that infers the niche from correlation between species occurrence and the environments \citep{Guissan2005, Austin2006, Elith2009}. %also Thullier2008 
+The third approach is to use statistical methods that infers the niche from correlation between species occurrence and the environmental conditions \citep{Guisan2005, Austin2007, Elith2009}. %also Thullier2008 
 Unlike the previous two, this last approach is less data greedy and applicable to a wide variety of species.
-Therefore, it is suited to tackle conservation problems.
+It is suited to tackle conservation problems.
  
 Theoretical studies put emphases on the realized niche especially competition (resource or niche partitioning) and there are a myriad of approaches (often unlinked) depending on which phenomenon is under investigation.  
 The broken stick model is used to explain species composition (abundance or relative abundance) of communities \citep{MacArthur1957} .
-%Although it has explanatory power, it does not tell how species interact with the environments.
-Studies of coexistence often seeks mechanisms that would allow species to partition the niche in space such as the competition colonization trade-off \citep[e.g.,][]{Levins1971,Tilman1994} or in time such as storage effect \citep{Skellam1951, Chesson2000}.
-Other models look focuses on the strength of competition.
-For instance, assuming a Gaussian resource utilization curve, competition is quantified by the amount of overlap \citep{MacArthur1967, Roughgarden1979}.% and lead to principle of limiting similarities.
-Finally, some other models investigates the evolution of niche width based on quantitative genetic framework \citep[reviewed in]{Futuyama1988}.
+%Although it has explanatory power, it does not tell how species interact with the environments. focus on partitioning the abstract niche rather than what is actually the niche axis. Oblivious to what niche axis actually are.
+Studies of coexistence often seeks mechanisms that would allow species to partition the niche in space such as the competition colonization trade-off \citep[e.g.,][]{Levins1971,Tilman1994} or partition the niche in time such as storage effect \citep{Skellam1951, Chesson2000}. %note that storage-effect also applies in space but the temporal aspect is the easiest 
+Other models focus on the strength of competition.
+For instance, assuming a given trait has Gaussian resource utilization curve, competition  between two traits is quantified by the amount of overlap between their curves \citep{MacArthur1967, Roughgarden1979}.% and lead to principle of limiting similarities.
+Finally, some other models investigates the evolution of niche width based on quantitative genetic framework \citep[reviewed in][]{Futuyma1988}.
 
-To get general results, theoretical models often make simplifying assumptions for mathematical convenience.
-In models that depict a relationship between the trait and say performance, some assumptions are often violated.
-For instance, resource utilization curve is Gaussian but there is no evidence that say large beak size cannot exploit small seed as efficiently as large ones.
-Another example is the symmetrical nature of the niche is not true.
-Experimental studies say along temperature gradient shows a left skewed performance curve \citep{Angilletta2009}.
-Finally, a trade-off in performance is not empirically verified (refs).%find that refs, otherwise use warmer is better.
-In general, this incongruence generated a gap between theoretical and empirical works (Amarasekare2003).
+To produce general results, theoretical models often make simplifying assumptions for mathematical convenience.
+In niche models that actually consider a relationship between the trait and say performance such as in \citet{Roughgarden1979}, the assumptions are often violated.
+For instance, resource utilization curve is Gaussian but there is no evidence that say large beak size cannot exploit small seed as efficiently as large ones. % do we need reference here
+The symmetrical nature of the niche is not necessarily true.
+Experimental studies  along temperature gradient shows a left skewed performance curve \citep{Angilletta2009}.
+Finally, a trade-off in performance is not empirically verified (refs). %find that refs, otherwise use warmer is better.
+In general, this incongruence generated a gap between theoretical and empirical works \citep{Amarasekare2003}.
 
-In this work our goal is to develop a theoretical models to reconstruct the niche.
-More precisely to understand the role of different processes that shape the fundamental niche of given a trait and an environmental gradient.
+In this work, we develop a theoretical models to reconstruct the niche; more precisely a physiological and behavioral model that derives the fundamental niche for given a trait and along an environmental gradient.
 The conceptual goal is to find a balance between realism and abstraction.
 In doing so, we choose two of the most important variables: temperature as niche axis and body size as the focal trait.
 The model is for adult insects...%T: not sure if there is a need to place it the intro 
-There is a vast literature on the relationship between body size, temperature and the physiological and behavioral processes so that they can be used to select modeling assumptions-thus based on empirical patterns (refs).
-We use the same approach as energy budget model but put emphasizes on the role of the processes rather than fitting to an empirical pattern.
-We want to derive a null model for performance as a function of body size and answering a specific question that is: under what condition does niche breadth (or thermal performance breadth) increases or decreases as a function of body size.
+Practically, there is a vast literature on the relationship between body size, temperature and the physiological and behavioral processes.
+These knowledge can be used to select and root modeling assumptions to empirical data and thus brings a degree of realism.
+We use the same approach as energy budget model but put emphasizes on the role of the processes rather than fitting empirical patterns.
+We want to derive a null model for performance as a function of body size and answering a specific question that is: under what condition niche breadth (or thermal performance breadth) increases or decreases as a function of body size.
 
-
+%MEETING NOTES
 % Data driven and then pure theory....competition, fundamental...
 % Expand, what is included in foraging...
 % cost of shivering
