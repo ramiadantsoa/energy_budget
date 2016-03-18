@@ -43,6 +43,7 @@ Temporary Items
 .apdisk
 
 main.pdf
+main_notes.pdf
 *.log
 *.aux
 *.bbl
