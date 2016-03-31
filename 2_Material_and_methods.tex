@@ -22,7 +22,7 @@ where $\psi$ is the zenith angle and $S_0 = 1361 \mbox{W.m}^{-2}$ the maximum so
 Solar radiation is needed to model warm-up phase (see appendix for more details on how $\psi$ depends on latitude and time of the year as well as how we obtained the time of sunrise).
 
 Third, we assume that there is fixed quantity of resource available $R$ in gram per day.
-$\varepsilon$ represents the absolute energy gained per unit of resource mass when the cost of processing the food, egestion, and excretion are subtracted. 
+$\rho$ represents the absolute energy gained per unit of resource mass when the cost of processing the food, egestion, and excretion are subtracted. 
 Environment with poor quality can thus be obtained by low quantity or low quality.
 
 \subsection*{Energetic cost}
@@ -73,7 +73,7 @@ We also assume that temperature is constant during foraging as (refs).
 
 Finally, the rate of energy gain is  
 \begin{equation} \label{eq:eg}
-	e_g(z) = a_3 z^{b_3} \times \varepsilon  = g(z) \times \varepsilon.
+	e_g(z) = a_3 z^{b_3} \times \rho  = g(z) \times \rho.
 \end{equation}
 
 \subsection*{Warm-up}
@@ -173,3 +173,37 @@ Our intuition here is that foraging in the most general sense increases with bod
 Power law is the simplest and there are no empirical evidence for other functional form.
 Yet, there are empirical data on other performance such as speed...
 One study of dung beetles fitted a power law and found an exponent equal to 1-ish.
+
+
+
+\begin{sidewaystable}
+\caption{Values and ranges of parameter used }
+\begin{tabular}{l l l l l}
+\hline
+Notation& Definition & Value or range & Unit & References \\ 
+\hline
+$a_1$ & Coefficient for resting metabolic rate  & 1 &  cal/$^{\circ}$C s mm$^2$ &  ?\citet{Heinrich1975} \\
+$b_1$ & Exponent for resting metabolic rate  & 0.75 &  &  Peters, Brown,.. \\
+$a_2$ & Coefficient for active metabolic rate  & 5-40 $ \times a_1$ &  cal/$^{\circ}$C s mm$^2$ &  Buckley, Heinrich... \\
+$b_2$ & Exponent for active metabolic rate  & 0.75-1.25 & ... &  \citet{Heinrich1975} \\
+$a_3$ & Coefficient for foraging rate  & 1 & ...  &  ... \\
+$b_3$ & Exponent  for foraging rate  & 0.5-1.25 &  &  \citet{Nervo2014} \\
+$c_p$ & molar specific heat of air  & 29.3 &  $\rm{J \, mol}^ {-1} \, \rm{C}^ {-1}$ & Campbell and Norman \\
+u &  wind speed & 0.1 & $\rm{m \, sec}^{-1}$ & ...\\
+$\delta $ & mass density & $0.15 \times 10^6$  & g  mm$^{-3}$  & ... \\
+s & specific heat capacity & 3.3472 & $\rm{J g}^{-1} \rm{C}^{-1}$ & ... \\
+$\sigma$ & Stefan-Boltzman constant & $5.67 \times 10^{-8}$ & ... & ...\\
+e & Energy per contraction & 0.04184 & $\rm{J \, g}^{-1}$ &\citet{Kammer1974} \\
+$a_w$& Frequency of contraction & 0.25 & ...& ?\citet{Bartholomew1977b}\\
+$K_1$& Conductance between the thorax and the rest-of-the-body & 0.05 $c_p$ & ... & ... \\
+$K_2$& Constant controlling convection & 1   & ... & Campbell and Norman \\
+$\varepsilon$& Emissivity of gray body & 0.93& ...& ... \\
+$r_3$  & Scale factor for the quantity of solar radiation absorbed & 0.5 & ... & ... \\
+$c_0$ & Intersect for minimum temperature for activity & 28 & $^{\circ}\rm{C}$  & ....\\
+$c_1$ & Slope for minimum temperature for activity & 0.75 &  & ....\\
+$\rho$ &Energy density per gram of resource & 13-100 &  $\rm{J g}^{-1}$  & ... \\  %  Energy density per gram  dry dung (40-80\%) of total weight, \citet{Nibaruta1980} \citet{Gittings1998}
+\hline
+\label{table:1}
+\end{tabular}
+\end{sidewaystable}
+
