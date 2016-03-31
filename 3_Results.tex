@@ -29,7 +29,7 @@ First, net energy can should increases and then decrease after certain threshold
 Second, net energy should also be positive.
 These conditions are fulfilled when: 
 
- There are two things: the b_3 as we have seen before but also, resource quality matters.
+ There are two things: the $b_3$ as we have seen before but also, resource quality matters.
  Sound too restrictive. 
  
 
@@ -57,16 +57,16 @@ When there is enough resource, net energy gain can increase with body size (Supp
 Net energy gain only peaks when two conditions  are met (see below for mathematical analysis).
 First, $b_3 < b_1 = b_2$ (the equality is by assumption and to reduce the number of free parameter).
 % E: so really, the condition is that b_3 is the smallest?
-Second, resource quality $\varepsilon$ is within a certain range represented by shades in \cref{fig2}a.
-\cref{fig2}a shows for two different temperatures (red = warm, blue = cold) the required values of the resource quality $\varepsilon$ so that net energy gain peaks at intermediate value of body mass.
+Second, resource quality $\rho$ is within a certain range represented by shades in \cref{fig2}a.
+\cref{fig2}a shows for two different temperatures (red = warm, blue = cold) the required values of the resource quality $\rho$ so that net energy gain peaks at intermediate value of body mass.
 \cref{fig2}b shows how net energy gain changes as function of body mass for the resource quality shown in \cref{fig2}a.
 These conditions are quite restrictive and looks unlikely in real system.
 %Given those restrictions, net energy gain will be a monotonic function of body mass.
 % E: This is a great example of why it was worth constructing a math model, rather than just intuitive arguments!
 
-In a more technical term, the range of the $\varepsilon$ allowing intermediate optimal body mass is 
+In a more technical term, the range of the $\rho$ allowing intermediate optimal body mass is 
 \begin{equation}\label{C1}
-	\widetilde{E_n} < \varepsilon < \widetilde{dE_n}.
+	\widetilde{E_n} < \rho < \widetilde{dE_n}.
 \end{equation}
 where,
 \begin{flalign*}
@@ -158,12 +158,12 @@ This increases in temperature further affects the largest individual (thick line
 %
 %Let us return to dashed line in \cref{fig1}a.
 %We found that intermediate optimal body mass only occurs under a restricted condition i.e. $d E_n/dz$ is negative for large value of $z$.
-%We show the derivation in the supplement but in short we found that resource quality $\varepsilon$ in \cref{eq:eg} needs to be within a certain range (\cref{fig2}a).
-%If $\varepsilon$ is too low (\cref{fig2}a, e.g. dashed horizontal line below the red shaded region for $z > 3 $), $E_n$ becomes negative (\cref{fig2}, red dashed).
-%If $\varepsilon$ is too high (\cref{fig2}a, e.g. dashed and solid horizontal lines above the blue shaded region),  $d E_n/dz$ becomes positive leading to a monotonic increase in $E_n$ with respect to $z$ (\cref{fig2}b, dashed and solid blue).
-%In a more technical term, the range of the $\varepsilon$ allowing intermediate optimal body mass is 
+%We show the derivation in the supplement but in short we found that resource quality $\rho$ in \cref{eq:eg} needs to be within a certain range (\cref{fig2}a).
+%If $\rho$ is too low (\cref{fig2}a, e.g. dashed horizontal line below the red shaded region for $z > 3 $), $E_n$ becomes negative (\cref{fig2}, red dashed).
+%If $\rho$ is too high (\cref{fig2}a, e.g. dashed and solid horizontal lines above the blue shaded region),  $d E_n/dz$ becomes positive leading to a monotonic increase in $E_n$ with respect to $z$ (\cref{fig2}b, dashed and solid blue).
+%In a more technical term, the range of the $\rho$ allowing intermediate optimal body mass is 
 %\begin{equation}\label{C1}
-%	\widetilde{E_n} < \varepsilon < \widetilde{dE_n}.
+%	\widetilde{E_n} < \rho < \widetilde{dE_n}.
 %\end{equation}
 %where,
 %\begin{flalign*}
@@ -184,7 +184,7 @@ This increases in temperature further affects the largest individual (thick line
 %\scalebox{1.5}{\includegraphics{Fig2}}
 %\caption{
 %	a) shaded regions show conditions where $E_n$ is maximized at intermediate value of $z$.
-%	Resource quality $\varepsilon$ needs to fall inside the shaded regions to satisfy \cref{C1}.
+%	Resource quality $\rho$ needs to fall inside the shaded regions to satisfy \cref{C1}.
 %	The upper (lower) limit of the shade region is $\widetilde{dE_n}$ ($\widetilde{E_n}$).  
 %	b) Different shape of $E_n$ based on a).
 %	Foraging time $t_f = 1$ hour.
@@ -311,7 +311,7 @@ This increases in temperature further affects the largest individual (thick line
 %In the first case, when $b_3$ is large, largest size is optimal for any environmental temperature (\cref{fig3}a).
 %However, when $b_3$ is small, optimal body mass is a decreasing function of temperature (\cref{fig3}b).
 %%At high temperature, it is easier to satisfy \cref{C1} as it allows a broader range of  resource quality (\cref{fig1}b).
-%%note here than in fig1, we changed $\varepsilon$ and in here $varepsilon$ is fixed but the shaded region is low and narrow
+%%note here than in fig1, we changed $\rho$ and in here $\rho$ is fixed but the shaded region is low and narrow
 %
 %Increasing the cost of warm-up does not change the relationship between optimal body mass and temperature but significantly reduces the thermal niche of each individual (\cref{fig3}c).
 %However, thermal niche is not only a function of internal parameters, as the quality of resource ameliorates, the thermal niche of the largest individual broadens (\cref{fig3}d).
@@ -331,7 +331,7 @@ This increases in temperature further affects the largest individual (thick line
 %	Panels show daily net energy gain  $E_n$ as function of environmental temperature $T_e(t) = \tau$ for 5 body masses.
 %	In a), b), c), and d) Foraging time $t_f$ is fixed to one hour.
 %	In e) and f) resource availability is $R$ is fixed to 60 g. 
-%	In c) resource quality $\varepsilon$ is higher $14.4$, in the remaining panels (a), b), d), e) and f), $\varepsilon = 8.4$.
+%	In c) resource quality $\rho$ is higher $14.4$, in the remaining panels (a), b), d), e) and f), $\rho = 8.4$.
 %	In c), d), and f), conductance is 14 times higher.
 %	Other parameters: $a_2 = 10 \times a_1$, remaining parameters as in \cref{fig1}.
 %}% Add non trivial units later
@@ -353,26 +353,26 @@ This increases in temperature further affects the largest individual (thick line
 %\subsubsection*{Case 1 = No warm-up}
 %For simplicity let us assume that there is no need to warm-up so that $e_w = 0 $ and $t_w =  0$.
 %\begin{flalign*}
-%	e_r(z) & = \varepsilon a_3 z^{b_3} \times t_f  - \left( \rho a_1 z^{b_2} E_0 Q_{10}^{\frac{\tau}{10}} \times t_f +  a_1 z^{b_1} E_0 Q_{10}^{\frac{\tau}{10}}\times (3600\times24 - t_f) \right) \\
-%			& =  z_3^{b_3} \left[  \varepsilon a_3 \times t_f  - \rho a_1  E_0 Q_{10}^{\frac{\tau}{10}} z^{b_2 - b_3} \times t_f -  a_1 z^{b_1- b_3}  E_0 Q_{10}^{\frac{\tau}{10}}\times (3600\times24 - t_f) \right] 
-%%			& =  z_3^{b_3} \left[  (\varepsilon a_3  - \rho a_1 Q_{10}^{\frac{\tau}{10}} z^{b_2 - b_3}) \times t_f -  a_1 z^{b_1- b_3} Q_{10}^{\frac{\tau}{10}}\times (3600\times24 - t_f) \right] 
+%	e_r(z) & = \rho a_3 z^{b_3} \times t_f  - \left( \rho a_1 z^{b_2} E_0 Q_{10}^{\frac{\tau}{10}} \times t_f +  a_1 z^{b_1} E_0 Q_{10}^{\frac{\tau}{10}}\times (3600\times24 - t_f) \right) \\
+%			& =  z_3^{b_3} \left[  \rho a_3 \times t_f  - \rho a_1  E_0 Q_{10}^{\frac{\tau}{10}} z^{b_2 - b_3} \times t_f -  a_1 z^{b_1- b_3}  E_0 Q_{10}^{\frac{\tau}{10}}\times (3600\times24 - t_f) \right] 
+%%			& =  z_3^{b_3} \left[  (\rho a_3  - \rho a_1 Q_{10}^{\frac{\tau}{10}} z^{b_2 - b_3}) \times t_f -  a_1 z^{b_1- b_3} Q_{10}^{\frac{\tau}{10}}\times (3600\times24 - t_f) \right] 
 %\end{flalign*}
 %Thus, the net energy gain is positive if the term between the square brackets is positive, 
 %\begin{equation} \label{eq:C1}
-%	\frac{\varepsilon a_3}{ E_0 Q_{10}^{\frac{\tau}{10}}} > \rho a_1  z^{b_2 - b_3} +  a_1 z^{b_1- b_3}  (3600 \times24 /t_f -1)
+%	\frac{\rho a_3}{ E_0 Q_{10}^{\frac{\tau}{10}}} > \rho a_1  z^{b_2 - b_3} +  a_1 z^{b_1- b_3}  (3600 \times24 /t_f -1)
 %\end{equation}
 %Net energy gain ($e_r$) increases with body size if $\frac{d e_r}{dz} > 0$, i.e. 
 %\begin{equation} \label{eq:C2}
-%	\frac{\varepsilon a_3}{ E_0 Q_{10}^{\frac{\tau}{10}}} > \rho a_1  z^{b_2 - b_3} \frac{b_2}{b_3} +  a_1 z^{b_1- b_3}  (3600 \times24 /t_f -1) \frac{b_1}{b_3}.
+%	\frac{\rho a_3}{ E_0 Q_{10}^{\frac{\tau}{10}}} > \rho a_1  z^{b_2 - b_3} \frac{b_2}{b_3} +  a_1 z^{b_1- b_3}  (3600 \times24 /t_f -1) \frac{b_1}{b_3}.
 %\end{equation}
 %In contrast, net energy gain ($e_r$) decreases with body size if $\frac{d e_r}{dz} <  0$, i.e. 
 %\begin{equation} \label{eq:C3}
-%	\frac{\varepsilon a_3}{ E_0 Q_{10}^{\frac{\tau}{10}}} < \rho a_1  z^{b_2 - b_3} \frac{b_2}{b_3} +  a_1 z^{b_1- b_3}  (3600 \times24 /t_f -1) \frac{b_1}{b_3}.
+%	\frac{\rho a_3}{ E_0 Q_{10}^{\frac{\tau}{10}}} < \rho a_1  z^{b_2 - b_3} \frac{b_2}{b_3} +  a_1 z^{b_1- b_3}  (3600 \times24 /t_f -1) \frac{b_1}{b_3}.
 %\end{equation}
 %% E: Explain why this situation is of particular interest.  absolute vs proportional/specific energy gain
 %Inequations~(\ref{eq:C1}) and~(\ref{eq:C3}) give
 %\begin{equation} \label{eq:C4}
-%	\rho a_1  z^{b_2 - b_3} +  a_1 z^{b_1- b_3}  (3600 \times24 /t_f -1) < \frac{\varepsilon a_3}{ E_0 Q_{10}^{\tau/10}} < \rho a_1  z^{b_2 - b_3} \frac{b_2}{b_3} +  a_1 z^{b_1- b_3}  (3600 \times24 /t_f -1) \frac{b_1}{b_3},
+%	\rho a_1  z^{b_2 - b_3} +  a_1 z^{b_1- b_3}  (3600 \times24 /t_f -1) < \frac{\rho a_3}{ E_0 Q_{10}^{\tau/10}} < \rho a_1  z^{b_2 - b_3} \frac{b_2}{b_3} +  a_1 z^{b_1- b_3}  (3600 \times24 /t_f -1) \frac{b_1}{b_3},
 %\end{equation}
 %which is true if $b_2 > b_1 > b_3$ and the middle term is fine tuned.
 %Thus, smaller individual may gain more energy than large individuals but under rather restricted conditions.
