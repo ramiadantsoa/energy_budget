@@ -1,23 +1,109 @@
 \section*{Discussion}
-There are many models that understand the performance of species in a given environment.
-they are often pattern oriented. 
-Our work is is to focus on process that influence the performance of an adult insect given as a function of its body size.
-In here we look how behavioral therm
- In this work we aim to understand how net energy gain changes as function of body size and temperature for adult insect.
- Amongst the myriad of factors that influence the performance, we explore on the role of  physiological, ecological, and behavioral processes and quantify their  relative importances in determining which body size perform best under a given condition.
-On one hand, the model relies on power law to model how energetic demand and gain depend on body size and on thermodynamic principle to study behavioral thermoregulation. 
-Although, these modeling assumptions already exist in the theoretical literature \citep[e.g.,][]{Brown1993, Kozlowski1997, Bakken1975} a unified integration of temperature, body size, and behavioral thermoregulation has not been done, let alone be the reconstruction of the fundamental niche.
-%this can also  be in the intro.
+How performance compared among body size given everything else is equal.
+In this work we attempt to clarify the role of  physiological, ecological, and warm-up thermoregulation in dictating the performance of a species for a given body size along a temperature gradient.
+It is different from other models as the goal is to look at the qualitative outcome as we explored parameter space. process vs. pattern oriented model.
+We show various qualitative outcomes rather than fitting one pattern
+The model is best suited for adult insect with deterministic growth and are income breeders.  
+Such simplification was needed to simplify model assumptions.
+In fact, quantifying foraging rate is more tractable for adult than for growing insects.
+Growth is an important part but what is the point of growing large if one will under-perform as adult.
+The model can be broken down into three main piece of rates  metabolic cost, foraging, and warm-up.
 
-One of our main result is that the exponent of the foraging rate plays a central role in determining performance across body size.
-We have found that if the exponent is lower than the exponent for the metabolic cost.
-This results is somehow intuitive but we actually do not know where in the parameter space we are as the relationship between body mass and foraging rate is poorly studied.
-Studies on dung beetles showed that the exponent can be larger than one \citep{Nervo2014}.
-In another study, foraging rate is only inferred from field metabolic cost \citep{Nagy1987}.
-Our model indeed shows that a high convexity of the foraging rate increases the performance of large bodied but only when active metabolic rate is extremely high.
-A high exponent of active metabolic rate ($b_2 \equiv 1.17$) has been reported for some tropical dung beetles \citep{Bartholomew1978}. 
-Factorial scope which is the ratio between maximum and resting rates can actually be up to 43 for moths \citep{Bartholomew1981} although a sustained metabolic scope is thought to be less than 7 \citep{Petterson1990}.
-In any case, different parameter values for active metabolic rate and especially foraging rate can already determine whether small or large will perform better under a given condition the need for other assumptions such as mortality or fecundity.
+One of the most debated exponent is actually whether 0.75 holds for metabolic rate.
+Data have supported for 2/3 and 3/4. 
+Here we show that in term of performance, looking at that exponent alone is not sufficient.
+On one hand, the exponent of active metabolic rate also influence and is not necessarily the same as resting metabolic rate.
+A high exponent of active metabolic rate ($b_2 \equiv 1.17$) has been reported for some tropical dung beetles \citep{Bartholomew1978}, although they suspect it is also due to the influence of temperature because large have higher temperature. 
+Some studies have shown that factorial scope (ratio between active and basal metabolic rate) can be both size dependent or independent-can separate the effect of these two.
+Large factorial scope
+Why is that important for the model?
+    
+On another hand, it all depends on foraging rate.
+The ratio between foraging rate and metabolic rate increases decreases with body size.
+In a standard form it would means whether the exponent is below or above 0.75.
+Ecological factor can for instance shape the exponent where which highly competitive and dominant, expnent is higher.
+Not that agility decrease with body size...
+Studies have shown that for instance the dimension of foraging influence foraging rate and the exponent can be as high as 1.xxx.
+The simple interplay can dictate what is the optimal body size.
+A dual measure will be valuable to understand the performance and compare with others.
+
+Whereas endogenous variables are important, external environment is also crucial.
+We can look at it in two phases:
+When resource is limiting.
+Resource availability limits the performance of large individuals, this make sense that if resource is finite, the high absolute cost of large individual will eventually dominates.
+When time is limiting, the quality of resources can be of importance.
+In general, performance increases with body size however for a certain parameter space intermediate body size is favored.
+The latter is non-trivial as it is only satisfied under two conditions: exponent of foraging rate is low with respect to metabolic rate and resource quality is within a certain range.
+If it is too low, there is not enough energetic gain and everyone suffers, whereas if it is too high, the large are now penalized enough.
+We assumed here that resource quality is  independent of body size but in reality small can be better at extracting higher quality resources.
+Nevertheless that can be pooled into the b3, and thus lower values are possible.
+Small dung beetles are better at extracting higher nutrient from a dung source than large ones.
+Although these appear restrictive, the role of resource quality alone can select for different body sizes.
+Adding temperature would even more enlarge the possibilities.
+
+Where is temperature???
+The role of temperature was not explicit in the previous arguments, here we discuss its role for warm-up thermoregulation.
+A significant part of the model is to understand the warm-up phase for endo and ectotherms. 
+Compare ability to warm-up.
+Verbal hypothesis, surface-area to body size. 
+Reverse effect on warm-up rate for ecto and endo.
+Under ideal conditions, it is true but when wind is added laminar convection can be high and would thus hamper warm-up rate for small individual. 
+
+The most important part is conductance between the thorax and the rest of the body. 
+This has been rarely investigated.
+Air between elytra and xx for dung beetles, moths and bees are covered with insulating pile (r1) but cooling rates are similar with db (refs).
+On surprising results is that there is a mixed strategy for endotherm
+If they warm-up early better to have thin skin to increase solar absorption
+
+Diel activity can be based on it. 
+Operative temperature does not differ between nocturnal and diurnal.
+
+What does have to do with performance?
+This will dictate how things will happen at low temperature...
+
+Verbal hypothesis on warm-up....
+
+
+Verbal hypothesis about Bergmann's rule.
+
+One of the most well-known pattern is Bergmann's rule (refs).
+Large are found in colder environment although there are also counter examples especially for cold-blooded animals (refs).
+The work provides a series of alternative hypotheses on what can generate or not Bergmann's rule.
+The prevailing pattern that is metabolism is a concave function of body size as well surface-area-to-body but it is incomplete.
+The other theory is only about growth but it does not work if being larger leads to low fitness.
+We found that these are important but cannot be evaluated with considering resource (quantity and quality).
+The absence of large individual at warm temperature can be due to the high metabolism with low resource limitation preventing them to establish \citep{Angert2005}. 
+The absence of small in cold environment can be due to the inability to warm-up.
+However, depending on whether they are ectotherm or endotherm can generate different patterns (not sure if it is limiting though see above)
+
+
+Open questions and require more data:
+Raises some questions
+Can they optimize?
+
+This part has been studied in past especially with respect to endotherms (refs.).
+Other model often focus on operative (equilibrium) temperature and generally for large ecotherms.
+In a competitive community, the ability to reach the resource first is crucial.
+We found that it often takes longer for larger whether they are ectotherm or endotherm.
+One reason is that they need to have a higher body temperature to start foraging but also because of the effect of surface area (why does it still happen in the ectotherm).
+
+Check if operative temperature is not body dependent
+
+
+
+The central variable for warm-up is the conductance between the thorax and the rest of the body. 
+
+
+
+In addition to physiological, behavior can influence the fundamental niche.
+We looked at a specific process that is common to all cold-blooded animals such as insect: that is warm-up (refs.).
+The model is highly simplified from general models of heat exchange between the individual and the environment \citep[e.g.,][]{Campbell2012}.
+The general model often focus usually is on operative (equilibrium) temperature \citep[e.g.]{Angilletta2009} rather the actual process.
+However, the the ability to forage and time left for foraging can be crucial in defining performance (say resource quality declines through time).
+Other than the realistic model, the argument is often verbal and based on surface-area-to-body size ratio (refs?).
+Most of our results aligns with  such intuition. 
+Large endotherm have better capability than smaller ones because they lose less heat and the conversely applies for ectotherm, small is better because it can absorb more heat.
+
 
  The story is however more complicated than just foraging rate.
  Two external variables have significant role.
@@ -35,6 +121,32 @@ In any case, different parameter values for active metabolic rate and especially
  \citet{Kearney2009b} already raised the issue when about shade availability (vegetation) is important for thermoregulation.
   Response can be mediated by these factors  rather than the usual focus on temperature and endogenous processes (refs.).
  Identifying which is limiting in empirical system is crucial if one wants to predict responses to environmental changes.
+
+One of our main result is that the exponent of the foraging rate plays a central role in determining performance across body size.
+We have found that if the exponent is lower than the exponent for the metabolic cost.
+This results is somehow intuitive but we actually do not know where in the parameter space we are as the relationship between body mass and foraging rate is poorly studied.
+Studies on dung beetles showed that the exponent can be larger than one \citep{Nervo2014}.
+In another study, foraging rate is only inferred from field metabolic cost \citep{Nagy1987}.
+Our model indeed shows that a high convexity of the foraging rate increases the performance of large bodied but only when active metabolic rate is extremely high.
+A high exponent of active metabolic rate ($b_2 \equiv 1.17$) has been reported for some tropical dung beetles \citep{Bartholomew1978}. 
+Factorial scope which is the ratio between maximum and resting rates can actually be up to 43 for moths \citep{Bartholomew1981} although a sustained metabolic scope is thought to be less than 7 \citep{Petterson1990}.
+In any case, different parameter values for active metabolic rate and especially foraging rate can already determine whether small or large will perform better under a given condition the need for other assumptions such as mortality or fecundity.
+
+
+Theories are useful of pinpointing the role of difference processes in shaping the performance of a species.
+Here we look at how the thermal performance changes with body size. There are many models that understand the performance of species in a given environment.
+they are often pattern oriented. 
+Our work is is to focus on process that influence the performance of an adult insect given as a function of its body size.
+In here we look how behavioral therm
+ In this work we aim to understand how net energy gain changes as function of body size and temperature for adult insect.
+ Amongst the myriad of factors that influence the performance, we explore on the role of  physiological, ecological, and behavioral processes and quantify their  relative importances in determining which body size perform best under a given condition.
+On one hand, the model relies on power law to model how energetic demand and gain depend on body size and on thermodynamic principle to study behavioral thermoregulation. 
+Although, these modeling assumptions already exist in the theoretical literature \citep[e.g.,][]{Brown1993, Kozlowski1997, Bakken1975} a unified integration of temperature, body size, and behavioral thermoregulation has not been done.
+%this can also  be in the intro.
+
+
+
+
 
 In addition to physiological, behavior can influence the fundamental niche.
 We looked at a specific process that is common to all cold-blooded animals such as insect: that is warm-up (refs.).
@@ -116,7 +228,7 @@ The absence of small in cold environment can be due to the inability to warm-up.
 However, depending on whether they are ectotherm or endotherm can generate different patterns (not sure if it is limiting though see above)
 ...
 
-Conclusions:
+Conclusions: Our goal is indeed to make some parameters measurable.
 There is no unique pattern.
 general theory about body size and temp, as scaling here
 at population scale, some things to consider.
