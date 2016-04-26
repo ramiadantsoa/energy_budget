@@ -1,150 +1,53 @@
 \section*{Introduction}
-The performance of an individual 
+%Temperature is one of the most important abiotic variables.
+%Many cellular processes requires a certain range to function.
+%These can then propagate to higher level of biological organizations.
+%At a global scale, temperature which correlates with latitude correlates with species richness. 
+...
+As the global temperature is raising, understanding species' fitness given thermal environment has become crucial.
 
-Niche is one of the most important concepts in ecology as it describes the function of an individual in a given environment.
-The geometrical abstraction by Hutchinson 
+The most common method to elucidate the relationship between a species and its thermal environment is to use species distribution models. 
+Species distribution models are based on  statistical procedures that finds a correlation between known species' occurrence and climate variables.
+The primary goal is to predict (future) species distribution for a given climate scenarios \citep{Guisan2005, Austin2007, Elith2009}
+A more direct way to measure performance along a temperature gradient (thermal sensitivity, thermal performance) is via controlled experiment.
+It is often complicated to directly measure fitness and instead rely on proximate variables such as locomotion, growth rate, assimilation, fecundity rate \citep[][and reference therein]{Angiletta2009}.
+Three basic properties of interest are the peak, the upper and lower boundary of the curve.
+They translate to the temperature that maximizes performance, the highest and lowest temperature above and below which performance becomes null, respectively. 
+These studies often found that the performance is hump-shaped with and skewed to the left i.e. the peak is closer to upper limit than the lower limit.
 
-Niche is now at the center because of crucial goal to understand species response to environmental changes.
-Understanding the performance of an individual or a population : thermal performance is essential.
+Recently theoretical work has underpinned mechanisms that underlies the skewness of the thermal performance \citep{Amarasekare2012}.
+The model  breaks down thermal performance (intrinsic growth rate)  into three components: development, fecundity, and mortality.
+The functional shapes of each of these components thus determines the basic properties of the curve.
+The framework is both elegant and sound because not only these components can be measured empirically but are also rooted on physiological principles.
+A different model that dig deep into physiological principles is called Dynamic Energy Budget (DEB) \citep{Kooijman2009}.
+The model focuses on how (food) energy is assimilated and then allocated to different needs such as growth, metabolic cost (maintenance), reproduction \citep{Kooijman2009}.
+A primary use of  these models is to fit a pattern to the data and required a detailed knowledge of the species.  
 
-The most popular way is to correlated occurrence with climate variable.
-Thermal performance has been measured way before concerns about response climate change.
-Most of the measurement does not capture fitness but a proxy and are in highly controlled environment.
-These include speed, developmental rate and xxx.
-These studies often found that the performance is skewed to the left.
-There are basically three main property of interest: the minimum temperature that allows activity called CTmin, the maximium, called CTmax and the optimum temperature.
+A general question is how thermal performance varies among species.
+...Something about large have broader distribution... \citep{Lumaret1996}.
+An intrinsic variable that often correlates with temperature is body size.
+One of the most well-known macroecological (ecogeographic) pattern is the Bergman's rule which states that body size tends to increase with decreasing temperature \citep{Bergman1847}. 
+Although the original formulation was intended for homeotherms at interspecific level, the pattern has been reported for heterotherms and at intraspecific level \citep{Blackburn1999}.
+Several hypotheses have been suggested to underlie the patterns.
+For instance, individual grows larger under colder thermal regime \citep{Van1996}.
+The original mechanism proposed by Bergman relates to surface area to volume ratio which confers larger species with higher heat conservation \citep{Blackburn1999}.
+...
+There is currently no study that investigate or how thermal performance changes with body size.
 
-Recently, Amarasekare constructed a model that breakdown thermal performance (fitness) into three components: development, fecundity, and mortality.
-It takes the functional shape of each of these component that are empirically measurable.
-She was then able figure out why tropical species has optimium near their CTmax: because xxx
-A more detailed models called DEB has a complete description of all the processes.
-It focuses on how energy is processes at different levels of physiological processes.
-A common theme with these models is they are used for specific species and to describe a pattern (although DEB are now use to predict species response to climate change)
+Body size has been related to several ecological and physiological process but it is importance for thermoregulation and behavior remains unexplored let alone be the consequences for thermal performance \citep{Dial2008}.
+Thermoregulation  is important for ectotherms as activity depends directly on it.
+There is thermoregulation during activities.
+For instance, some insects avoid overheating during flight by dissipating excess heat from the thorax to the abdomen \citep{Verdu2012}.
+In a cold environment, some insects have the opposite strategy that insulate the thorax from the rest of the body to keep heat \citep{Verdu2012}.
+In a cold environment, activities is  preceded by warm up phase because a minimum temperature is required for muscle to be efficient (refs).
+The general strategy is to bask under the sun like many lizards are doing but some species (insects) such as bees, moths, and dung beetles are capable of generating heat endogenously by contracting their muscles \citep{Heinrich1975, Bartholomew1978, Bartholomew1981}.
+The ability to warm-up is thought to be a function of body size, for instance  bee can complete warm-up in colder environment than smaller one although there is no different in heat generated per unit of mass \citep{Kammer1974, Heinrich1975}.
+Successful warm-up is needed for foraging and thus gaining energy.
+Such process has been included in some studies \citet[e.g.,][]{Buckley2008} which was applied to North American lizard but there is no current theoretical framework that investigate the role of body size in the warm-up phase and in general in the thermal performance \citep{Dial2008}.
 
-A variable that often correlates with temperature is body size.
-One of the most well-known rules is Bergmann's rule.
-Often it shows that body size increases with temperature.
-Hypotheses are heat conservation  as surface-area-to-body size ratio, food reserve, growth
-In a more general case, how thermal performance changes with body size is still unknown.
-
-One process that is of particular importance is thermoregulation for ectotherms.
-Activity depends directly on it, there is theory about operative environmental temperature which is a thermodynamical model of heat exchange.
-Regulation of body size temperature not to overheat (bee honeydew by abdominal pumping).
-When the environment is cold, an important phenomenon is the ability to raise body temperature that would enable physical activity.
-The general strategy is to bask under the sun like many lizards are doing but some species, insects such as bees and dung beetles are capable of generating endongenously (refs.
-The ability to warm-up is thus crucial for resource acquisition but has not been included in the understanding of thermal performance.
-
- In this work we build a theoretical model to understand how thermal performance varies with body size.
+ In this work we build a theoretical model to investigate how thermal performance varies with body size putting emphasis on how the role of warm-up process in shaping the curve. 
 The model is an energetic model, that is performance is defined as the difference between total energy gained and total energy lost to stay alive.
- It is similar to energy Buckely (or energy budget in general) but the goal is not to fit any species but to understand the role of different processes that influence net energy gain.
- In addition we include thermoregulation that is body size dependent (warm-up) and how does that effect the thermal performance.
- And in general how allometric scaling influence the performance.
- The model is based on adult insect with deterministic body size and are income breeder. 
-
-
-We simplify the model and focus on the performance of the determinisic body size for income breeder.   
-
-
-Unlike the previous models, actual model focus for species dist now includes behavior.
-For ectotherm, thermoregulation is crucial.
-Current  models now include thermo.
-Buckley and operative temperature.
-Review about thermoregulation.
-Temperature as a cue
- 
-
-Niche is one of the most important concepts in ecology.
-Niche was popularized by \citet{Hutchinson1957} who described species' niche as a hypervolume in a n-dimensional space.
-Moving from Hutchinson's abstraction to concrete and empirical description of the niche is nontrivial.
-The difficulty of measuring the niche as well as the emergence of non-niche based theories  (e.g. Hubbell) have dwindled the interest in ecological niche but recently started to play a more dominant role again % (or revival, resurgence).. 
-This is partly due terminological clarifications, for instance the distinction between the Grinellian and Eltonian niche \citep{Chase2003} but also because of the crucial need to predict species' response to current rapid human-induced environmental changes \citep[e.g.,][]{Parmesan2006, Kearney2009}. %one can think about environmental filtering too
-The geometrical abstraction by \citet{Hutchinson1957} is particularly useful to illustrate one key property of the niche: its breadth.
-%Niche breadth can however take two forms whether it is the fundamental or realized niche.
-Yet  characterization of niche breadth focused essentially on the realized niche in both theoretical and empirical works although understanding fundamental niche would be the first step.
-
-%In fact species with narrow niche breadth is more vulnerable to environmental changes \citep{Henle2004}.
-
-%another way to present is to talk about spectrum, this is at the one end, although not necessarily true for 
-Empirically, the characterization of the niche generally adopts three main approaches \citep{Holt2009}.
-The first approach consists of measuring the performance of  individuals in at different environmental gradients \citep{Birch1953, Elliott1982, Angert2005, Frazier2006}.
-Depending on the design,the experiment would yield an approximation of fundamental or realized niche \citep{Birch1953, Elliott1982, Angert2005, Frazier2006}.
-%The problem is that it is quite tedious to do (can be slow, requires more resources, applicable to only few species
-The second approach consists of building models that integrate highly detailed mechanisms at the molecular level, thermodynamic, physiological and behavioral to determine  the performance \citep{Kooijman2009, Kearney2009, Buckley2008}.
-This approach generally focus on the fundamental niche.
-%approach is to mechanistically construct how an individual trait interacts with the environment using a bottom-up approach %Marr-Pirt or Monod model for early energy budget model
-%The main approach is called energy budget model and is based on detailed physiological, thermodynamic and behavioral processes. 
-%The main problem with these two approaches is that they are tedious and applies to few well-studied species.
-%called brute force by Holt, some key parameters are still needs to be measured and is not often easy to get them (Nisbet2000). 
-The third approach is to use statistical methods that infers the niche from correlation between species occurrence and the environmental conditions \citep{Guisan2005, Austin2007, Elith2009}. %also Thullier2008 
-Unlike the previous two, this last approach is less data greedy and applicable to a wide variety of species.
-It is suited to tackle conservation problems.
-In these approaches, there is often a striking discrepancy between the depth of comprehension and broad application.
-Tactical strategic spectrum of pop model (Holling 1966)
-In first two, the mechanistic probing can be tedious whereas the last approach gives a correlation and tells little about the fundamental niche.
-
-Theoretically, niche partitioning has been most dominant.
-Study of coexistence aim to find mechanisms that would allow species to partition the niche in space such as the competition colonization trade-off \citep[e.g.,][]{Levins1971,Tilman1994} or partition the niche in time such as storage effect \citep{Skellam1951, Chesson2000}. %note that storage-effect also applies in space but the temporal aspect is the easiest  
- %Theoretical studies put emphases on the realized niche especially competition (resource or niche partitioning) and there are a myriad of approaches (often unlinked) depending on which phenomenon is under investigation.  
-The broken stick model is used to explain species composition (abundance or relative abundance) of communities \citep{MacArthur1957}.
-Yet, what constitutes the niche remains abstract and is simply a latent variable.
-%Although it has explanatory power, it does not tell how species interact with the environments. focus on partitioning the abstract niche rather than what is actually the niche axis. Oblivious to what niche axis actually are.
-Other models focus on the strength of competition along one niche axis.
-For instance, assuming a given trait has Gaussian resource utilization curve, competition  between two traits is quantified by the amount of overlap between their curves \citep{MacArthur1967, Roughgarden1979}.% and lead to principle of limiting similarities.
-In that latter, fundamental niche is given for granted and is used to study competition.
-%Finally, some other models investigates the evolution of niche width based on quantitative genetic framework \citep[reviewed in][]{Futuyma1988}.
-
-In the early age, Levins that they will be entangled not to be able to separate.
-There is still a divide between theory and data (Angilletta2009).
-DEB is in between but still too much on the data side.
-Mechanistic model such as DEB uses theory but they are too data dependent.
-\textit{Maybe a chance here to talk more about these energy budget model}
-In times, the parameters cannot be measured and thus limit their applicability (Nisbet).
-In addition the complexity of the processes prevents the understanding of how the processes influence the performance.
-It was shown energy budget model can fit data very well.
-In fact that is the goal.
-Theory on the other hand, surf too much on the abstraction and the realized niche.
-There is no general theory about fundamental niche.
-Traits are not defined..
-
-
-Paragraph about behavior, thermoregulation, body size allometry
-Allometry of behavior Dial 2008 TREE
-Hump-shaped attack rate and body size 
-
-Our goal in this work is to develop a model to study fundamental niche. Building block. Too great sacrifice in realism
-More specifically about niche breath for fundamental niche.
-The goal is find a balance between realism and abstraction that would constitute a bridge between theory and data.
-We thus pick two concrete variables: body size (as an intrinsic trait) and temperature (as niche axis). 
-We are interested about two main processes: physiological and behavioral. %can cite Futuyma here if more refinement is needed. Or if we want to state that those are the first underlying processes.
-We will root our modeling assumption on the vast literature on physiological and behavioral responses to temperature. 
-We use the same approach as energy budget model but put emphasizes on the role of the processes rather than fitting empirical patterns.% Require different type of data.
-We can then answer a specific question: under what condition niche breadth (or thermal performance breadth) increases or decreases as a function of body size.
-
-
-%MEETING NOTES
-% Data driven and then pure theory....competition, fundamental...
-% Expand, what is included in foraging...
-% cost of shivering
-% why are parameters of interest.
-% fig for limited time
-% emphasize generality/realism.
-% Model parameters...discussion first paragraphs into methods. 
-% not say it all depends. highlight the important ones.
-
-%To produce general results, theoretical models often make simplifying assumptions for mathematical convenience.
-%In niche models that actually consider a relationship between the trait and say performance such as in \citet{Roughgarden1979}, the assumptions are often violated.
-%For instance, resource utilization curve is Gaussian but there is no evidence that say large beak size cannot exploit small seed as efficiently as large ones. % do we need reference here
-%The symmetrical nature of the niche is not necessarily true.
-%Experimental studies  along temperature gradient shows a left skewed performance curve \citep{Angilletta2009}.
-%Finally, a trade-off in performance is not empirically verified (refs). %find that refs, otherwise use warmer is better.
-%In general, this incongruence generated a gap between theoretical and empirical works \citep{Amarasekare2003}.
-%
-%In this work, we develop a theoretical models to reconstruct the niche; more precisely a physiological and behavioral model that derives the fundamental niche for given a trait and along an environmental gradient.
-%The conceptual goal is to find a balance between realism and abstraction.
-%In doing so, we choose two of the most important variables: temperature as niche axis and body size as the focal trait.
-%The model is for adult insects...%T: not sure if there is a need to place it the intro 
-%Practically, there is a vast literature on the relationship between body size, temperature and the physiological and behavioral processes.
-%These knowledge can be used to select and root modeling assumptions to empirical data and thus brings a degree of realism.
-%We use the same approach as energy budget model but put emphasizes on the role of the processes rather than fitting empirical patterns.
-%We want to derive a null model for performance as a function of body size and answering a specific question that is: under what condition niche breadth (or thermal performance breadth) increases or decreases as a function of body size.
-%
+We use physiological principle (metabolic theory) for the metabolic cost \citep{Brown2004}.
+Our approach is not to fit any species but to understand the role of different processes that influence net energy gain and in general the allometric scaling of body size.
+We narrow our taxonomic scope to insect,  more precisely to adult insect with deterministic body size and income breeder. 
+In general we found that resource quality and quantity, allometric scaling of foraging and defines the upper thermal limit whereas warm-up ability sets the lower thermal limit.
