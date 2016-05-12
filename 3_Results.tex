@@ -8,7 +8,13 @@ We looked at the effect the amount of resource available on the performance acro
  The exponent for the foraging rate does not change the qualitative pattern.
  When resource are unlimited (we assumed that they can take up to 100 times their body size), net energy gain increases with body size (\cref{fig2}c).
 
-Change in the environmental temperature from cold to warm changes qualitatively the latter pattern (i.e., even if resource are unlimited).
+The role of temperature.
+Higher temperature means higher cost. Does it only show when cost is really high?
+There are two qualitative pattern:
+The convexity and concavity here means that foraging takes longer for large for small which increases metabolic cost.
+Temperature exacerbates these effects.
+
+Change in the environmental temperature from cold to warm changes qualitatively the latter pattern (i.e., even if resource are unlimited) when cost of activity is really high. 
 Performance (or net energy gain) is maximized at intermediate body size when foraging rate is concave and is monotonous when foraging rate is convex (\cref{fig2}de).
 This difference is more apparent at high temperature: large (small) individual only persist when $b_3$ is high (low).  
 Temperature amplifies the difference across body size especially when active metabolic rate is really high (which we assumed here).
@@ -21,7 +27,7 @@ We also looked at a different scenario where foraging time is limited.
  In general, net energy gain increases with body size (\cref{fig3}).
  However, there is a parameter space where net energy gain peaks at intermediate body size.
  Two conditions needs to be fulfilled.
- Foraging rate is concave ( large are less efficient at gathering resource per unit of mass) and resource quality is within a certain range.
+ The exponent of the foraging rate is less than the exponent of the metabolic rate (here we assume $b_1 =b_2$) and resource quality is within a certain range.
  Temperature affects the range of resource quality permitting the non monotonic pattern.
  Warmer environment means  that colder conditions.
  Temperature has a magnifying effect (because it is multiplicative) so that the range of resource quality is larger when temperature increases (\cref{fig3}b).
@@ -36,7 +42,7 @@ where,
 \widetilde{E_n} &= \theta_1 + \theta_2, \\
 \widetilde{dE_n} &= \frac{b_2}{b_3} \theta_1  +  \frac{b_1}{b_3} \theta_2.
 \end{flalign*}
-and $$\theta_1 = \frac{a_2}{a_3}  z^{b_2 - b_3}  e^{-E/[k (max(T_w(z_{th}),T_e(t))+ 273.15)]}$$ and $$\theta_2 =  \frac{a_1}{a_3} z^{b_1- b_3}  e^{-E/[k (T_e(t)+ 273.15)]} (\frac{24}{t_f} -1).$$
+and $$\theta_1 = \frac{a_2}{a_3}  z^{b_2 - b_3}  e^{-E/[k (max(T_w(z_{th}),T_e(t))+ 273.15)]}$$ and $$\theta_2 =  \frac{a_1}{a_3} z^{b_1- b_3}  e^{-E/[k (T_e(t)+ 273.15)]} (\frac{24}{\tau_f} -1).$$
 
 The difference between  $\widetilde{E_n}$ and  $\widetilde{d E_n}$ is that in  $\widetilde{dE_n}$, each term of  $\widetilde{E_n}$   is weighted by $\frac{b_2}{b_3}$ and $\frac{b_1}{b_3}$.
 Thus, a necessary condition for optimal mass to be intermediate (\cref{C1}) is that the weights are larger than 1 i.e.  $b_3 < b_1$ ($b_2 \geq b_1$ is always true). 
@@ -45,7 +51,7 @@ As temperature increases, the term with the product $\frac{b_1}{b_3}$ becomes la
 \subsection*{Role of warm-up.}
 \subsubsection*{Minimum conditions}
 Completion of warm-up is a necessary condition before foraging. 
-Under perfect conditions where solar radiation is not limiting and under convection (no wind), any individual can absorb and use that energy to complete warm-up (for the parameter we have).
+Under perfect conditions where solar radiation is not limiting and under free convection (no wind), any individual can absorb and use that energy to complete warm-up (for the parameter we have).
 Here, we explore here cases where solar radiation is limiting and wind becomes a factor.
 
 The intensity of convection (wind speed) nor the conductance do not affect qualitative results.
@@ -54,6 +60,8 @@ What matters is difference between laminar and free convection, and between ecto
 Without wind, small are better as they can warm-up at low temperature (\cref{fig4}a).
 This is due to higher surface-area to body size ratio.
 With wind, intermediate are better because, smallest individual are penalized by increased convection  which increase with surface-area to body size ratio ($h$ in \cref{eq:dTr} and \cref{fig4}b).
+There is  a balance here between that ability and the minimum temperature for activity. 
+Without the effect of temperature, large becomes better.
 For endotherm, large are always better because more heat are retained (again because of lower surface-area to body size ratio) (\cref{fig4}c).
 Adding laminar convection will favor them even more.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -77,7 +85,7 @@ On another hand, if the individual delays warm-up initiation to take advantage o
 Qualitatively, there is no difference between endotherm and ecotherm because warm-up always takes longer for larger species. 
 
 The exponent of foraging rate ($b_3$) drives how performance curves varies with body size.
-If foraging rate is convex, niche breadth increases with body size (\cref{fig3} and solid lines in \cref{fig6}b).
+If foraging rate is concave, niche breadth increases with body size (\cref{fig3} and solid lines in \cref{fig6}b).
 In fact, large individual performs better than smaller ones at any temperature (solid black line above solid gray line in \cref{fig6}b).
 However, under the same environmental condition a concave foraging rate generates a different pattern (dashed lines \cref{fig6}b).
 When temperature is high, smaller individuals perform better than larger ones.

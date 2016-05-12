@@ -20,11 +20,11 @@ We model solar radiation as in \citet{Campbell2012}.
 The intensity of solar radiation at any given time of the day is \[S_R = S_0 \cos(\psi) \]
 where $\psi$ is the zenith angle and $S_0 = 1361 \mbox{W.m}^{-2}$ the maximum solar radiation at noon.
 %Time of sunrise and sunset (when $|\psi| = 90^{\circ}$)
-Solar radiation is needed to generate heat during the warm-up component of the model (see appendix for more details on how $\psi$ depends on latitude and time of the year as well as how we obtained the time of sunrise).
+Solar radiation is needed to generate heat during the warm-up component of the model (see appendix for more details on how $\psi$ depends on latitude and the day of the year as well as how we obtained the time of sunrise).
 
-Finally, we assume that during the day, a fixed quantity of resource $R$ is available .
+Finally, we assume that during the day, a fixed quantity of resource $R$ is available.
 $\rho$ represents the energy density per unit of resource mass. %when the cost of processing the food, egestion, and excretion are subtracted. 
-Environment with poor quality can thus be obtained by low quantity or low quality.
+Poor environment in term of resource can thus be obtained by low quantity $R$ or low quality $\rho$.
 
 \subsection*{Energetic cost}
 \subsubsection*{Cost: resting metabolic rate}
@@ -91,7 +91,7 @@ Change in thoracic temperature $T_{th}$ is
 \begin{equation} \label{eq:dTh}
 	\frac{dT_{th}}{dt} = \frac{1}{s z_{th}} (z_{th} e f[T_{th}] +  A_{th} K_1(T_r - T_{th}))
 \end{equation}
-where $s$ is the specific heat capacity, $e$ is the calories generated per contraction and per gram of muscle (\citep{Kammer1974}), $A_{th}$ is total surface of the thorax, and $K_1$ the conductance between the thorax and the rest-of-the-body.
+where $s$ is the specific heat capacity, $e$ is the calories generated per contraction and per gram of muscle \citep{Kammer1974}, $A_{th}$ is total surface of the thorax, and $K_1$ the conductance between the thorax and the rest-of-the-body.
 
 The exchange between the rest-of-the-body and the environment is based on thermodynamic process. 
 \begin{equation} \label{eq:dTr} 
@@ -164,7 +164,7 @@ Our goal however is not to use argue about the homogeneity of these values but i
 \cref{fig1} depicts how the exponent influences the shape of the power law.
 
 Another form that can be used to model the effect of temperature is the use of $Q_{10}$ which is the change in rate with a $10^ {\circ} \rm{C}$ increase in the body temperature \citep{Precht1973}.
-We however opted for the Arhenius equation by \citet{Brown2004} because it reduces the number of free parameter but also it approximates the temperature effect for $Q_10 = 2.45$.  
+We however opted for the Arhenius equation by \citet{Brown2004} because it reduces the number of free parameter but also it approximates the temperature effect for $Q_{10} = 2.45$.  
 Finally, to  insure that the coefficients are not different, the model is best for species with narrow taxonomical scope and thus restricted to monophyletic group including within species. 
 
 \cref{table1} summarize different parameter values we used and explored in this work.
