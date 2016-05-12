@@ -1,18 +1,20 @@
 \section*{Introduction}
-%Temperature is one of the most important abiotic variables.
-%Many cellular processes requires a certain range to function.
-%These can then propagate to higher level of biological organizations.
-%At a global scale, temperature which correlates with latitude correlates with species richness. 
-...more abstract...comb of bio and abio that influence perf
-As the global temperature is raising, understanding species' fitness given thermal environment has become crucial.
+The distribution of species are influenced two factors: abiotic and biotic variables.
+Abiotic factors often sets a hard limit on species distribution.
+A simple example is the tree line caused temperature.
+Biotic factors are often more flexible.
+The presence of competitor is a familiar example, see barnacles, disable range limits.
+Trophic interaction, example the absence of resource or prey precludes the  species to be there, enable range limits.
+The niche of the species is concept introduced by Hutchinson that describe the range of condition for the persistence of the species.
+Reconstructing the niche along biotic and abiotic axes is a holy grail in ecology. 
 
-The most common method to elucidate the relationship between a species and its thermal environment is to use species distribution models. 
-Species distribution models are based on  statistical procedures that finds a correlation between known species' occurrence and climate variables.
+Temperature is one o the most important abiotic variable, it often shows a global gradient in latitude and altitude.
+In the face of global warming there is even a further need to understand the thermal niche of a species.
+A very popular method to reconstruct the relationship between a species and its thermal environment is to use species distribution models. 
+Species distribution models are based on statistical procedures that finds a correlation between known species' occurrence and climate variables.
 The primary goal is to predict (future) species distribution for a given climate scenarios \citep{Guisan2005, Austin2007, Elith2009}
 A more direct way to measure performance along a temperature gradient (thermal sensitivity, thermal performance) is via controlled experiment.
 It is often complicated to directly measure fitness and instead rely on proximate variables such as locomotion, growth rate, assimilation, fecundity rate \citep[][and reference therein]{Angilletta2009}.
-Three basic properties of interest are the peak, the upper and lower boundary of the curve.
-They translate to the temperature that maximizes performance, the highest and lowest temperature above and below which performance becomes null, respectively. 
 These studies found that the performance is hump-shaped with and skewed to the left i.e. the peak is closer to upper limit than the lower limit.
 
 Recently theoretical work has underpinned mechanisms that underlies the skewness of the thermal performance \citep{Amarasekare2012}.
@@ -24,40 +26,47 @@ The model focuses on how (food) energy is assimilated and then allocated to diff
 A primary use of  these models is to fit a pattern to the data and required a detailed knowledge of the species.  
 
 
-ultimate cause? exper what aspect of the ind lead to those diff
-
-
-this helps us see that performance curves/niche differs among individuals, but it doesn't provide a framework for understanding the intrinsic causes of those differences
-body size is perhaps one explanation of those differences ... body size and temperature other work ...
-
-
-A general question is how thermal performance varies among species.
-...Something about large have broader distribution... \citep{Lumaret1996}.
-An intrinsic variable that often correlates with temperature is body size.
-One of the most well-known macroecological (ecogeographic) pattern is the Bergman's rule which states that body size tends to increase with decreasing temperature \citep{Bergman1847}. 
-Although the original formulation was intended for homeotherms at interspecific level, the pattern has been reported for heterotherms and at intraspecific level \citep{Blackburn1999}.
-Several hypotheses have been suggested to underlie the patterns.
+Such model framework helps us understand that performance curves and how they differs  among individuals, but it does not provide a framework for understanding the intrinsic causes of those differences.
+One variable that might underlie those differences is body size.
+Body size is often associated with temperature.  
 For instance, individual grows larger under colder thermal regime \citep{Van1996}.
-The original mechanism proposed by Bergman relates to surface area to volume ratio which confers larger species with higher heat conservation \citep{Blackburn1999}.
-...
-There is currently no study that investigate or how thermal performance changes with body size.
-goal of the work...
+Metabolic theory of ecology links with one equation body size and temperature \citep{Brown2004}
+%...Something about large have broader distribution... \citep{Lumaret1996}.
+One of the most well-known macroecological (ecogeographic) pattern is the Bergman's rule which states that body size tends to increase with decreasing temperature \citep{Bergman1847}. 
+%Although the original formulation was intended for homeotherms at interspecific level, the pattern has been reported for heterotherms and at intraspecific level \citep{Blackburn1999}.
+%Several hypotheses have been suggested to underlie the patterns.
+%For instance, individual grows larger under colder thermal regime \citep{Van1996}.
+%The original mechanism proposed by Bergman relates to surface area to volume ratio which confers larger species with higher heat conservation \citep{Blackburn1999}.
+Yet, there is currently no study that investigate how thermal performance changes with body size.
+Our goal of the work is to develop and analyze a model that evaluates how different processes that links to body size generates thermal performance curves.
 
-Body size has been related to several ecological and physiological process but it is importance for thermoregulation and behavior remains unexplored let alone be the consequences for thermal performance \citep{Dial2008}.
-Thermoregulation  is important for ectotherms as activity depends directly on it.
-There is thermoregulation during activities.
+For cold blooded animals, temperature is even more crucial as it regulates activities.
+Thermoregulation is important in both warm and cold environment.
+In warm environment, species thermoregulate to avoid overheating.
 For instance, some insects avoid overheating during flight by dissipating excess heat from the thorax to the abdomen \citep{Verdu2012}.
+In cold environment, some individuals also regulates avoid losing heat.
 In a cold environment, some insects have the opposite strategy that insulate the thorax from the rest of the body to keep heat \citep{Verdu2012}.
-In a cold environment, activities is  preceded by warm up phase because a minimum temperature is required for muscle to be efficient (refs).
-The general strategy is to bask under the sun like many lizards are doing but some species (insects) such as bees, moths, and dung beetles are capable of generating heat endogenously by contracting their muscles \citep{Heinrich1975, Bartholomew1978, Bartholomew1981}.
-The ability to warm-up is thought to be a function of body size, for instance  bee can complete warm-up in colder environment than smaller one although there is no different in heat generated per unit of mass \citep{Kammer1974, Heinrich1975}.
-Successful warm-up is needed for foraging and thus gaining energy.
-Such process has been included in some studies.
-For instance, \citet{Buckley2008} included the operative temperature of the North American lizard that conditioned but there is no current theoretical framework that investigate the role of body size in the warm-up phase and in general in the thermal performance \citep{Dial2008}.
+An overlooked component is warm-up.
+Muscle needs to be at certain temperature to function properly thus when the environment is below that temperature.
+And individual needs to do warm-up. 
+This can be achieved by basking or under the sun or some endogeneous heat production through shivering (refs).
+In this case, body size have a direct influence as it mediates heat absorption and in general exchange via surface-area to body size ratio this is called conductance.
+The capacity of warm-up has recently being integrated into physiological model see Buckley for one lizard,  but there is no explicit study of how these leads to differences in overlap performance and to make comparison across body size. 
+%Behavioral thermoregulation is important but its consequence on thermal performance remain unexplored \citep{Dial2008}.
 
- In this work we build a theoretical model to investigate how thermal performance varies with body size putting emphasis on how the role of warm-up process in shaping the curve. 
-The model is an energy budget model, that is performance is defined as the difference between total energy gained and total energy lost to stay alive.
-We use physiological principle (metabolic theory) for the metabolic cost \citep{Brown2004}.
-Our approach is not to fit any species but to understand the role of different processes that influence net energy gain and in general the allometric scaling of body size.
-We narrow our taxonomic scope to insect,  more precisely to adult insect with deterministic body size and income breeder. 
-In general we found that resource quality and quantity, allometric scaling of foraging and defines the upper thermal limit whereas warm-up ability sets the lower thermal limit.
+
+%In a cold environment, activities is  preceded by warm up phase because a minimum temperature is required for muscle to be efficient (refs).
+%The general strategy is to bask under the sun like many lizards are doing but some species (insects) such as bees, moths, and dung beetles are capable of generating heat endogenously by contracting their muscles \citep{Heinrich1975, Bartholomew1978, Bartholomew1981}.
+%The ability to warm-up is thought to be a function of body size, for instance  bee can complete warm-up in colder environment than smaller one although there is no different in heat generated per unit of mass \citep{Kammer1974, Heinrich1975}.
+%Successful warm-up is needed for foraging and thus gaining energy.
+%Such process has been included in some studies.
+%For instance, \citet{Buckley2008} included the operative temperature of the North American lizard that conditioned but there is no current theoretical framework that investigate the role of body size in the warm-up phase and in general in the thermal performance \citep{Dial2008}.
+
+ In this work we build a theoretical model to investigate how thermal performance varies with body size.
+ More precisely, to understand how processes resulting from body size and temperature relationship such as thermoregulation, metabolism, and foraging creates different patterns and which conditions favor large or small body.
+ The model is an energy budget model, performance is defined as the difference between total energy gained and total energy lost to stay alive.
+ Unlike other models of energy budget, we do not fit any species but focus on the role of various processes on performance. This is thus a process-based model not a pattern-based.
+%We use physiological principle (metabolic theory) for the metabolic cost \citep{Brown2004}.
+%Our approach is not to fit any species but to understand the role of different processes that influence net energy gain and in general the allometric scaling of body size.
+%We narrow our taxonomic scope to insect,  more precisely to adult insect with deterministic body size and income breeder. 
+In general we found that resource availability and allometric scaling of foraging and defines the upper thermal limit whereas thermoregulation ability of warm-up sets the lower thermal limit.
