@@ -14,7 +14,7 @@ We consider three properties of the environment: the environmental temperature, 
 We define environmental temperature $T_e$ as the temperature felt by the individual while inactive.
 %We implicitly assume that environmental temperature takes into account other factors such as humidity and so on.
 Because insects are small enough, we further assume that environmental temperature does not depend on body size.
-For simplicity and otherwise mentioned, we assume temperature is constant during the day.
+For simplicity and otherwise mentioned, we assume temperature is constant during the day. % E: This sounds quite restrictive here, and you did so much work with variable temperature.  Maybe say that variable-temp results are in Appendix and are qualitatively the same?
 
 We model solar radiation as in \citet{Campbell2012}.
 The intensity of solar radiation at any given time of the day is \[S_R = S_0 \cos(\psi) \]
@@ -37,7 +37,7 @@ At rest, the body temperature of the individual matches that of the environmenta
 
 \subsubsection*{Cost: active metabolic rate}
 Naturally, we assume that the cost of activity exceed that of resting. 
-For simplicity, we assume that functional forms of the active metabolic rate is the same as that of the resting metabolic rate, i.e.,
+For simplicity, we assume that functional forms of the active metabolic rate is the same as that of the resting metabolic rate, i.e., % E: for simplicity, but also especially because it is poorly characterized empirically?
 \begin{equation} \label{eq:ea}
 	e_a(z,t) = a_2 z^{b_2}  e^{-E/[k (\max(T_w(z_{th}), T_e(t))+ 273.15)]}
 \end{equation}
@@ -65,6 +65,8 @@ Finally, the rate of energy gain is
 \begin{equation} \label{eq:eg}
 	e_g(z) = a_3 z^{b_3} \times \rho  = g(z) \times \rho.
 \end{equation}
+
+% E: At this point, I was wondering about justifications for the various functions and parameters.  It might be good to mention earlier to the reader (e.g., first paragraph of M&M) that you will be discussing the justifications extensively later on.
 
 \subsection*{Warm-up}
 Warm-up is a prerequisite for foraging when the temperature of the muscle is below its minimum value which occurs when the environmental temperature is low. 
@@ -109,8 +111,10 @@ Here, we ignore view factors, reflected radiation and so on, and pool every sour
 Parameters $r_3$ is used to scale and summarize the quantity of absorbed solar radiation.
 
 We solve the ODE numerically using NDSolve implemented in \citet{Mathematica10}.
-By solving the equation through time, we can find if the minimum temperature  required for activity $T_w$ is reached.
+By solving the equation through time, we can find if the minimum temperature  required for activity $T_w$ is reached. % E: Be prepared to submit your Mathematica notebook as a supplemental file (as .nb and .pdf).
 In that case, we can also solve for the duration of the warm-up $\tau_w$ which corresponds by definition to $T_{th}(\tau_w) = T_w$. 
+
+% E: Should have mentioned in the warm-up section that this is "behavior"?
 
  \subsection*{Net energy budget}
 We now integrate all the components above to calculate  the energy budget during a 24-hour period.
@@ -131,7 +135,7 @@ If we assume that warm-up starts at $t_w$ (we use $t$ to denote the time of the 
 	E_t(z, \tau_f) = \int_0^{t_i} e_b(z, t) dt + \int_{t_i + \tau_w}^{t_i + \tau_f } e_a(z,t) dt + \int_{t_i+\tau_f}^{24} e_b(z, t) dt 
 \end{equation}
 $e_b$ is defined in \cref{eq:eb}  and $e_a$ in \cref{eq:ea}.
-The energetic cost for endothermic insect is negligible \citep{Heinrich1975} and is omitted in \cref{eq:et}.
+The energetic cost for endothermic insect is negligible \citep{Heinrich1975} and is omitted in \cref{eq:et}. % E: Could be more explicit and say that you evaluated the corresponding integral and found it negligible.
 
 Daily net energy gain is obtained from the  difference between energy gain from foraging and total energy expended, i.e.,
 \[ 
@@ -156,7 +160,7 @@ Recent studies have explored rate of energetic gain and recovered a power law re
 There seems to be no single exponent $b_3$.
 For instance, its value can depend on dimension of the search space with a value of 0.85 for a two-dimensional search space to 1.06 in three-dimensional search space \citep{Pawar2012}.
 Body size can actually influence other processes, for instance walking speed  can scale with a power 0.29 \citep{Peters1986}, with dominance competition excerted by larger individual, exponent might also scale superlinearly.
-Our goal however is not to argue about the homogeneity of these values but instead to explore the consequences of their heterogeneities.
+Our goal however is not to argue about the homogeneity of these values but instead to explore the consequences of their heterogeneities. % E: nice dodge :)
 \cref{fig1} depicts how the exponent influences the shape of the power law.
 
 Another form that can be used to model the effect of temperature is the use of $Q_{10}$ which is the change in rate with a $10^ {\circ} \rm{C}$ increase in the body temperature \citep{Precht1973}.
@@ -201,3 +205,4 @@ $r_3$  & Scale factor for the quantity of solar radiation absorbed & 0.5 & ... &
 \end{tabular}
 \end{sidewaystable}
 
+% E: You asked about figure (and table) placement.  The latex package endfloat allows figures/tables to be placed in the source file where they belong (like this table), but then printed at the end of the pdf when desired.
