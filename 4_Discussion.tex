@@ -1,49 +1,38 @@
 \section*{Discussion}
-In this work we build a theoretical model to investigate how thermal performance varies with body size for cold blooded animals. 
-To do so, we look at the marginal and combined effect of three processes along temperature gradient and for a given amount of resource. 
-Integrate 3 things...
-What determines niche, lower upper and middle part, no clear mapping
-Maybe bergmann afterwards
-measure things
+In this work, we built and analyzed an integrative model that reconstruct the thermal performance as a function of body size.
+Our differs with classical energy budgets \citep[e.g.,][]{Kooijman2009} in two ways.
+First, our goal is not to fit a particular empirical data but to explore the role of various processes that goes into the model.
+As such we lies in whatever find the balance between theory and data.
+Second, we put a strong emphasis on the role of behavioral thermoregulation for ectotherm in shaping performance by analyzing in details the temporal process of warm-up.
+%Other models just look at equilibrium temperature.
+In general, we concluded that such ability to warm-up may have a important influence on the performance in cold environment.
+Whereas the upper part is limited by physiological and ecological processes such as resource availability, foraging, and metabolism.
+This concur with other models of range limits (refs)% T: Emma on top of your head?
+Moreover,  there is actually no clear mapping on how performance (optimal temperature, critical minimum, maximum) changes with body size and should be evaluated case by case.
+Because of how the model is constructed, it should be parameterizable.
 
+Metabolic rate, especially resting, has been the subject of intense empirical and theoretical investigation (Isaac, Brown, Peters, West for how does it arise, Kozlowski allometric scaling).
+Of particular interest is on the universality of the exponent know as the 3/4 law.
+Whereas it is interesting on its own, it is secondary to the foraging rate in defining performance.
+We found that the convexity or concavity of the shape of foraging is crucial.
+When comparing performance across body size it makes sense because concavity favors small whereas convex would benefit large.
+This effect is accentuated especially when active metabolic rate is high in itself of as consequence of warm environment (fig 2xx).
+Unlike the exponent of resting metabolic rate, there is no clear values for the exponent of active metabolic rate and foraging rate (see parameter justification).
+Some models in the past like Yodzis or Brown kind of a single value, say 0.75 similar to physiology but is often not based on any empirical data.
+Recent study has shown that this value can is more variable than resting metabolic rate and factors such as dimensionality of search (complete exogenous), searching ability (complete endogenous visual acuity or maneuverability),  species interaction (e.g. competition) can all shaped that foraging rate (case specific).
+We hypothesize that there is more variation in these rates that is worth to be looked into more details as there are more potential to generate various patterns.% Still fuzzy here, can you relate to any concrete empirical example?
 
-notes:
-Niche in the discussion
-In this work we wanted understand how thermal performance varies with body size.
-We wanted to answer questions like does thermal niche breadth increase or decrease with body size, does optimal temperature increase or decrease with body size.
-We focus on how the allometry of physiological processes (metabolism), ecological process (foraging), and behavioral thermoregulation (warm-up) shapes thermal performance. 
-Unlike many energy budget models \citep[e.g.,][]{Brown1993,Kooijmann2009}, this is a process-oriented rather than pattern oriented modeling.
-We strive to find a balance between realism and abstraction that makes to model fully parameterizable and flexible enough to generate general insight.
-We are in the middle of what \citet{Hooling1966} called tactical-strategic spectrum (ranging from the need to perform detailed measurements and generally defined parameters that cannot be measured).
-%T: I just like the term tactical-strategic. It can be left off.
+In addition to temperature, we also evaluate the importance a ubuquitous exogenous variable : resource quantity and quality.
+A rather clear result is that resource limitation harms large individual more than the small one.
+This is based on the fact that gain is limited but cost keeps increasing.
+This clarifies and complements a verbal hypothesis why we find large individual in colder environment.
+They need to have enough resource first.
+Yet, finding smaller individuals can also be the reason for finding a decreasing gradient.
+Is there really more resource in higher latitude? with an explanation of large being better here starvation hypothesis.
+Even if they are better at foraging. 
+Maybe look at storage.
 
-CHOWN 2007 Scaling of insect metabolic rate is inconsistent with the nutrient supply network model
-KINGSOLVER 2016	Beyond Thermal Performance Curves: Modeling Time-Dependent Effects of Thermal Stress on Ectotherm Growth Rates
-
-What are the roles of metabolism in defining performance?
-A classical results is that resting metabolic rate scales with body size with a power 3/4  \citep{Kleiber1947, Peters1986, Brown2004}.
-It has been a source of debate for instance whether it is 2/3 or 3/4 \citep[for refs][]{Yodzis1992, Isaac2010}.
-Other theoretical models tried to explain the 3/4 power \citep[e.g.,][]{West1997, Kozlowski1997}.
-Although they are interesting on their own, when the goal is to define performance the picture is incomplete without foraging.
-
-What is the role of foraging?
-Scaling of foraging rate is a determinant factor when comparing performance across body size.
-Theoretical works often assume that the exponent is also 0.75 \citep{Yodzis1992, Brown1993}.
-Such value is not often supported empirically .
-For instance, \citet{Maino2015} found that at the interspecific level, the slope can exceed 3/4 (they look at consumption rate).
-\citet{Pawar2012} did a meta-analysis and found that the exponent depends on the dimension on the search space and can reach up to 1.08.
-Low exponent, say velocity of locomotion can be low (around 0.20)  \citep{Peters1986}.
-Say search time, speed, visual acuity all can shape encounter and consumption rate \citep[ref in][]{Kalinkat2015}.
-\citet{Yodzis1992} mentioned that the ecology context can define the exponent rate without specifying the dependence on body size.
-We explored here the consequences of these different exponents within a range 0.5 and 1.25.
-The concavity or convexity of that function generally determines where performance increases monotonically (i.e. large is always better) or not (intermediate body size is better).
-It is obvious that the smallest (at the limit of body size equals zero) cannot be optimal due to physical and physiological limit.
-Another aspect is that the exponent also influences total foraging time which in turn influences the metabolic cost of activities
-Comparing performance would first require the need to clarify the parameter values within the system under study.
-
-Whereas endogenous variables are important, external environment is also crucial.
-Resources are generally limited.
-When resources are limited, large which has an higher absolute metabolic cost thus have lower net energy gain, and also narrower thermal breadth.
+A rather surprising and interesting result is the role of resource quality.
 An interesting result is when foraging is limited in time.
 In general, performance increases with body size but for a certain parameter space intermediate body size is favored.
 Having a concave exponent for foraging rate is not enough (i.e. large are less efficient at gathering resource per unit of mass).
@@ -51,14 +40,15 @@ Resource quality needs to be within a certain range.
 In fact, if resource quality is too low, there is not enough energetic gain and everyone suffers (we did not evaluate negative net energy gain), whereas if it is too high, the large are not penalized enough.
 %Small dung beetles are better at extracting higher nutrient from a dung source than large ones.
 Resource quality alone and not quantity can select for different body sizes even if everything else remain the same.
+%Think about Malagasy dung beetles that did not switch to cow dung....
 Optimal body size would shift to lower values are resource quality decreases.
 Such selection is also more likely in warmer environment.
 Comparing performance is incomplete and one does not consider a better description of the environment (resource-wise) \citet{Sears2015}.
 
-Most energetic budget models (process-oriented) do not include ignores behavioral aspect.
-A novel approach we have is to include the effect of body size on thermoregulation and thermoregulation on performance.
+A novel approach we have is to include the effect of body size on thermoregulation and the effect of thermoregulation on performance.
 We developed and analyzed a thermodynamic model that determine the warm-up process.
 Such process has been analyzed empirically during the 80's  for endotherm  such dung beetles, bee, moth \citep{Heinrich1975, Bartholomew1978, Bartholomew1981}.
+Whereas now, it is more the equilbrium operative temperature....(Angilleta2009).
 A key parameter is conductance between the body and the thorax as it determines the heat exchange between the individual and the environment.
 Much studies on thermoregulation have been done for large ecotherms (lizard) (refs).
 80's studies actually investigated the heat exchange for endothermic insects.
@@ -68,7 +58,7 @@ Color...
 %Two moths (income and capital breeding) with different warm-up style (whir vs quiver wings) are similar allometrically in energetics of endothermy \citep{Bartholomew1981}.
 Is there any adaptation for small endotherm to lose less heat, or as for mammals big is better because coat becomes thicker?
 
-The duration of warm-up can be essential.
+In a more practical way...temporal partitioning. The duration of warm-up can be essential.
 A dung beetle can take a while up to 40 min to warm-up \citep{Verdu2008}.
 Our  model shows that the timing of warm-up is important and too long warm-up can affect significantly performance.
 In a highly competitive community such as dung beetles reaching the site as soon as possible confers a great advantage, additionally fresh dung is more palatable \citep{Hanski1991}.
@@ -82,53 +72,173 @@ It would be interesting to know if species that differs in their diel activity a
 More studies on warm-up: how it drives diel activity (and its partitioning), is there a correspondence between the conductance and the timing of foraging i.e. are they smart enough so they can optimize the timing of warm-up? 
 Recent reviews emphasize the role of thermoregulation and should be included in evaluation performance \cref{Dial2008, Kalinkat2015}.
 
+Model limitation....
+Only look at net gain
+We are in the middle of what \citet{Hooling1966} called tactical-strategic spectrum (ranging from the need to perform detailed measurements and generally defined parameters that cannot be measured).
+Level of details?
+No growth...
+Other variable e.g.humidity
+what goes into the model can be an endless list...
+The advantage is that it can be extended.
+From here to Amarasekare
 
-\textbf{Other things (interesting?):} 
-- verbal argument that small dung beetles just wait until food shows up whereas  large do more active searching.
-- Studies have shown that below 2 g, body temperature depends on ambient temperature and above it becomes independent, role of conductance? 
+Ways to take the model:
+temperature and habitat loss.
+amarasekare again???? Angilletta theoretical work.
+Bergmanns
+Process and what to measure
+Extension.
 
-Macroecological consequences?
-One reason where variation in thermal performance across body size is to investigate macroecological pattern.
-One of the most known pattern is Bergmann's rule.
-There has been debate whether the rule holds or not.
-There are many examples that found the opposite, it can be common in invertebrates (refs).
-There are various explanations \citep{Chown2010}.
-Our models showed that many mechanisms can underly the pattern.
-1- resource limitation penalizes large ones: temperature plays a role in increasing cost for large.
-2- allometric scaling of foraging can penalize large ones: they don't get enough resource. 
-3- reduction in resource quality
-There are ecological factors without the need to call for physiological, if it occurs to be true, theres should be a relationship between the magnitude of decrease in body size and resource availability (can also be due to competition) moderated by the temperature effect.
-%excess of resource and little competition??
-The inverse pattern can also occur if foraging rate is highly convex...
-Use of quantitative model can give insight and verify verbal assumption.
- %Chown Gaston 2010: 
- % Large because excess of resource due to low competition (p98 1st col) thus grow faster and get bigger
- %Sawtooth pattern (intraspecific) voltinism
- %restistance hyp (Cushman et al 1993): large resist to starvation and whole section if ref is needed- and counterexample NVDI and wing length in africa
- %hostplant effect (mentioning quality) arctic as good example, those not on angiosperm. Resource limitation (Repasky 1991)
- %Pop dens scales with -0.75  and since R scales  with 0.75 thus equal ``energetic equivalence rule''- no supported Blackburn and ganston 1998
- 
-What are we missing?
-Evaluating performance has been done in the past.
-There is a bunch of literature that is about growth  (e.g. Kozlowski2004, Vanbertanlafy, van der have). 
-Other models focus on performance as a function of body size (e.g. Yodzis, Brown).
-The same assumption is that performance is defined as the difference between input and output.
-We use net energy gain here as a first proxy of performance.
-We do not mean it as fitness, as Kozlowski states, how mortality scales can change the optimum.
-%More resource can actually decrease mortality...
-A way to convert resource to offspring for instance if fecundity is linear
-Finally a key aspect that is missing is humidity.
-This is a simplifying version of DEB but they are necessary to illustrate the effect of the other factors.
-Competition to reduce resource availability, the only thing to do is to convert foraging rate so that it depends on the set of competitors.
-
-
-link back to SDM, can't tell what causes absence.
-relates to piece in amarasekare, body size to fec
-       
-Conclusion:
--more mec for niche theory
-- what to think about when comparing performance across body size.
-- multiplicative effect of temperature stronger effect on large
-- consequences of habitat loss on thermal performance: large will suffer most---past extinction? (ref Angiletta).
-- parameter values are unknown and empirical measurements are needed.
-- upper limit defined by physiology, lower limit defined by behavior and thermoregulation.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%Evaluating performance has been done in the past.
+%There is a bunch of literature that is about growth  (e.g. Kozlowski2004, Vanbertanlafy, van der have). 
+%Other models focus on performance as a function of body size (e.g. Yodzis, Brown).
+%The same assumption is that performance is defined as the difference between input and output.
+%We use net energy gain here as a first proxy of performance.
+%We do not mean it as fitness, as Kozlowski states, how mortality scales can change the optimum.
+%%More resource can actually decrease mortality...
+%A way to convert resource to offspring for instance if fecundity is linear
+%Finally a key aspect that is missing is humidity.
+%This is a simplifying version of DEB but they are necessary to illustrate the effect of the other factors.
+%Competition to reduce resource availability, the only thing to do is to convert foraging rate so that it depends on the set of competitors.
+%
+%
+%
+%notes:
+%Niche in the discussion
+%In this work we wanted understand how thermal performance varies with body size.
+%We wanted to answer questions like does thermal niche breadth increase or decrease with body size, does optimal temperature increase or decrease with body size.
+%We focus on how the allometry of physiological processes (metabolism), ecological process (foraging), and behavioral thermoregulation (warm-up) shapes thermal performance. 
+%Unlike many energy budget models \citep[e.g.,][]{Brown1993,Kooijmann2009}, this is a process-oriented rather than pattern oriented modeling.
+%We strive to find a balance between realism and abstraction that makes to model fully parameterizable and flexible enough to generate general insight.
+%We are in the middle of what \citet{Hooling1966} called tactical-strategic spectrum (ranging from the need to perform detailed measurements and generally defined parameters that cannot be measured).
+%%T: I just like the term tactical-strategic. It can be left off.
+%
+%CHOWN 2007 Scaling of insect metabolic rate is inconsistent with the nutrient supply network model
+%KINGSOLVER 2016	Beyond Thermal Performance Curves: Modeling Time-Dependent Effects of Thermal Stress on Ectotherm Growth Rates
+%
+%What are the roles of metabolism in defining performance?
+%A classical results is that resting metabolic rate scales with body size with a power 3/4  \citep{Kleiber1947, Peters1986, Brown2004}.
+%It has been a source of debate for instance whether it is 2/3 or 3/4 \citep[for refs][]{Yodzis1992, Isaac2010}.
+%Other theoretical models tried to explain the 3/4 power \citep[e.g.,][]{West1997, Kozlowski1997}.
+%Although they are interesting on their own, when the goal is to define performance the picture is incomplete without foraging.
+%
+%What is the role of foraging?
+%Scaling of foraging rate is a determinant factor when comparing performance across body size.
+%Theoretical works often assume that the exponent is also 0.75 \citep{Yodzis1992, Brown1993}.
+%Such value is not often supported empirically .
+%For instance, \citet{Maino2015} found that at the interspecific level, the slope can exceed 3/4 (they look at consumption rate).
+%\citet{Pawar2012} did a meta-analysis and found that the exponent depends on the dimension on the search space and can reach up to 1.08.
+%Low exponent, say velocity of locomotion can be low (around 0.20)  \citep{Peters1986}.
+%Say search time, speed, visual acuity all can shape encounter and consumption rate \citep[ref in][]{Kalinkat2015}.
+%\citet{Yodzis1992} mentioned that the ecology context can define the exponent rate without specifying the dependence on body size.
+%We explored here the consequences of these different exponents within a range 0.5 and 1.25.
+%The concavity or convexity of that function generally determines where performance increases monotonically (i.e. large is always better) or not (intermediate body size is better).
+%It is obvious that the smallest (at the limit of body size equals zero) cannot be optimal due to physical and physiological limit.
+%Another aspect is that the exponent also influences total foraging time which in turn influences the metabolic cost of activities
+%Comparing performance would first require the need to clarify the parameter values within the system under study.
+%
+%Whereas endogenous variables are important, external environment is also crucial.
+%Resources are generally limited.
+%When resources are limited, large which has an higher absolute metabolic cost thus have lower net energy gain, and also narrower thermal breadth.
+%An interesting result is when foraging is limited in time.
+%In general, performance increases with body size but for a certain parameter space intermediate body size is favored.
+%Having a concave exponent for foraging rate is not enough (i.e. large are less efficient at gathering resource per unit of mass).
+%Resource quality needs to be within a certain range.
+%In fact, if resource quality is too low, there is not enough energetic gain and everyone suffers (we did not evaluate negative net energy gain), whereas if it is too high, the large are not penalized enough.
+%%Small dung beetles are better at extracting higher nutrient from a dung source than large ones.
+%Resource quality alone and not quantity can select for different body sizes even if everything else remain the same.
+%Optimal body size would shift to lower values are resource quality decreases.
+%Such selection is also more likely in warmer environment.
+%Comparing performance is incomplete and one does not consider a better description of the environment (resource-wise) \citet{Sears2015}.
+%
+%Most energetic budget models (process-oriented) do not include ignores behavioral aspect.
+%A novel approach we have is to include the effect of body size on thermoregulation and thermoregulation on performance.
+%We developed and analyzed a thermodynamic model that determine the warm-up process.
+%Such process has been analyzed empirically during the 80's  for endotherm  such dung beetles, bee, moth \citep{Heinrich1975, Bartholomew1978, Bartholomew1981}.
+%A key parameter is conductance between the body and the thorax as it determines the heat exchange between the individual and the environment.
+%Much studies on thermoregulation have been done for large ecotherms (lizard) (refs).
+%80's studies actually investigated the heat exchange for endothermic insects.
+%Although conductance is controlled by the air beneath the elythra for dung beetles and by an insulating pile for moths and bees, cooling rates are similar \citep{Bartholomew1978}.  
+%It would be interesting to know  how much conductance differ between ecotherm and endotherm.
+%Color...
+%%Two moths (income and capital breeding) with different warm-up style (whir vs quiver wings) are similar allometrically in energetics of endothermy \citep{Bartholomew1981}.
+%Is there any adaptation for small endotherm to lose less heat, or as for mammals big is better because coat becomes thicker?
+%
+%The duration of warm-up can be essential.
+%A dung beetle can take a while up to 40 min to warm-up \citep{Verdu2008}.
+%Our  model shows that the timing of warm-up is important and too long warm-up can affect significantly performance.
+%In a highly competitive community such as dung beetles reaching the site as soon as possible confers a great advantage, additionally fresh dung is more palatable \citep{Hanski1991}.
+%Temporal partitioning has been reported to facilitate coexistence of sympatric species \citep{Verdu2007, Verdu2012}.
+%Two species of dung beetles forage at different time because the first is better are retaining heat and thus is active during cold period and the second is better are dissipating heat (the mechanism is to control of heat transfer to the abdomen) \citep{Verdu2012}.
+%Body size constraints on warm-up ability because of different scaling of surface and volume.
+%As a consequence is a potential mechanisms to temporal partitioning of activity (also combined with conductance above).
+%Our model actually showed that different values of conductance are preferred at different time of the day for endotherms.
+%Does it happen in reality? % T: I am not sure where to place that topic, here or above
+%It would be interesting to know if species that differs in their diel activity also have different conductance (this is relevant event without considering body size)  
+%More studies on warm-up: how it drives diel activity (and its partitioning), is there a correspondence between the conductance and the timing of foraging i.e. are they smart enough so they can optimize the timing of warm-up? 
+%Recent reviews emphasize the role of thermoregulation and should be included in evaluation performance \cref{Dial2008, Kalinkat2015}.
+%
+%
+%\textbf{Other things (interesting?):} 
+%- verbal argument that small dung beetles just wait until food shows up whereas  large do more active searching.
+%- Studies have shown that below 2 g, body temperature depends on ambient temperature and above it becomes independent, role of conductance? 
+%
+%Macroecological consequences?
+%One reason where variation in thermal performance across body size is to investigate macroecological pattern.
+%One of the most known pattern is Bergmann's rule.
+%There has been debate whether the rule holds or not.
+%There are many examples that found the opposite, it can be common in invertebrates (refs).
+%There are various explanations \citep{Chown2010}.
+%Our models showed that many mechanisms can underly the pattern.
+%1- resource limitation penalizes large ones: temperature plays a role in increasing cost for large.
+%2- allometric scaling of foraging can penalize large ones: they don't get enough resource. 
+%3- reduction in resource quality
+%There are ecological factors without the need to call for physiological, if it occurs to be true, theres should be a relationship between the magnitude of decrease in body size and resource availability (can also be due to competition) moderated by the temperature effect.
+%%excess of resource and little competition??
+%The inverse pattern can also occur if foraging rate is highly convex...
+%Use of quantitative model can give insight and verify verbal assumption.
+% %Chown Gaston 2010: 
+% % Large because excess of resource due to low competition (p98 1st col) thus grow faster and get bigger
+% %Sawtooth pattern (intraspecific) voltinism
+% %restistance hyp (Cushman et al 1993): large resist to starvation and whole section if ref is needed- and counterexample NVDI and wing length in africa
+% %hostplant effect (mentioning quality) arctic as good example, those not on angiosperm. Resource limitation (Repasky 1991)
+% %Pop dens scales with -0.75  and since R scales  with 0.75 thus equal ``energetic equivalence rule''- no supported Blackburn and ganston 1998
+% 
+%What are we missing?
+%We are in the middle of what \citet{Hooling1966} called tactical-strategic spectrum (ranging from the need to perform detailed measurements and generally defined parameters that cannot be measured).
+%Level of details?
+%What next?
+%
+%Evaluating performance has been done in the past.
+%There is a bunch of literature that is about growth  (e.g. Kozlowski2004, Vanbertanlafy, van der have). 
+%Other models focus on performance as a function of body size (e.g. Yodzis, Brown).
+%The same assumption is that performance is defined as the difference between input and output.
+%We use net energy gain here as a first proxy of performance.
+%We do not mean it as fitness, as Kozlowski states, how mortality scales can change the optimum.
+%%More resource can actually decrease mortality...
+%A way to convert resource to offspring for instance if fecundity is linear
+%Finally a key aspect that is missing is humidity.
+%This is a simplifying version of DEB but they are necessary to illustrate the effect of the other factors.
+%Competition to reduce resource availability, the only thing to do is to convert foraging rate so that it depends on the set of competitors.
+%
+%
+%link back to SDM, can't tell what causes absence.
+%relates to piece in amarasekare, body size to fec
+%       
+%Ways to take the model:
+%temperature and habitat loss.
+%amarasekare again???? Angilletta theoretical work.
+%Bergmanns
+%What to measure
+%Extension.
+%       
+%Conclusion:
+%-more mec for niche theory
+%- what to think about when comparing performance across body size.
+%- multiplicative effect of temperature stronger effect on large
+%- consequences of habitat loss on thermal performance: large will suffer most---past extinction? (ref Angiletta).
+%- parameter values are unknown and empirical measurements are needed.
+%- upper limit defined by physiology, lower limit defined by behavior and thermoregulation.
+%Bergmann's rule.
