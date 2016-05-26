@@ -1,93 +1,104 @@
 \section*{Discussion}
-In this work, we developed a model to investigate how thermal performance of adult insect varies with body size.
+In this work, we developed a model to investigate how thermal performance of foraging adult insect varies with body size.
 So far, there is no theoretical work that shows a clear mapping on how performance (optimal temperature, critical minimum, maximum) changes with body size. 
-We evaluated the role of metabolism, foraging and thermoregulation which all naturally scale allometrically with body size and all depend on temperature.
+Our model evaluates the role of metabolism, foraging and thermoregulation which all scale allometrically with body size and all depend on temperature.
 Unlike classical energy budgets \citep[e.g.,][]{Kooijman2009}, our goal is not to fit a particular empirical data but to explore the role of various processes that goes into the model.
-Furthermore, we put a strong emphasis on the role of behavioral thermoregulation for ectotherm in shaping performance by analyzing in details the temporal process of warm-up.
+Furthermore, we put a strong emphasis on the role of behavioral thermoregulation for heterotherm in shaping performance by analyzing in details the temporal process of warm-up.
 In general, we concluded that such ability to warm-up may have a important influence on the performance in cold environment.
 Whereas the upper part is limited by physiological and ecological processes such as resource availability, foraging, and metabolism.
 This concur with other models of range limits (refs)% T: Emma, on top of your head?
 
-Metabolic rate, especially resting, has been the subject of intense empirical and theoretical investigation with a massive focus on  the universality of the exponent know as the 3/4 law \citep{Peters1986,West1997, Kozlowski1997, Brown2004, Isaac2010}. 
- Whereas it is interesting on its own, it is secondary to the foraging rate in defining performance.
-We found that the convexity or concavity of the shape of foraging rate is crucial.
-When comparing performance across body size, concavity favors small whereas convexity would benefit large.
-This effect is accentuated especially when active metabolic rate is high in itself of as consequence of warm environment (fig 2xx).
-Unlike the exponent of resting metabolic rate, there is no clear values for the exponent of active metabolic rate and foraging rate (see parameter justification).
-Some models in the past like Yodzis or Brown kind of a single value, say 0.75 similar to physiology but is often not based on any empirical data.
-Recent study has shown that this value can is more variable than resting metabolic rate and factors such as dimensionality of search (complete exogenous), searching ability (complete endogenous visual acuity or maneuverability),  species interaction (e.g. competition) can all shaped that foraging rate (case specific).
-We hypothesize that there is more variation in these rates that is worth to be looked into more details as there are more potential to generate various patterns.
-Looking at the ecology of the species: competition...% Still fuzzy here, can you relate to any concrete empirical example?
+Metabolic rate, especially resting, has been the subject of intense empirical and theoretical investigation with a major focus on  the universality of the exponent---know as the 3/4 law \citep{Peters1986,West1997, Kozlowski1997, Brown2004, Isaac2010}. 
+Whereas it is interesting on its own, in defining performance across body size, the exponent of the foraging rate is more important.
+Concavity favors smaller individual, convexity benefits large and differences are accentuated with increasing temperature (\cref{fig:2}).
+Unlike the exponent of resting metabolic rate, there is no clear values for the exponent for foraging rate (see parameter justification).
+Some theoretical models adopted a single value 0.75 (thus similar to the exponent of resting metabolic rate) but are not based on empirical data \citep{Yodzis1992, Brown1993}.
+Recent studies and reviews have shown that the exponent $b_3$  is more variable than resting metabolic rate and factors such as spatial dimensionality of search (2 vs 3), searching ability (e.g. visual acuity or maneuverability),  species interaction (e.g. competition) can all shaped that foraging rate\citep{Pawar2012, Kalinkat2015}.
+We believe that there is more variation in these rates that is worth to be looked into more details as there are more potential to drive different patterns.
 
-A rather surprising and interesting result is the role of resource quality.
-An interesting result is when foraging is limited in time.
-In general, performance increases with body size but for appropriate resource quality and a concave foraging rate a certain parameter space intermediate body size is favored.
-If resource quality is too low, there is not enough energetic gain and everyone suffers (we did not evaluate negative net energy gain), whereas if it is too high, the large are not penalized enough.
-If the conditions are satisfied then resource quality alone (and not quantity) can select for different body sizes even if everything else remain the same.
-%Think about Malagasy dung beetles that did not switch to cow dung....
-Optimal body size would shift to lower values are resource quality decreases.
-The likelihood of such case increases with temperature...
-Comparing performance is incomplete and one does not consider a better description of the environment (resource-wise) \citet{Sears2015}.
+A non-intuitive and interesting result is the role of resource quality when foraging time is limited.
+In general, we found that performance increases with body size but for certain resource quality and a concave foraging rate,  intermediate body size is favored.
+If resource quality is too low, there is not enough energetic gain and everyone suffers whereas if resource quality is too high, large are not penalized enough.
+If the conditions are satisfied then resource quality alone (and not quantity) can select for different body sizes.
+That would mean that optimal body size would shift to lower values are resource quality decreases even if  everything else is equal.
+These dual conditions might look restrictive but our analytical results also shows that the range of resource quality allowing the pattern increases with temperature. 
+There is no data to confirm these study but the result shows that it is a possibility and in general  underscore the idea that one should look at the ecological context in determining species performance \citep{Sears2015}.
+The joint effect of low resource quality or quantity mixed with high energetic demands from  metabolism cost limits performance at high temperature.
+%Instead of looking at endogenous factors Comparing performance is incomplete and one does need to consider a better description of the environment (resource-wise) \citet{Sears2015}.
+
+A unique assumption of this work is that we examine the thermodynamic features of insect to classify quantitative and qualitative patterns of warm-up.
+Warm-up process has been investigated empirically during the 70's and 80's for endothermic insects  such as dung beetles, bees, moths \citep{Heinrich1975, Bartholomew1978, Bartholomew1981} but to the best of our knowledge no model describes the entire warm-up phase let alone the effect of body size.
+In general, the model validates the intuitive idea about  the effect of surface-area to body size ratio in heat absorption and heat retention.
+The ability to complete warm-up increases with decreasing size for ectotherms and with increasing size for endotherms.
+However, for ectotherm wind can create enough convection that being small is no more optimal.
+An important parameter is conductance which control heat exchange between the thorax and the surface.
+There are not much data about conductance although  \citet{Bartholomew1978} found  cooling rates are similar although conductance is controlled by very different processes for dung beetles and moth and bees. %the air beneath the elythra for dung beetles and by an insulating pile for moths and bees,.
+Nevertheless, the homogeneity of such value would be surprising. % as coloration can make a difference in heat exchange \citep{Forsman2002}. 
+For instance, we found that depending on the timing of warm-up, the optimal conductance should be higher for endotherm  when warm-up occurs in the early morning  to increase the heat absorption but the optimal conductance should be lower afterwards to increase heat retention.
+Such low conductance in part can be a problem because insects also need to dissipate heat during activities.
+Yet,  other studies on bees and beetles also revealed that the process of cooling happens through often different mechanisms such as abdominal pumping or evaporative cooling \citep{Heinrich1979, Verdu2012}.
+....
+
+A central question is whether these thermodynamic features are actually important in real system.  
+We relate our model with empirical studies.
+First, studies on endothermic dung beetles have shown than below a certain mass (about 2 g), individual becomes thermoconformer i.e. not capable of endogeneous thermoregulation \citep{Bartholomew1978, Verdu2006}.
+We actually found  a threshold condition.
+In \cref{fig:4}c (dashed line with low convection) warm-up can be completed at any given temperature (here above freezing temperature) above a certain body mass.
+The threshold is simply the point where heat loss equals endogenous heat production such that  below that value, warm-up is not possible.
+Second, partitioning of diel activity has been proposed to facilitate coexistence between sympatric species \citep{Viljanen2009}
+This can occur if thermoregulation capacity and thermal niche matches.
+Data indeed revealed that smaller  individual are active during the warmer period of the day whereas large ones forage during colder ambient temperature \citep{May1985}.
+Our model reveals that maybe lower warm-up ability for endothermic insect does not allow the small ones to forage during colder times.
+Third, data has shown that a community of dung beetles can be exact on when they start to be active \citep[e.g.,]{Halffter 1966,Caveney1995}.
+Our models show a significant difference in the duration of warm-up depending on the hour of the day especially soon after sunrise.
+In such a competitive community where resources can be depleted fast \citep{Hanski1991}, arriving at the source and optimizing warm-up time by starting at the right time can be important.
+Can we dare to ask if there is actually a cognitive ability in the warm-up process or is simply a mechanical response?
+Recent reviews emphasize the role of thermoregulation and should be included in evaluation performance \citep{Dial2008, Kalinkat2015}.
 
 
-A major differentiating aspect of this model is that we included the effect of thermoregulation on performance by embedding the effect of body size on thermoregulation.
-We focused on the role of warm-up, when temperature is low, which is  necessary prior to foraging for insects.
-There are two facets of warm-up.
-First, whether it can be completed and second the duration.
-Our model underscores that the conductance between the body and the thorax is a key parameter as it determines the heat exchange between the individual and the environment.
-In theory, conductance should be lower for ectotherm to increase the ability to transfer heat to the thorax and lower for endotherm to  reduce heat loss.  
-Such process has been investigated empirically during the 70's and 80's for endotherms  such as dung beetles, bees, moths \citep{Heinrich1975, Bartholomew1978, Bartholomew1981}, there is not much data to relate to.
-Interestingly, \citet{Bartholomew1978} found that although conductance is controlled by the air beneath the elythra for dung beetles and by an insulating pile for moths and bees, cooling rates are similar.  
-In highly competitive community such as dung beetles, temporal partitioning is important.
-%There are different sorts of behavior, sit and wait or active search...
-%Is conductance selected? Colors are for instance important too
-%More data is needed to validate if such trait correlates with the thermal and solar regime the population is exposed to.
+In this study, we compared performance across body sizes by looking at their absolute net energy gain.
+Clearly, net energy gain is a very simplistic approximation of performance and does not mean fitness
+\citet{Kozlowski1996} has already pointed out that energetic definition of fitness is wrong such that adding size dependent mortality can shift optimum body size.
+Conversion to fecundity, assimilation and more all can affect the thermal performance.
+What perhaps is missing the most is that we do not include growth in our model but also what is the point of growing larger or smaller if you underperform as an adult. 
+The model is situated in a middle of what \citet{Holling1966} called tactical-strategic spectrum.
+Our main goal is to have a realistic, understandable and measurable parameter so yet not too specific that would still allow to get general insight. 
+What goes into the model can be an endless list, hopefully, energy is a core currency that is a starting point for future extension.
+
+Although the model is focused on looking at individual, the model helps to pinpoint possible mechanisms behind  some macroecological patterns.
+For instance, it can be used test various reasons for seeing or not Bergmann's rule \citep{Blackburn1999}.
+Whether the constraints is on resources availability, when resources are scares, the larger absolute cost can lead to a decrease in body size.
+Thermoregulation can be important as it determines whether the individual can be active or not and indeed Cushman 1993 voiced that slow ability to warm-up can disadvantage large.
+There is a long list of mechanisms for Bergmann's rule an approach like our can allow testing.
+As another example, habitat change due to global warming and habitat loss are the main drivers of loss of biodiversity (refs).
+We have found here that large tends to be more sensitive due to lack of resource.
+Temperature acts multiplicatively such that the increase in the cost is much higher arithmetically for large with the same increase in temperature.
+
+In summary, our integrative model underscore that parameters such as foraging rate, conductance that would require empirical attentions.
+Theoretically, there is no single relationship on how thermal performance changes with body size.
+It can increase, decrease or shifts depending on the ecological settings especially: metabolic rate, foraging rate, thermoregulation, and resource availability
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Finally, heat exchange via conductance can even be selected for, some studies have found that color can influence thermoregulation behavior for grasshoppers (Forsman)
+%It is undeniable that a good thermoregulation capacity can broaden the niche \citep{May1985} but it is unsure about the specific role of warm-up.
+%Coevolution of color pattern and thermoregulatory behavior in polymorphic pygmy grasshoppers Tetrix undulata (Forsman A, Ringblom K, Civantos E, Ahnesjö J.)
+
+%Several empirical studies in the past have emphasized the matching between thermoregulation capacity and thermal niche (refs).
+%For dung beetles, it has been proposed difference in thermoregulation can facilitate the coexistence of sympatric  species by niche differentiation .e.g in diel activity (refs) 
+
+%Diel activity relates to taxon, diet, color, body size and functional group (Vulinec 2002, Krell-Westerwalbesloh et 2004, Feer and Pincebourde 2005)
+%Verdu 2006 on partitioning, less than 2 grams thermoconformers so have to flight during warm time.
+%However, it is not known how species use their thermoregulatory capacity or how species  behave according to the thermal quality of the habitat,  particularly in the case of the endothermic insects. In burying beetles, body size and some morphological features (such as wing loading and insulation) affect their thermoregulation
+%pattern and activity times (Merrick and Smith,2004).
+%In some stingless bees, thermoregulatory differences related to body size and coloration suggests niche differentiation and different biogeographic  distributions at the interspecific level (Pereboom & Biesmeijer, 2003 ).
 %
-%and the diel activity of the species difference among say diurnal, crepuscular, and nocturnal species
+%Thus, thermoregulation may broaden a thermal niche in both space and time ( May, 1985 ).
 %
+%The dung beetles of a given community tend to be quite exact in the timing of their daily activities ( Halffter & Matthews, 1966; Fincher et al. , 1971; Mena et al. , 1989; Caveney et al. , 1995 ).
 %
-%Is there any adaptation for small endotherm to lose less heat, or as for mammals big is better because coat becomes thicker?
-%
-%We of course ignore other roles of the conductance here 
-%
-%Much studies on thermoregulation have been done for large ecotherms (lizard) (refs).
-
-In a more practical way...temporal partitioning. The duration of warm-up can be essential.
-A dung beetle can take a while up to 40 min to warm-up \citep{Verdu2008}.
-Our  model shows that the timing of warm-up is important and too long warm-up can affect significantly performance.
-In a highly competitive community such as dung beetles reaching the site as soon as possible confers a great advantage, additionally fresh dung is more palatable \citep{Hanski1991}.
-Temporal partitioning has been reported to facilitate coexistence of sympatric species \citep{Verdu2007, Verdu2012}.
-Two species of dung beetles forage at different time because the first is better are retaining heat and thus is active during cold period and the second is better are dissipating heat (the mechanism is to control of heat transfer to the abdomen) \citep{Verdu2012}.
-Body size constraints on warm-up ability because of different scaling of surface and volume.
-As a consequence is a potential mechanisms to temporal partitioning of activity (also combined with conductance above).
-Our model actually showed that different values of conductance are preferred at different time of the day for endotherms.
-Does it happen in reality? % T: I am not sure where to place that topic, here or above
-It would be interesting to know if species that differs in their diel activity also have different conductance (this is relevant event without considering body size)  
-More studies on warm-up: how it drives diel activity (and its partitioning), is there a correspondence between the conductance and the timing of foraging i.e. are they smart enough so they can optimize the timing of warm-up? 
-Climate change
-Recent reviews emphasize the role of thermoregulation and should be included in evaluation performance \cref{Dial2008, Kalinkat2015}.
-
-
-
-
-Model limitation....
-Only look at net gain
-We are in the middle of what \citet{Hooling1966} called tactical-strategic spectrum (ranging from the need to perform detailed measurements and generally defined parameters that cannot be measured).
-Level of details?
-No growth...
-Other variable e.g.humidity
-what goes into the model can be an endless list...
-The advantage is that it can be extended.
-From here to Amarasekare
-
-Ways to take the model:
-scrutinize
-temperature and habitat loss.
-amarasekare again???? Angilletta theoretical work.
-Bergmanns
-Process and what to measure
-Extension.
-
+%how species behave according to the thermal quality of the habitat, particularly in the case of the endothermic insects (Verdu2007)
+ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %Evaluating performance has been done in the past.
