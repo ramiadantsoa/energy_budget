@@ -4,24 +4,26 @@ We define performance as net energy gain which is the difference between energet
 The energetic gain is the amount energy acquired during foraging whereas  the energetic cost is the sum of metabolic cost while resting and during activity (i.e., foraging).
 The model contains thermoregulation phase that precedes activity.
 The completion of warm-up is necessary because muscles are only operational when they are at certain temperature. 
-First, we describe the external environment.
+First, we describe the external properties of the environment.
 Second, we use empirically derived relationship to model rate of energetic costs and gain as a function of body size and temperature.
 Third, we use thermodynamical principle to describe changes in body temperature during warm-up.
 Finally, we integrate these components altogether to define net energy gain. 
+At this end of this section, we justify the relationships and the parameter values we adopted.
 
 \subsection*{Environment}
 We consider three properties of the environment: the environmental temperature, the intensity of solar radiation, and the amount of available resource.
 We define environmental temperature $T_e$ as the temperature felt by the individual while inactive.
 %We implicitly assume that environmental temperature takes into account other factors such as humidity and so on.
 Because insects are small enough, we further assume that environmental temperature does not depend on body size.
-For simplicity and otherwise mentioned, we assume temperature is constant during the day. % E: This sounds quite restrictive here, and you did so much work with variable temperature.  Maybe say that variable-temp results are in Appendix and are qualitatively the same?
+Unless mentioned explicitly, for simplicity , we assume that temperature is constant during the day. 
+In fact, we also studied the situation where daily temperature changes but that does not affect the qualitative results (Appendix 2). %T : I will add this later
 
 We model solar radiation as in \citet{Campbell2012}.
 The intensity of solar radiation at any given time of the day is \[S_R = S_0 \cos(\psi) \]
 where $\psi$ is the zenith angle and $S_0 = 1361 \mbox{W.m}^{-2}$ the maximum solar radiation at noon.
 Solar radiation is needed to generate heat during the warm-up phase of the model (see appendix for more details on how $\psi$ depends on latitude and the day of the year as well as how we obtained the time of sunrise).
 
-Finally, we denote by $R$ the daily quantity of resource available.
+We denote by $R$ the daily quantity of resource available.
 $\rho$ represents the energy density per unit of resource mass. 
 Poor environment in term of resource can thus be obtained by low quantity $R$ or low quality $\rho$.
 
@@ -31,26 +33,26 @@ Following \citet{Brown2004}, we assume that resting metabolic rate increases wit
 \begin{equation} \label{eq:eb}
 	e_b(z, t) = a_1 z^{b_1} e^{-E/[k (T_b(t)+ 273.15)]}
 \end{equation}
-where $z$ is body mass, $T_b(t)$ is the body temperature, at time $t$ in Celsius, $E$ and $k$ are respectively the activation energy and the Boltzman constant (this is the Arrhenius equation), $a_1$ is and $b_1$ are some constants which will be called respectively coefficient and exponent.
+where $z$ is body mass, $T_b(t)$ is the body temperature at time $t$ in Celsius, $E$ and $k$ are respectively the activation energy and the Boltzman constant (this is the Arrhenius equation), $a_1$ and $b_1$ are some constants which we called respectively coefficient and exponent.
 In \cref{eq:eb} $b_1$ is often suggested to be around 0.75 \citep{Kleiber1947, Peters1986, Brown2004}, which we use as a default value in our analyses.
 At rest, the body temperature of the individual matches that of the environmental \citep[e.g.,][]{Bartholomew1978} so that $T_b(t)$ in \cref{eq:eb} can be replaced by $T_e(t)$.
 
 \subsubsection*{Cost: active metabolic rate}
 Naturally, we assume that the cost of activity exceed that of resting. 
-For simplicity, we assume that functional forms of the active metabolic rate is the same as that of the resting metabolic rate, i.e., % E: for simplicity, but also especially because it is poorly characterized empirically?
+For simplicity and because it is poorly characterized empirically, we assume that functional forms of the active metabolic rate is the same as that of the resting metabolic rate, i.e., 
 \begin{equation} \label{eq:ea}
 	e_a(z,t) = a_2 z^{b_2}  e^{-E/[k (\max(T_w(z_{th}), T_e(t))+ 273.15)]}
 \end{equation}
 where $T_w$ is the minimum thoracic temperature that would permit foraging.
-Warm-up phase (see section Warm-up below) will determine whether an individual will be able to warm-up and eventually forages.
-Large bodied often have higher temperature during activity \citep{Bartholomew1977a}.
-For simplicity, we use a linear relationship \citep{Bartholomew1977a}, i.e.
+Warm-up phase (see section Warm-up below) determines whether an individual is able to warm-up and eventually forages.
+Large-bodied often have higher temperature during activity \citep{Bartholomew1977a}.
+For simplicity, we assume a linear relationship \citep{Bartholomew1977a}, i.e.
 \begin{equation} \label{eq:Tw}
 	T_w(z_{th}) = c_0+ c_1 z_{th}.
 \end{equation}
 $z_{th}$ is the mass of the thorax and $c_0$ and $c_1$ two free parameters.
-Thus, unlike resting metabolic rate, the effect of temperature depends body size, the use of the function $max$ is a rough approximation such that when the environmental temperature is too high, there is an additional cost of foraging---say the additional energy used to avoid overheating. 
-We alway assume that parameters for active metabolic rates are higher than the parameters for resting metabolic rate, i.e.,   $a_2 \geq a_1$, $b_2 \geq b_1$.
+Thus, unlike resting metabolic rate, the effect of temperature depends body size, the use of the function maximum ($\max$) is a rough approximation such that when the environmental temperature is too high, there is an additional cost of foraging---say the additional energy used to avoid overheating. 
+We always assume that the parameters of the active metabolic rates are greater than the parameters of the resting metabolic rate, i.e.,   $a_2 \geq a_1$, $b_2 \geq b_1$.
 
 \subsection*{Gain: foraging}
 We define foraging rate $g(z)$ as the average amount of resource and individual collects per unit of time.
@@ -66,56 +68,52 @@ Finally, the rate of energy gain is
 	e_g(z) = a_3 z^{b_3} \times \rho  = g(z) \times \rho.
 \end{equation}
 
-% E: At this point, I was wondering about justifications for the various functions and parameters.  It might be good to mention earlier to the reader (e.g., first paragraph of M&M) that you will be discussing the justifications extensively later on.
-
 \subsection*{Warm-up}
 Warm-up is a prerequisite for foraging when the temperature of the muscle is below its minimum value which occurs when the environmental temperature is low. 
-However,insects do not need to warm-up the entire body but essential the thorax where most of the muscles are. 
+In reality, an individual makes a decision about when warm-up starts as well as the correct position to minimize warm-up time and so on. 
+Therefore, we define warm-up as one type of behavior.
+Insects do not need to warm-up the entire body but only the thorax where most of the muscles are. 
 Here, we track the temperature of the thorax $T_w$ (\cref{eq:Tw}), i.e. with respect to thoracic mass rather than the body mass.
 
 The most common strategy for warming up is to absorb solar radiation.
 Heat is transfered to the thorax from the surface of the body by passive conductance \citep{Bakken1976}.
 A second strategy is to endogenously generate heat by contracting muscle against each other similar to shivering \citep[e.g.,][]{Kammer1974}.
 We assume that frequency of contraction increases linearly with thoracic temperature $f[T_{th}]  = a_w T_{th}$ for $T_{th}> 0$ and 0 otherwise.
-With a slight abuse of terminology, we call the first group  ectotherm and the second group endotherm. % T: this can be a bit confusing 
+With a slight abuse of terminology, we call the first group  ectotherm and the second group endotherm (the latter means that the insects have the ability to generate heat endogenously only during warm-up).
 The distinction between ectotherm and endotherm is obtained by setting $a_w$ to zero.
 
-A coupled differential equations  tracks changes in the thoracic temperature and non-thoracic temperature (i.e., rest-of-the-body).%T: find a better term instead of the rest of the body
-Geometrically and for simplicity we  assume that the insect/individual is shaped as an half a sphere, the thorax constitutes the interior of first half of the sphere.
-Half of which is the thorax.
-The surface of the thorax and the non-thorax can be easily calculated given the mass and the density of the insect (see appendix).
-We only compare warm-up within group.
+A coupled differential equations  tracks changes in the thoracic temperature and non-thoracic temperature (i.e., the rest of the body).
+For geometrical simplicity we assume that the body represented by half of a sphere and the thorax constitutes half of body.
+The surface of the thorax and the non-thorax can be easily calculated given the mass and the density of the insect (see Appendix 1).
+%We only compare warm-up within group. T: this does not look necessary? 
 
 Change in thoracic temperature $T_{th}$ is based on heat exchange between the thorax and the non-thorax, we have 
 \begin{equation} \label{eq:dTh}
 	\frac{dT_{th}}{dt} = \frac{1}{s z_{th}} (z_{th} e f[T_{th}] +  A_{th} K_1(T_r - T_{th}))
 \end{equation}
-where $s$ is the specific heat capacity, $e$ is the calories generated per contraction and per gram of muscle \citep{Kammer1974}, $A_{th}$ is total surface of the thorax, and $K_1$ the conductance between the thorax and the rest-of-the-body.
+where $s$ is the specific heat capacity, $e$ is the calories generated per contraction and per gram of muscle \citep{Kammer1974}, $A_{th}$ is total surface of the thorax, and $K_1$ the conductance between the thorax and the non-thorax.
 
-Change in the  non-thorax ($T_r$) is based on the thermodynamic process between the surface of the individual and the external environment, we have
+Change in the  non-thorax ($T_r$, the subscript $r$ is to remind it is the rest of the body) is based on the thermodynamic process between the surface of the individual and the external environment, we have
 \begin{equation} \label{eq:dTn} 
 	%\begin{split}
 		\frac{dT_r}{dt} =  \frac{1}{s z_{r}} \Bigl( - A_{th} K_1(T_r - T_{th})  \Bigr)
-			+ \frac{1}{s z_{r}} \Bigl( A_r \left[ - c_p K_2 h(T_r -T_e, V)- \sigma \varepsilon T_r^4 + \sigma \varepsilon T_e^4  + r_3 S_R  \right] \Bigr),
+			+ \frac{1}{s z_{r}} \Bigl( A_r \left[ - c_p K_2 h(T_r -T_e, V)- \sigma \varepsilon T_r^4 + \sigma \varepsilon T_e^4  + r_3 S_R  \right] \Bigr).
 %\end{split}
 \end{equation}
 We consider two forms of convection here where $ h(T_r -T_e, V) = (T_r- T_e)^{1.25} (1/V)^{1/12 }$ for free convection (no wind) and $ h(T_r -T_e, V) =  1.4 \times 0.135 \sqrt{u/V^{1/3}} (T_r- T_e) $ for laminar convection \citep{Campbell2012}.
-
-$K_1$ is defined above, $c_p$ is specific capacity of the air. 
+%
+$K_1$ is defined above, $c_p$ is specific capacity of the air.
 $K_2$ is a constant controlling convection between the body and the air \citep{Campbell2012}.
-$\varepsilon = 0.935$  is the emissivity of gray body.
-$u$ is wind speed.
-$V$ is the volume of the insect and $A_r$ is the surface area of the  non-thorax (it is simply the surface of the whole body).
+$\varepsilon = 0.935$  is the emissivity of gray body, $u$ is wind speed, $V$ is the volume of the insect, and $A_r$ is the surface area of the non-thorax (it is simply the surface of the whole body).
 
 The last term of \cref{eq:dTn}  is an approximation of more the detailed equation in \citet{Campbell2012}.
 Here, we ignore view factors, reflected radiation and so on, and pool every source of radiation in $ \sigma \varepsilon T_e^4$ and $S_R$. 
 Parameters $r_3$ is used to scale and summarize the quantity of absorbed solar radiation.
 
 We solve the ODE numerically using NDSolve implemented in \citet{Mathematica10}.
-By solving the equation through time, we can find if the minimum temperature  required for activity $T_w$ is reached. % E: Be prepared to submit your Mathematica notebook as a supplemental file (as .nb and .pdf).
+By solving the equation through time, we can find if the minimum temperature  required for activity ($T_w$) is reached. % E: Be prepared to submit your Mathematica notebook as a supplemental file (as .nb and .pdf).
 In that case, we can also solve for the duration of the warm-up $\tau_w$ which corresponds by definition to $T_{th}(\tau_w) = T_w$. 
 
-% E: Should have mentioned in the warm-up section that this is "behavior"?
 
  \subsection*{Net energy budget}
 We now integrate all the components above to calculate  the energy budget during a 24-hour period.
@@ -125,7 +123,7 @@ We start the calculation at sunrise $t = 0$.
 Total foraging time can be fixed $\tau_f$ or as a function of resource availability $R$. 
 In the latter case, $\tau_f = R/g(z)$.
 If warm-up cannot be completed, foraging does not occur and $\tau_f = 0$.
-If warm-up is complete, we subtract the duration of warm-up $\tau_w$ from the total foraging time $\tau_f$. 
+If warm-up is complete, we penalize the individual by subtracting the duration of warm-up $\tau_w$ from the total foraging time $\tau_f$. 
 The total daily energetic gain is given by
 \[
 	E_g(z,\tau_f - \tau_w) = (\tau_f - \tau_w) e_g(z).
@@ -136,37 +134,37 @@ If we assume that warm-up starts at $t_w$ (we use $t$ to denote the time of the 
 	E_t(z, \tau_f) = \int_0^{t_i} e_b(z, t) dt + \int_{t_i + \tau_w}^{t_i + \tau_f } e_a(z,t) dt + \int_{t_i+\tau_f}^{24} e_b(z, t) dt 
 \end{equation}
 $e_b$ is defined in \cref{eq:eb}  and $e_a$ in \cref{eq:ea}.
-The energetic cost for endothermic insect is negligible \citep{Heinrich1975} and is omitted in \cref{eq:et}. % E: Could be more explicit and say that you evaluated the corresponding integral and found it negligible.
+The energetic cost for endothermic insect is negligible \citep{Heinrich1975} which we also found in our calculation and so is omitted in \cref{eq:et}.  
 
 Daily net energy gain is obtained from the  difference between energy gain from foraging and total energy expended, i.e.,
 \[ 
-	E_n(z, \tau_f) = E_g(z,\tau_f) - E_t(z, \tau_f).
+	E_n(z, \tau_f) = E_g(z,\tau_f- \tau_w) - E_t(z, \tau_f).
 \]
 
 \subsection*{Power law and parameter justifications}
-The central assumption here is that relationship between body size and that metabolic and between body size and foraging rate are represented by a power law.
+The central assumption here is that relationships between body size and metabolic, and foraging rate are represented by a power law.
 
-A general pattern is that resting metabolic rate scales with body size with an exponent 0.75 \citep{Kleiber1947, Peters1986, Brown2004}.
+A general pattern is that resting metabolic rate scales with body size with an exponent 0.75 \citep{Kleiber1947, Peters1986,Gillooly2001}.
 Such value has been reported from unicellular organisms to mammals \citep{Brown2004}.
 Although there is a debate about the actual values \citep[e.g.,][]{Isaac2010}, we adopt that value to diminish the number of free parameters and rather explore the value of other exponents which are not well established.
 
 The power law relationship for active metabolic rate has less empirical ground.
-Since few studies have spanned the measurement for a range of body size that look specifically to active metabolic rate.
-A notable example is a work by \citet{Bartholomew1978} who found a power law with exponent $b_2 = 1.17$.
+Since few studies have spanned the measurement for a range of body size that look specifically at active metabolic rate.
+A notable exception is a work by \citet{Bartholomew1978} who found a power law with exponent $b_2 = 1.17$.
 In general, what is known is specific values of the metabolic scope which is the ratio between maximum active metabolic and resting metabolic rate.
-Several studies have reported that oxygen consumption can be as high as 70 times than resting although a typical values is about 40 \citep{Bartholomew1981}.  
+Several studies have reported that oxygen consumption can be as high as 70 times than resting although a typical value is about 40 \citep{Bartholomew1981}.  
 In our model, metabolic scope can then be adjusted either by varying $a_2$  or by $b_2$ whether it is mass independent or not. 
 
-Recent studies have explored rate of energetic gain and recovered a power law relationship \citep{Maino2015, Pawar2012}.
+Recent studies have explored rate of energetic gain and recovered a power law relationship \citep{Pawar2012, Maino2015}.
 There seems to be no single exponent $b_3$.
-For instance, its value can depend on dimension of the search space with a value of 0.85 for a two-dimensional search space to 1.06 in three-dimensional search space \citep{Pawar2012}.
+For instance, the exponent can depend on the dimension of the search space with a value of 0.85 for a two-dimensional and 1.06 in three-dimensional search space \citep{Pawar2012}.
 Body size can actually influence other processes, for instance walking speed  can scale with a power 0.29 \citep{Peters1986}, with dominance competition excerted by larger individual, exponent might also scale superlinearly.
 Our goal however is not to argue about the homogeneity of these values but instead to explore the consequences of their heterogeneities. % E: nice dodge :)
 \cref{fig1} depicts how the exponent influences the shape of the power law.
 
-Another form that can be used to model the effect of temperature is the use of $Q_{10}$ which is the change in rate with a $10^ {\circ} \rm{C}$ increase in the body temperature \citep{Precht1973}.
+The effect of temperature can be modeled by using $Q_{10}$ which is the change in rate with a $10^ {\circ} \rm{C}$ increase in the body temperature \citep{Precht1973}.
 We however opted for the Arhenius equation by \citet{Brown2004} because it reduces the number of free parameter but also it approximates the temperature effect for $Q_{10} = 2.45$.  
-Finally, to  insure that the coefficients are not different, the model is best for species with narrow taxonomical scope and thus restricted to monophyletic group including within species. 
+Finally, to  insure that the coefficients are not too different, the model is best for species that are closely related. 
 
 \cref{table1} summarize different parameter values we used and explored in this work.
 
