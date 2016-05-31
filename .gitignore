@@ -45,6 +45,7 @@ Temporary Items
 main.pdf
 main_notes.pdf
 appendix.pdf
+Supplementary_file.pdf
 *.log
 *.aux
 *.bbl
