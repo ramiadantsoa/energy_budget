@@ -1,37 +1,38 @@
 \section*{Discussion}
 We have developed a model to investigate how the thermal performance of a foraging adult insect varies with body size.
 There is not previous theoretical work that shows clearly how performance (e.g., optimal temperature, critical minimum or maximum temperature) changes with body size. 
-We take a first step by exploring the role of metabolism, foraging, and thermoregulation, which all scale allometrically with body size and all depend on temperature.
+We take a first step by exploring the role of metabolism, foraging, and thermoregulation, which all scale allometrically with body size and all depend on temperature in shaping the net daily net energy gain of an individual.
 Unlike classical energy budget models \citep[e.g.,][]{Kooijman2009}, our goal is not to fit particular empirical data but to explore the role of various processes.
 Furthermore, we put a strong emphasis on the role of behavioral thermoregulation for heterotherms in shaping performance by analyzing in detail the temporal process of warm-up.
 We report several key parameters that have not been measured but which have important roles in shaping thermal performance across body size.
 In general, we quantify how warm-up and its timing can decrease performance in cold environments.
-We find that the upper part of the performance curve is limited by physiological and ecological processes such as resource availability, foraging, and metabolism. % E: not sure what "whereas" was a contrast to?
-We do not mean that these are the only processes that shape thermal performance---other factors like competition, heat stress, and cold tolerance can be just as important---but we aim to derive an outer envelop of the actual (realized) thermal performance. % T: I don't really like I integrated and linked that last sentence and generally this first paragraph. Though I don't want to wait for another wave of inspiration for now.  E: I think it's okay, until the final "outer envelop" thing.
+We find that the upper part of the performance curve is limited by physiological and ecological processes such as resource availability, foraging, and metabolism. 
+We do not mean that these are the only processes that shape thermal performance---other factors like competition, heat stress, and cold tolerance can be just as important---but the net energy gain can be a first proxy for the actual (realized) thermal performance.
 
 Metabolic rate, especially resting rate, has been the subject of intense empirical and theoretical investigation with a major focus on  the universality of the exponent---known as the 3/4 law \citep{Peters1986,West1997, Kozlowski1997, Brown2004, Isaac2010}. 
 Whereas the exponent of the resting metabolic rate is interesting on its own, our model suggests that, when comparing performance across body size, the exponent of the foraging rate is even more important.
 We assumed that the exponent is always positive, which means that foraging rate always increases with body size, but the increase can be concave or convex (\cref{fig1}).
 Concavity favors smaller individuals because it means that per unit mass, the efficiency in resource gathering increases with decreasing body size.
-The reciprocal is also true that convexity benefits larger individuals (\cref{fig3,fig6}b). % E: reciprocal? reverse? converse?
-Unlike the exponent of resting metabolic rate, there is no clear value for the exponent for foraging rate (see Parameter Justification section). % E:  \label and \cref also work for sections, by the way
+The converse is also true that convexity benefits larger individuals (\cref{fig3,fig6}b).
+Unlike the exponent of resting metabolic rate, there is no clear value for the exponent for foraging rate (see section Model Description: Power law and parameter justifications ). % E:  \label and \cref also work for sections, by the way, T: I did not work after few tries, maybe because I don't number the section.  
 Some theoretical models adopted a single value of 0.75 (thus similar to the exponent of resting metabolic rate), but the choice was not based on empirical data \citep{Yodzis1992, Brown1993}.
 Recent studies and reviews have shown that the exponent $b_3$  is more variable than resting metabolic rate, and that factors such as the spatial dimensionality of search (2- vs. 3-dimensional), searching ability (e.g., visual acuity or maneuverability), and species interactions (e.g., competition) can all shape the exponent of foraging rate \citep{Pawar2012, Kalinkat2015}.
 We suggest that variability in the exponent of foraging rate is worth much further empirical investigation because of its potential to generate different qualitative patterns in performance curves.
 
 A non-intuitive and interesting result is the role of resource quality when foraging time is limited.
 In general, we found that performance increases with body size, but for a certain range of resource quality and a highly concave foraging rate, intermediate body size is favored.
-If resource quality is too low, there is not enough energetic gain and individuals of all size suffer, whereas if resource quality is too high, large individuals are not penalized enough. % E: "enough" for what?
+If resource quality is too low, there is not enough energetic gain and individuals of all size have negative net energy gain.
+In contrast, if resource quality is high, individuals of all size have a positive net energy gain but the low mass specific metabolic cost confers the advantage to large individuals. 
 If the sweet-spot condition is satisfied \cref{eq:C1}, resource quality alone (and not quantity) can select for different body sizes.
 That would mean that optimal body size would shift to lower values as resource quality decreases even if everything else remains constant.
 These dual conditions might look restrictive, but our analytical results also show that the range of resource quality allowing the pattern increases with temperature. 
 There is no data to confirm this theoretical finding, but the result shows that it is a possibility and in general underscores the idea that one should look at the ecological context in determining species performance \citep{Sears2015}.
 
-Bergmann's rule is the macroecological pattern that animals tend to be larger in colder environments \citep{Bergmann1847,Blackburn1999}. % E: If Bergmann does not have two n's, my apologies here and elsewhere.
+Bergmann's rule is the macroecological pattern that animals tend to be larger in colder environments \citep{Bergmann1847,Blackburn1999}. 
 Several mechanisms have been proposed to generate the body size cline.
 From an energetic perspective, large individuals do better in cold environments than smaller ones because they are better at conserving heat (due to lower surface area-to-volume ratio or to lower conductance) or better at resisting starvation. 
 Although our principal goal is not to explain Bergmann's rule, our model draws attention not only to energetic cost but to also energetic gain.
-Our results suggest that efficiency in foraging and resource availability have the potential not only to explain Bergmann's rule but also its inverse, which has been documented for insects \citep{Cushman1993, Loder1997,Blackburn1999}. % E: Do my changes here preserve the correct meaning?
+Our results suggest that efficiency in foraging and resource availability have the potential not only to explain Bergmann's rule but also its inverse, which has been documented for insects \citep{Cushman1993, Loder1997,Blackburn1999}. 
 Our quantitative model can actually be explored to find the optimal body size for a given set of parameter values and thus to propose the shape of the relationship, but such investigation is beyond the scope of this study.
 
 Our work is unique in examining the thermodynamic features of insects to classify quantitative and qualitative patterns of warm-up.
@@ -61,23 +62,16 @@ The same ability to warm up is known to allow large individuals to forage during
 Furthermore, we found that the inverse relationship occurs for ectothermic insects such that small individuals can forage at lower temperature.
 We are not aware of any dataset that correlates foraging time or temperature as a function of body size for ectotherms and endotherms.
 We hope that our model predictions can actually be tested both in controlled and natural conditions. 
-% E: This is great to do.  Clarify that some of these observations can already be "understood" with the "endotherms are large" and "endotherms can operate in colder temperatures" verbal models, but your model also makes more specific predictions. %T: I am not sure about the exact nature of the prediction you mentioned.
-
-%%%%%%%%%%%%READ COMMENT JUST BELOW%%%%%%%%%%%%%%
-%T: I removed this at this point to avoid making to bigger claim.
-% E: It could be good to include not as a "claim", but as an example of how physiology and ecology interact.
-%
-%
-%Third, data has shown that a community of dung beetles can be exact on when they start to be active \citep[e.g.,][]{Halffter1966, Caveney1995}.
-%Our models show a significant difference in the duration of warm-up depending on the hour of the day especially soon after sunrise.
-%In such a competitive community where resources can be depleted fast \citep{Hanski1991}, arriving at the source and optimizing warm-up time by starting at the right time can be important.
-%Recent reviews emphasize the role of thermoregulation and should be included in evaluation performance \citep{Dial2008, Kalinkat2015}.
+A last example where the process warm-up can play a significant role is in regulating diel activity. 
+For instance, data has shown that a community of dung beetles are accurate in timing their activities \citep[e.g.,][]{Halffter1966, Caveney1995}
+Although the generally proposed mechanism of temporal partitioning is to reduce competition,  we found a significant difference in the duration of warm-up depending on the hour of the day especially soon after sunrise and depending on body size.
+ In such a competitive community where resources can be depleted fast \citep{Hanski1991} and optimizing warm-up time to arrive at the source can become crucial.
 
 In  this study, we compared performance across body sizes by calculating net energy gain.
 Clearly, net energy gain is a very simplistic approximation of performance or fitness.
 \citet{Kozlowski1996} has pointed out that an energetic definition of fitness is incomplete, and adding size-dependent mortality shifts optimum body size.
-The energy currency in hand can be converted to, for instance, fecundity, by using additional power law relationships \citep{Kooijman2009}. % E: what was "assimilation" doing in this sentence?
-A notable missing component is the growth and development rate, but questions of adult performance have also been investigated heavily \citep{VandH1996, Kozlowski2004,Kooijman2009}. % E: I'm not sure that I got the intended meaning of this sentence.
+The energy currency in hand can be converted to, for instance, fecundity, by using additional power law relationships \citep{Kooijman2009}. % E: what was "assimilation" doing in this sentence? T: I think assimilation can depend on body size too, assimilation is indeed the real energy they can use.
+A notable missing component is the growth and development rate, but such questions have been investigated heavily \citep{VandH1996, Kozlowski2004,Kooijman2009}. 
 Another interesting extensions would be to explicitly include competition in the model, as well as finding the optimal time to start warm-up and foraging, or to integrate net energy gain for a longer time span.
 Using energy as a core currency for understanding species performance is appealing, and many studies have embraced this approach.
 Energy budget models are now used to predict future species distributions \citep[e.g.,][]{Buckley2008}, but the extreme detail and large number of parameters in DEB models \citep{Kooijman2009} prevents wide application.
@@ -89,7 +83,7 @@ Our main goal is to use parameters that are measurable with clear biological mea
 In summary, we attempted to understand how body size and temperature shape performance by developing and analyzing a mathematical model.
 We found that there is no single theoretically-expected relationship of how thermal performance changes with body size.
 Niche breadth can increase, decrease, or shift depending on the space where the parameters for metabolic rate, foraging rate, thermoregulation, and resource availability are situated.
-We have illustrated here how the model can be used to verify verbal arguments such as the relationship between body size and warm-up behavior, and also to reveal patterns that arise beyond simple intuition such the importance of resource quality and concavity of foraging rate in determining optimal body size. % E: Instead of "concavity", which is just a math thing, could we say something like "size-specific foraging rate"?
+We have illustrated here how the model can be used to verify verbal arguments such as the relationship between body size and warm-up behavior, and also to reveal patterns that arise beyond simple intuition such the importance of resource quality and size-specific foraging rate in determining optimal body size.
 However, the major contribution of this model is the ability to extend feedback between theory and data.
 We hope this work is helpful in highlighting potentially important parameters to measure, and also by providing a clear theoretical relationship among the variables that will guide future empirical work.
 
