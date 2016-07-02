@@ -1,56 +1,41 @@
 \section*{Introduction}
-A myriad of biotic and abiotic factors  hypothetically affect species' performance.
-Biotic species interaction such as competition, mutualism, parasitism can be cryptic, and even if they is not, it is not obvious if the interactions really matter \citep{Morales2015}. 
-Abiotic factors such as photoperiodism, temperature, and humidity are often correlated. 
-A direct measure of fitness is often complicated, and studies instead rely on proximate variables (performance) such as locomotion, growth rate, assimilation, fecundity rate \citep[][and references therein]{Angilletta2009}.
-Disentangling the relative effects of those factors in shaping performance is generally difficult.
-% E: Perhaps there are *many* more reasons this is a difficult task?  Effects can be contrary at different times or circumstances, etc.  I like the approach here (mainly the contrast with the next sentence), but it still needs sharpening.  (Which I can do if you want, but I'm trying to only edit grammar now!)
-% T: I am not really found or writing the first paragraph so you have green light as long as the contrast to the next paragraph is maintained.
+Temperature is one of the most crucial abiotic factors.
+A quantity that is of general interest is how an individual or species responds to temperature change known as the thermal performance curve.
+For instance, \citep{Deutsch2008} showed that species in the tropics have narrower thermal performance breadth and consequently are more vulnerable  to global warming.
+In fact, the current change thermal environment underscores the need to better understand the thermal performance curve .
 
-% shorten/remove first paragraph, get to thermal curves sooner
- 
-A surrogate approach is to flip the question around: choose a factor and see how it affects the performance of the species, holding everything else equal.
-Temperature is one abiotic factor that has been intensely investigated.
-Numerous empirical studies have been conducted to investigate how species respond to temperature gradients \citep[e.g.,][]{Angilletta2009}.
-A classical result is that thermal performance is a non-monotonic curve and is skewed to the left, meaning that the optimal temperature (peak of the curve) is closer to the critical maximum temperature than to the critical minimum temperature. 
-It means that species that already occur in their optimal thermal environments, e.g., tropical species,  are more threatened by global warming because their future thermal environment will move closer to the critical maximum temperature \citep{Deutsch2008}. % E: I think "given" should if "if", but that may be the fault of Deutsch. T: the previous one was more accurate but this might be simple enough?
-
-In general, measuring the effect of one factor and keep everything else equal  is difficult to do empirically. % maybe not?
-In contrast, simplification is the central tenet of theoretical approach.
-Theoretical works have investigated the role of temperature in shaping performance, especially for growth \citep{VandH1996, Kozlowski2004}.
+For ectotherm, a classical empirical results is that thermal performance is a non-monotonic curve and is skewed to the left, meaning that the optimal temperature (peak of the curve) is closer to the critical maximum temperature than to the critical minimum temperature \citep[e.g.,][]{Angilletta2009}.
 Recently, a theoretical model reconstructed the fitness of an individual as a function of temperature \citep{Amarasekare2012}.
 The model  breaks down thermal performance (intrinsic growth rate)  into three components: development, fecundity, and mortality.
 The functional shapes of each of those components and how they intersect thus determine the basic properties of the curve (the optimium, minimum, maximum, and skewness).
-Dynamic Energy Budget (DEB) models, in contrast, dig deep into physiology \citep{Kooijman2009}. % E: Is DEB one model or many?  Alternatively, "Dynamic Energy Budget (DEB) models, in contrast, dig deep into physiology." T: it looks plural
+Dynamic Energy Budget (DEB) models, in contrast, dig deep into physiology \citep{Kooijman2009}.
 The general framework focuses on how (food) energy is assimilated and then allocated to different needs such as growth, metabolic cost (maintenance), and reproduction \citep{Kooijman2009}.
-When species'  data are available, these models have great power in reproducing patterns, say body size or number of offspring through time \citep{Nisbet2000}. 
+When species'  data are available, these models have great power in reproducing patterns, say body size or number of offspring through time \citep{Nisbet2000}.
 
 Such models help to understand and describe the qualitative and quantitative shapes of performance curves and how they differ among individuals, but they do not provide a framework for a deeper investigation of those differences.
 One intrinsic cause that might underlie variability in performance curves is body size.
-% E: I like this.  Might just need to clarify that "development curve" etc. is not an "intrisic cause". T:  My question is the following statement: You are specifically talking about development curve  not mortality and others. I made a minor change but I am not sure if it really address it.  E: Hah! Not sure that my changes here are much better.  But this is a key point, so it is worth some further effort.
-Empirical data have shown that body size is often associated with temperature.  
+Empirical data have shown that body size is often associated with temperature.
 At the global scale, Bergmann's rule states that body size tends to increase with decreasing temperature \citep{Bergmann1847}.
 At the physiological level, an individual grows larger under a colder thermal regime \citep{Van1996}.
 The metabolic theory of ecology links in one equation body size and temperature \citep{Gillooly2001}.
 Theoretical studies that link body size and performance do not account for the explicit effect of temperature \citep[e.g.,][]{Yodzis1992, Brown1993}.
-The question thus remains, if everything else is equal, how does thermal performance curve change with body size?. % E: "given" was correct, but I fear some non-theorists may have a bad reaction to it. T: thanks, I kinda see the nuance but too mentally demanding for a non native speaker :D
+An open key question is how does thermal performance curve change with body size?
 
 Body size influences many physiological and ecological processes \citep{Peters1986}.
 For instance, resting metabolic rate scales with body size by following a power law \citep{Kleiber1947, Peters1986, Gillooly2001,Brown2004}.
-When we consider performance (fitness), an important process that is often overlooked is the role of behavioral thermoregulation in shaping performance \citep{Kearney2009b}. 
+When we consider performance (fitness), an important process that is often overlooked is the role of behavioral thermoregulation in shaping performance \citep{Kearney2009b}.
 A particular example is the warm-up phase for ectotherms, especially insects.
-Because muscle needs to be at a certain temperature to function properly, when the environment is below that temperature, warm-up is necessary \citep[e.g.,][]{Heinrich1975}. 
+Because muscle needs to be at a certain temperature to function properly, when the environment is below that temperature, warm-up is necessary \citep[e.g.,][]{Heinrich1975}.
 In some communities like dung beetles, the duration and completion of warm-up is important as it is crucial to arrive on site before resource quality degrades or gets depleted \citep{Hanski1991}. %(Anderson & Coe 1974, Horgan 200,  Heinrich & Bartholomew, 1979 ).
 The ability to warm up has further been hypothesized to cause diel partitioning, which facilitates coexistence \citep{Viljanen2009}.
 Intuitively, large ectotherms warm up at a lower rate than smaller ones because large individuals have a smaller surface area-to-body size ratio and thus a reduced capacity to transfer heat to the body.
 The warm-up aspect of thermoregulation, its dependence on body size, and especially its role in shaping thermal performance has not been explored.
- 
+
 In this work, we build a theoretical model to investigate how the thermal performance curve varies with body size.
-We define performance as net energy gain, which is the difference between total energetic gain and energetic cost. 
+We define performance as net energy gain, which is the difference between total energetic gain and energetic cost.
 Our approach is similar to other energy budget models \citep[e.g.,][]{Kooijman2009}, but the goal is not to fit a particular species.
 Instead, we look at the effects of three processes in shaping net energy gain: physiological processes of metabolism, ecological processes of resource availability and foraging, and thermodynamic processes of thermoregulation and warm-up.  % E: Perhaps I took too great a liberty here.  But it is good to aim for parallel structure in a complicated sentence like this. T: you are restraining yourself too much :D
 The model is conceptually valid for heterotherms, but to include more explanatory detail, we narrow our taxonomic scope to insects.
 In particular, the model is best suited for fully-grown, adult insects that are income breeders such as dung beetles and bees.
 In general, we find that metabolism plays a secondary role in shaping thermal performance.
-Instead, resource availability and allometric scaling of foraging are key in defining the upper thermal limit, whereas thermoregulation ability of warm-up sets the lower thermal limit.
-% E: This is the second time I've changed "thermoregulation of warm-up".  It sounds weird to me, but maybe it is a standard phrase?
+Instead, resource availability and allometric scaling of foraging are key in defining the upper thermal limit, whereas the ability to warm-up sets the lower thermal limit.

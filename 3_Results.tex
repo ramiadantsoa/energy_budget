@@ -1,79 +1,100 @@
 \section*{Results}
+The main interest is to figure out net energy gain varies a  function of body size and temperature, namely whether change in body size shrinks, broadens, or shifts thermal performance curve.
+Given the large number of processes in the model, we start by pulling apart their marginal effects and by end we will return to the central question above.
 
-Wrap what has been done, guide the reader through the steps.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Role of body size scaling, resource, time, and temperature or?}
-We first explored how performance varies as a function of the amount of resource available.
-With limited resources,  there is an upper limit to the amount of energy available in the environment, which thus eventually penalizes those with high metabolic costs.
-Because ABSOLUTE MAKE CLEAR metabolic costs increase with  body size, for large values of $z$, net energy gain eventually decreases with body size.
-With limited resources, net energy gain is thus maximized at intermediate body size (\cref{fig2}ab).
- When resources are unlimited (we assumed that individuals can take up to 50 times their body size), net energy gain increases with body size (\cref{fig2}c).
+\subsection*{Role of body size scaling, resource, time, and temperature}
+% \subsection*{Or Does net energy gain increase or decrease with body size?}
+First we ignored thermoregulation and only looked at the effects of the scaling of resting metabolic rate, active metabolic rate, and foraging rate on net energy gain.
+Inuitively, because mass-specific metabolic rate decreases with body mass, large is expected to do better.
+We found that when resource quantity is unlimited net energy gain indeed increases with body mass (\cref{fig2a}).
+In contrast, when resource quantity is limited, net energy gain peaks at intermediate body mass (\cref{fig2b}).
+Additionally, the exponent $b_3$ does not affect the qualitative pattern.
 
-For reasonable cost of activity, the value of the exponent of the foraging rate ($b_3$) does not change the qualitative pattern.
-However,  for a combination of high temperature and high metabolic cost for activity, even with unlimited resources, the exponent $b_3$ can lead to qualitatively different patterns   (\cref{fig2}def).
-If the foraging rate is concave (\cref{fig1}), large individuals actually forage for a longer period because they are less efficient in gathering resources.
-A longer period for  activity means the energetic cost for activity is higher.
-At high temperature, the cost is magnified and  large individuals eventually have a negative net energy gain (\cref{fig2}ef, dashed lines).
-The same phenomenon occurs when foraging rate is convex, thought it instead penalizes the smallest individuals (\cref{fig2}f, thick solid line).
+We also looked at case where foraging time is limited.
+Under that assumption, resource quality determines the qualitative patterns of net energy gain.
+When resource quality is high, net energy gain increases with body mass (\cref{fig2c}).
+When resource is low,  net energy gain again peaks at intermediate body size (\cref{fig2d}).
+Unlike the case where resource quantity, the exponent $b_3$ has a significant effect on the pattern.
+In fact, our analytical results show that intermediate is favored when $b_3 < b_2$ and when resource quality is within a certain range (see Appendix).
+Moreover, they show that duration of foraging time does not matter and that change in temperature can favor different body sizes (\cref{fig2d} vs. \cref{fig2g}).
 
-We also looked at a different scenario where foraging time is limited.
-In general, net energy gain increases with body size (\cref{fig3}ac).
-However, when the exponent of the foraging rate is less than the exponent of the metabolic rates ($b_3 > b_2 = b_1$) and resource quality is within a certain range,  net energy gain peaks at intermediate body size.
+At third, scenario where intermediate is best when temperature is high.
+Although, net energy gain increases with body size with unlimited resources, a high temperature and higher cost of activity can penalize the largest individuals (\cref{fig2ef}.
+Additionally, the exponent $b_3$ does affect the qualitive pattern, or the concavity dictates where it always increases or evenually decreases.
+even if resource are unlimited,  a concave foraging rate means that it would take much longer to gather resources, it also means that the individual will be active for longer and thus an increase in total cost.
 
-% E: I know you've worked hard to condense this, but it still feel much more technical than everything else.  I'll come back here and see if I can add something a bit more intuitive.
-SIMPLIFY THIS FURTHER
-Mathematically (see Appendix for complete derivation), this means that the range of the resource quality $\rho$ allowing intermediate optimal body mass is
-\begin{equation}\label{eq:C1}
-	\widetilde{E_n} < \rho < \widetilde{dE_n},
-\end{equation}
-where $\widetilde{E_n} < \rho $ ensures that net energy gain is positive (lower limit of the shaded areas in \cref{fig3}b) and $\rho < \widetilde{dE_n}$ ensures that the derivative with respect to body size $z$ becomes negative (upper limit of the shaded areas in \cref{fig3}b).
-$\widetilde{dE_n}$ is in fact $\widetilde{E_n}$ weighted by $\dfrac{b_1}{b_3}$  and $\dfrac{b_2}{b_3}$ (see Appendix), and thus $\widetilde{dE_n}$ is greater than $\widetilde{E_n}$ if  $b_3 < b_1$ ($b_2 \geq b_1$ is always true).
-Temperature has the same multiplicative effect on $\widetilde{E_n}\textnormal{ and }\widetilde{dE_n}$ which means that the range of values for $\rho$ in \cref{eq:C1} increases with temperature (\cref{fig3}b).
+% For reasonable cost of activity, the value of the exponent of the foraging rate ($b_3$) does not change the qualitative pattern.
+% However,  for a combination of high temperature and high metabolic cost for activity, even with unlimited resources, the exponent $b_3$ can lead to qualitatively different patterns   (\cref{fig2}def).
+% If the foraging rate is concave (\cref{fig1}), large individuals actually forage for a longer period because they are less efficient in gathering resources.
+% A longer period for  activity means the energetic cost for activity is higher.
+% At high temperature, the cost is magnified and  large individuals eventually have a negative net energy gain (\cref{fig2}ef, dashed lines).
+% The same phenomenon occurs when foraging rate is convex, thought it instead penalizes the smallest individuals (\cref{fig2}f, thick solid line).
+%
+% We also looked at a different scenario where foraging time is limited.
+% In general, net energy gain increases with body size (\cref{fig3}ac).
+% However, when the exponent of the foraging rate is less than the exponent of the metabolic rates ($b_3 > b_2 = b_1$) and resource quality is within a certain range,  net energy gain peaks at intermediate body size.
+%
+% % E: I know you've worked hard to condense this, but it still feel much more technical than everything else.  I'll come back here and see if I can add something a bit more intuitive.
+% SIMPLIFY THIS FURTHER
+% Mathematically (see Appendix for complete derivation), this means that the range of the resource quality $\rho$ allowing intermediate optimal body mass is
+% \begin{equation}\label{eq:C1}
+% 	\widetilde{E_n} < \rho < \widetilde{dE_n},
+% \end{equation}
+% where $\widetilde{E_n} < \rho $ ensures that net energy gain is positive (lower limit of the shaded areas in \cref{fig3}b) and $\rho < \widetilde{dE_n}$ ensures that the derivative with respect to body size $z$ becomes negative (upper limit of the shaded areas in \cref{fig3}b).
+% $\widetilde{dE_n}$ is in fact $\widetilde{E_n}$ weighted by $\dfrac{b_1}{b_3}$  and $\dfrac{b_2}{b_3}$ (see Appendix), and thus $\widetilde{dE_n}$ is greater than $\widetilde{E_n}$ if  $b_3 < b_1$ ($b_2 \geq b_1$ is always true).
+% Temperature has the same multiplicative effect on $\widetilde{E_n}\textnormal{ and }\widetilde{dE_n}$ which means that the range of values for $\rho$ in \cref{eq:C1} increases with temperature (\cref{fig3}b).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection*{Role of warm-up}
-\subsubsection*{Minimum temperature for completing warm-up or?}
+% \subsection*{Thermoregulation potential}
+
+\subsubsection*{Minimum temperature for completing warm-up}
 %For the parameter considered here, when solar radiation is not limiting and without wind (free convection), any individual can absorb and use that energy to complete warm-up.
 %Here, we explore cases where solar radiation is limiting and wind is not negligible.
 If the environmental temperature is too low, it may be impossible to reach the operating temperature.
 %As environmental temperature increases, some species can complete warm-up and others cannot. % E: Do you mean temperature increases in math/abstract, or during the day?
 Here we explore how the ability of completing warm-up depends on body size.
-For ectotherms in the absence of wind, smaller is advantageous as it increases the surface area-to-body size ratio and thus increases the ability to absorb more heat per unit of mass  (\cref{fig4}a).
-For endotherms, larger is advantageous for the opposite reason: more heat is retained within the body  (\cref{fig4}c).
-However, with wind, ectotherms of intermediate sizes are better because small sizes are penalized due to increasing laminar convection ($h$ in \cref{eq:dTn} and \cref{fig4}b)  and large sizes are penalized because they have higher operative temperatures (\cref{eq:Tw}).
-Without the effect of operative temperature, large becomes better (supplementary figure).
+For ectotherms in the absence of wind, smaller is advantageous as it increases the surface area-to-body size ratio and thus increases the ability to absorb more heat per unit of mass  (\cref{fig3}a).
+For endotherms, larger is advantageous for the opposite reason: more heat is retained within the body  (\cref{fig3}c).
+However, with wind, ectotherms of intermediate sizes are better because small sizes are penalized due to increasing laminar convection ($h$ in \cref{eq:dTn} and \cref{fig3}b)  and large sizes are penalized because they have higher operative temperatures (\cref{eq:Tw}).
+Without the effect of operative temperature, large becomes better (Supplementary Figures).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection*{Duration of warm-up}
 % E: I wonder if it is wise to re-raise the matter of constant temperature.  It makes the reader wonder about the assumptions behind all the other results.  Is this the only way to get something interesting to say about warm-up duration?  Did you already convince me that it is foolish to present all results with this daily temperature variation?
 % T: I will try to convince you now :D the results don't change much. In fact I changed the figures so that temperature remains fixed. I am not found of replacing all the results by considering temperature variation because 1- as far as I looked, it does not change much of the results. 2- It creates additional parameter as to how much does it increase during the day, is linear ok, when does it peak... 3- It adds questions about trade-off between the cost of warm-up during cold environment but less metabolic cost or now warm-up because it is hot enough but then high metabolic cost
-As expected, the duration of warm-up decreases as this intensity of solar radiation increases (\cref{fig5}a).
-The decrease is not linear as the duration of  warm-up decreases abruptly and then levels off a few hours after sunrise (\cref{fig5}a).
-The same pattern occurs even if temperature increases during the day (see Supplement)
-For ectothermic individuals, the duration of warm-up increases with body mass (\cref{fig5}a).
-For endothermic individuals, the same pattern occurs but the difference is less pronounced and the slope shallower (see Supplement).
+As expected, the duration of warm-up decreases as this intensity of solar radiation increases (\cref{fig4}a).
+The decrease is not linear as the duration of  warm-up decreases abruptly and then levels off a few hours after sunrise (\cref{fig4}a).
+The same pattern occurs even if temperature increases during the day (see Supplementary Figures)
+For ectothermic individuals, the duration of warm-up increases with body mass (\cref{fig4}a).
+For endothermic individuals, the same pattern occurs but the difference is less pronounced and the slope shallower (see Supplementary Figures).
 
-We found that for endotherms, different values for the conductance are favored at different times of the day (\cref{fig5}b).
+We found that for endotherms, different values for the conductance are favored at different times of the day (\cref{fig4}b).
 If warm-up is initiated early in the day when solar radiation is weak, low conductance is better because it limits heat loss (thick line).
 As the intensity of solar radiation increases, solar radiation becomes a dominant source of heat, and transferring that heat to the thorax is better achieved with high conductance (dashed line).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection*{Thermal performance across body size}
- We integrated the components above to see how they shape thermal performance and how thermal performance varies with body size.
-Warm-up can have a major negative effect on performance (\cref{fig6}a).
+% \subsection*{Does thermal performance shrink, broaden, or shifts as a function of body size?}
+We integrated the components above to see how they shape thermal performance and how thermal performance varies with body size.
+First, we looked at how the timing of warm-up can affect thermal performance.
+Warm-up can have a major negative effect on performance (\cref{fig5}a).
 On one hand, the colder it gets, the longer it takes to warm up and thus the less time is left for foraging.
 (We assumed a fixed time for foraging, which is independent of body size.)
-On the other hand, if an individual delays warm-up initiation to take advantage of more intense solar radiation, the negative effect on performance is reduced (\cref{fig5}a and \cref{fig6}a). % E: Is this true even when foraging stops at a fixed time of day?  Nice to know that early risers don't always get more done! T: I am not sure I follow you. If foraging stops at say 9am. One that warm-up at 6 am might get an advantage compared to another one that starts at 8:45 am even if it takes less amount of time for the latter to warm-up. In here, I assume they are given the same amount of time and they decide when I start the timer.   E:  Okay.  New question: is it ever better to delay warm-up? T: In general unfortunately, I cannot really answer that question (it might depend on competition, predation..). Here, when temperature is constant, yes!! but only delay until a certain point (maybe noon). Afterwards solar energy will start to decrease!
+On the other hand, if an individual delays warm-up initiation to take advantage of more intense solar radiation, the negative effect on performance is reduced (\cref{fig4}a and \cref{fig5}b). % E: Is this true even when foraging stops at a fixed time of day?  Nice to know that early risers don't always get more done! T: I am not sure I follow you. If foraging stops at say 9am. One that warm-up at 6 am might get an advantage compared to another one that starts at 8:45 am even if it takes less amount of time for the latter to warm-up. In here, I assume they are given the same amount of time and they decide when I start the timer.   E:  Okay.  New question: is it ever better to delay warm-up? T: In general unfortunately, I cannot really answer that question (it might depend on competition, predation..). Here, when temperature is constant, yes!! but only delay until a certain point (maybe noon). Afterwards solar energy will start to decrease!
 Qualitatively, warm-up always takes longer for larger individuals, whether they are endotherms or ectotherms.
+As such, large will suffer more from poorly timed warm-up.
 
-The exponent of foraging rate ($b_3$) drives how performance curves vary with body size.
-If foraging rate is a convex function of body size, performance breadth increases with body size (thick line in \cref{fig3} and solid lines in \cref{fig6}b) and large individuals perform better than smaller ones at any temperature (thick solid line above thin solid line in \cref{fig6}b).
-However, if foraging rate is a concave function of body size, performance breadth shifts with body size (dashed lines cross, \cref{fig6}).
+
+Second, we looked at the influence of a reduction in resource availability (e.g., habitat loss) on thermal performance.
+We found that the negative effect decreases as function of body size (\cref{fig2}b and \cref{fig5}x).
+This reduction in resource availability shrinks the performance breadth of large individuals, but it also decreases performance such that small is better along the entire temperature gradient.
+
+Third, we found that the exponent of foraging rate ($b_3$) also dictates thermal performance breadth.
+If foraging rate is a convex function of body size, performance breadth increases with body size (thick line in \cref{fig2}ac and solid lines in \cref{fig5}c) and large individuals perform better than smaller ones at any temperature (thick solid line above thin solid line in \cref{fig5}b).
+However, if foraging rate is a concave function of body size, performance breadth shifts with body size (thick solid line above thin solid cross \cref{fig5}d).
 When temperature is high, small is advantageous.
 When temperature is low, large still performs better.
-
-Finally, we looked at the influence of a reduction in resource availability (e.g., habitat loss) on thermal performance.
-We found that the negative effect decreases as function of body size (\cref{fig2}abc and \cref{fig6}c).
-This reduction in resource availability shrinks the performance breadth of large individuals, but it also decreases performance such that small is better along the entire temperature gradient.
 
 Our results show that there is no single relationship between performance breadth and body size.
 Different factors---here concavity of foraging  rate and resource availability---generate three cases where large individuals have broader, shifted, or narrower performance breadth.
