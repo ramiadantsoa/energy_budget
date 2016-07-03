@@ -18,17 +18,17 @@
 \begin{center}
 \scalebox{0.90}{\includegraphics{fig2}}
 \caption{
-	Different scenarios where net energy gain peaks at intermediate body size as funtion of resource quantity (a, b), resource quality (c, d), and temperature (e, f, g).
+	Different scenarios where net energy gain peaks at intermediate body size as function of: resource quantity (a, b), resource quality (c, d), and metabolic cost (e, f, g, h) due to increase an in temperature and cost of activity.
+	Thick, thin, and dashed lines are for $b_3 = 0.5, 0.8, \rm{ and }\, 1.25$, respectively.
 	%
-	Exogenous parameters:
-	For a) and b), abundant resource $R = 500$ (an individual can collect at most 50 times its body mass), scrace resource $R= 10$, resource quality $\rho = 12$, $T_e = 15$.
+	Extrinsic parameters:
+	For a) and b), high quantity $R = 500$ (an individual can collect at most 50 times its body mass), low quantity $R= 10$, resource quality $\rho = 12$, $T_e = 15$.
 	For c) and d), high quality $\rho = 24$, low quality $\rho = 12$, total foraging time $\tau_f = 45 \rm{min}$, $T_e = 15$.
-	For e)$T_e = 15$, for f) $T_e = 24.5$, $R = 500$, $\rho = 12$, and for g) $T_e = 17$
-	Endogenous parameters:
-	For a), b), c), d), and g) $b_2 = 0.75, a_2 = 20 a_1$.
+	For e) $T_e = 15$, for f) $T_e = 24.5$, $R = 500$, $\rho = 12$, and for g) $T_e = 17$
+	Intrinsic parameters:
+	For a), b), c), d), g), and h) $b_2 = 0.75, a_2 = 20 a_1$.
 	For e) and f) we assumed a high active metabolic rate $a_2 = 30 a_1, b_2  = 1.25$.
-	Fixed parameter values: $b_1 = 0.75$.
-	See \cref{table:table1} for units.
+	See \cref{table:table1} for units and default parameters.
 }
 \label{fig2}
 \end{center}
@@ -39,15 +39,15 @@
 \scalebox{0.85}{\includegraphics{fig3}}
 \caption{
 	Lowest temperature required for the completion of warm-up as a function of body mass.
-	a)  low value for conductance (0.1 $\times$ the default value).
-	b) default value for conductance, wind speed  = 0.1m/s.
-	c)  $a_w = 1.25$.
-	Fixed parameter values: default conductance $K_1 = 0.05 \, c_p, r_3 = 0.5$.
-	Remaining parameters are in \cref{table:table1}.
 	The individual is given a maximum of 6 hours to complete warm-up.
 	To focus on the effect of solar radiation, daily temperature is constant.
 	Solar radiation increases linearly from 0 to 0.25 of the maximum value $S_0$ during a period of 6 hours.
-	See \cref{table:table1} for units.
+	a)  low value for conductance (0.1 $\times$ the default value).
+	b) default value for conductance, wind speed  $u = 0.1$.
+	c)  $a_w = 1.25$.
+	Fixed parameter values: default conductance $K_1 = 0.05 \, c_p, r_3 = 0.5$.
+	Remaining parameters are in \cref{table:table1}.
+	See \cref{table:table1} for units and default parameters.
 }
 \label{fig3}
 \end{center}
@@ -57,12 +57,12 @@
 \begin{center}
 \scalebox{0.85}{\includegraphics{fig4}}
 \caption{
-	Panel a) shows the duration of warm-up as a function of the timing of warm-up and body size for ecotherm (similar results for endotherms).
+	Panel a) shows the duration of warm-up as a function of the timing of warm-up and body size for ecotherms (similar results for endotherms).
 	Panel b) shows the duration of warm-up as a function of the conductance for endotherms. Body size $z = 1$ , $a_w = 1.25$
-	Solar radiation is equivalent to what would happen at 30 degree latitude during equinox.
 	Environmental temperature $ T_e = 15$.
+	Solar radiation during equinox at 30 degree latitude.
 	Default value $K_1$ in a) and $K_2$ a) and b).
-	See \cref{table:table1} for units.
+	See \cref{table:table1} for units and default parameters.
 }
 \label{fig4}
 \end{center}
@@ -72,21 +72,21 @@
 %%
 \begin{figure}%[H]
 \begin{center}
-\scalebox{0.85}{\includegraphics{fig5}}
+\scalebox{0.75}{\includegraphics{fig5}}
 \caption{
-	Overlap of the thermal performance curves (or net energy gain) between body sizes as function of: the timing of warm-up (a,b), the exponent of the foraging rate (c,d), and the quantity of resource available (e, f).
-	Exogenous parameters:
+	Overlap of the thermal performance curves (or net energy gain) between large and small body sizes as function of: the timing of warm-up (a,b), the exponent of the foraging rate (c, d), and the quantity of resource available (e, f).
+	Extrinsic parameters:
 	$\rho = 30, R = 30 \rm{g}$ expect for f) $R = 15 \rm{g}$.
 	%
-	Endogenous parameters:
-	For c) and d) convex ($b_3 = 1.25$) concave ($b_3 = 0.5$).
+	Intrinsic parameters:
+	for c) and d) convex ($b_3 = 1.25$) concave ($b_3 = 0.5$).
 	For e) and d) $b_3 = b_2 = b_1 = 0.75$.
-	For a), b), c), and d) large $z = 2 \rm{g}$, small $z = 0.5 \rm{g}$.
-	For e) and f) large $z = 2 \rm{g}$, small $z = 0.1 \rm{g}$.
+	For a), b), c), and d) large $z = 2$, small $z = 0.5$.
+	For e) and f) large $z = 2 \rm$, small $z = 0.1$.
 	%
 	Other parameters:
-	Foraging time $\tau_f = 1 \rm{hour}$ and $a_2 = 10 a_1$, wind $u = 1 \rm{m.s^{-1}}$.
-	See \cref{table:table1} for units.
+	Foraging time $\tau_f = 1$ and $a_2 = 10 a_1$, wind $u = 0.1$.
+	See \cref{table:table1} for units and default parameters.
 }
 \label{fig5}
 \end{center}
