@@ -1,47 +1,106 @@
-\title{Body size, temperature, and net energy gain} % E: Something here before sending this out for comments!
-\date{\vspace{-5ex}}
-\author{Tanjona Ramiadantsoa \& Emma Goldberg}
-\documentclass[12pt]{article}
-\usepackage{amsmath}
-\usepackage{mathabx}
-\usepackage{graphics}
-\usepackage[top=0.75in, bottom=0.75in, left=1in, right=1in]{geometry}
-\usepackage{tabu}
-\usepackage[english]{babel}
-\usepackage{natbib}
-\bibliographystyle{evolution}
+\documentclass[11pt]{article}
+\usepackage{amnat}
 \usepackage{rotating}
-\usepackage[capitalize, sort&compress]{cleveref}
-\usepackage{float}
-%\newcommand{\crefrangeconjunction}{--}
-%\crefname{section}{Sect.}{Sects.}
-%\crefname{equation}{Eq.}{Eqs.}
-%\crefformat{equation}{Eq.~#2#1#3}
-%\crefrangeformat{equation}{Eqs.~#3#1#4--#5#2#6}
-%\crefmultiformat{equation}{Eqs.~#2#1#3}{--#2#1#3}{, #2#1#3}{ and~#2#1#3}
-
-% for comments visible in the compiled pdf
-%\usepackage{color}
-%\definecolor{orange}{rgb}{0.8,0.4,0}
-%\newcommand{\eeg}[1]{{\em \color{orange} #1}}
 
 % Tell latex how it can introduce linebreaks if necessary.
 \hyphenation{Bar-thol-o-mew}
-\linespread{1.5}
 
 \begin{document}
+
+%--------------------------------------------------
+% Titlepage and Abstract
+%--------------------------------------------------
+
+% The first page of the manuscript file should be a title page that includes
+% the title; a list of four to six keywords; and a list of all the elements of
+% the manuscript that will appear in the expanded online edition (so reviewers
+% will not miss essential elements). The title page should indicate whether the
+% manuscript is an article, note, synthesis, natural history miscellany,
+% comment, reply, or symposium (invited) article.
+
+\title{Body size, temperature, and net energy gain}
+
+% removed for anonymity during review
+% LATER: restore, and add addresses
+% \author{
+%     Tanjona Ramiadantsoa \& Emma E.\ Goldberg
+% }
+
+\date{}
+
 \maketitle
+
+\bigskip
+
+\noindent
+\textit{Manuscript elements}:
+Figures 1--5.
+Table 1.
+Appendix 1. % ??
+No color.
+
+\bigskip
+
+\noindent
+\textit{Keywords}: 
+% E: provide 4-6
+thermal performance, \ldots
+
+\bigskip
+
+\noindent
+\textit{Manuscript type}:
+Article.
+
+\vfill
+
+\noindent{\footnotesize Prepared using the suggested \LaTeX\ template for \textit{Am.~Nat.}}
+
+\newpage
+
+% The second page should be the one-paragraph abstract, without citations, of
+% less than 200 words for articles.
+
+\linenumbers{}
+
+\section*{Abstract}
+
+TODO
+
+\newpage
+
+%--------------------------------------------------
+% Content: see other .tex files
+%--------------------------------------------------
 
 \input{./1_Introduction.tex}
 \input{./2_Material_and_methods.tex}
 \input{./3_Results.tex}
 \input{./4_Discussion.tex}
 %\input{./Appendix_warm-up_derivation.tex }
-\newpage
 
+%--------------------------------------------------
+% \section*{Acknowledgements}
+%--------------------------------------------------
+% LATER: include in pdf.  Removed for anonymity now.
+
+%--------------------------------------------------
+% References
+%--------------------------------------------------
+
+% \clearpage
+
+\setstretch{1.5}
 \bibliography{refs_energy_budget}
-\newpage
+\bibliographystyle{amnat}
+% LATER: paste .bbl file here (actually, see latex instructions accessible from upload page)
 
+%--------------------------------------------------
+% Figures and Captions
+%--------------------------------------------------
+
+\clearpage
+\nolinenumbers % applies to the figures
 \input{./5_figure_captions.tex}
 
 \end{document}

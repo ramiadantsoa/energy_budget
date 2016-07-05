@@ -1,0 +1,80 @@
+\ProvidesPackage{amnat}     % must match file name 
+
+% \documentclass[11pt]{article} % AN
+
+%--------------------------------------------------
+% Style for American Naturalist
+% Blends my preferences with their file, 
+%   http://press.uchicago.edu/dms/ucp/journals/AmNat_MS_template/AmNat_MS_template.tex
+%--------------------------------------------------
+
+% \usepackage{fullpage} % AN
+\usepackage[margin=1in]{geometry}
+
+% \usepackage{times}
+% \usepackage{mathptmx}
+\usepackage[sc]{mathpazo} % AN
+% \usepackage[utf8]{inputenc} % AN
+
+% \linespread{1.7} % AN
+\usepackage{setspace}
+\newcommand{\stretchby}{1.7} % facilitates matching spacing in captions
+\setstretch{\stretchby}
+
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+
+% Clear floats at the end of each section
+% \usepackage[section]{placeins} % for FloatBarrier
+\usepackage[nolists,nomarkers]{endfloat}
+% \renewcommand{\efloatseparator}{\mbox{}} % don't clearpage after each float
+
+% Citations
+% \usepackage[authoryear,sectionbib,sort]{natbib} % AN
+\usepackage[authoryear,sectionbib]{natbib}
+\bibpunct{(}{)}{;}{a}{}{,}  % no comma between author and year
+\renewcommand{\bibsection}{\section*{Literature Cited}}
+\setlength{\bibsep}{1pt}
+
+% Section headings
+\usepackage[compact,tiny]{titlesec}
+\titleformat*{\section}{\centering\bfseries}
+\titleformat*{\subsection}{\centering\itshape\bfseries}
+\titleformat*{\subsubsection}{\centering\itshape}
+
+% Allows fancier equation formatting
+\usepackage{amsmath}
+% \usepackage{amssymb}
+% \usepackage{mathtools}
+
+% Line numbering
+%   put after amsmath, for better numbering
+%   though still need to wrap subequations in begin/end{linenomath*}
+\usepackage[mathlines]{lineno}
+\modulolinenumbers[5]
+% Turn on after title page (AN)
+% \linenumbers
+
+% References to figures and equations
+\usepackage[capitalize,sort&compress]{cleveref}
+\newcommand{\crefrangeconjunction}{--}
+
+\crefformat{equation}{equation~(#2#1#3)}
+\crefrangeformat{equation}{equations~(#3#1#4)--(#5#2#6)}
+\crefmultiformat{equation}{equations~(#2#1#3)}{--(#2#1#3)}{, (#2#1#3)}{ and~(#2#1#3)}
+
+\crefformat{figure}{figure~#2#1#3}
+\crefrangeformat{figure}{figures~#3#1#4--#5#2#6}
+\crefmultiformat{figure}{figures~#2#1#3}{--#2#1#3}{, #2#1#3}{ and~#2#1#3}
+
+% for parenthetical references, use \crefp
+\newcommand{\crefp}[1]{%
+  \crefformat{figure}{fig.~##2##1##3}%
+  \crefformat{equation}{eq.~[##2##1##3]}%
+  \crefformat{subequation}{eq.~[##2##1##3]}%
+  \cref{#1}%
+  \crefformat{figure}{figure~##2##1##3}%
+  \crefformat{equation}{equation~(##2##1##3)}%
+  \crefformat{subequation}{equation~(##2##1##3)}%
+}
