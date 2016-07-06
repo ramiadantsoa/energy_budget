@@ -6,33 +6,39 @@ We investigate how the thermal performance curve differs---in width, location, a
 We start by exploring the role of scaling with body size, temperature, and resource availability, without considering warm-up.
 We then focus on warm-up only.
 Finally, we report the combined effects of all processes on the thermal performance curve.
+Throughout, we emphasize the diverse outcomes that are possible from our model, rather than provide an exhaustive description of the effects of each parameter.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection*{Does net energy gain increase or decrease with body size?}
 
-Intuitively, because mass-specific metabolic rate decreases with body mass, the net energy gain is expected to increase with body mass.
-We found that when resource quantity is unlimited the net energy gain, indeed, increases with body mass (\crefp{fig2}a).
-We note that although resource are unlimited, an individual can only gather resource up to 50 times its body mass.
-In contrast, when resource quantity is limited, the net energy gain peaks at intermediate body mass (\crefp{fig2}b) simply because there is not enough energy to sustain the high absolute metabolic cost of large-bodied individuals.
-In this scenario, the exponent $b_3$ does not affect the qualitative pattern (\crefp{fig2}ab).
+% E: I just noticed that "body size" and "body mass" seem to be used interchangeably throughout the text and figures.  I think it would be better to pick one and stick with it everywhere.  Probably mass.
 
-An alternative scenario is to assume that foraging time is limited.
-In that case, resource quality determines the qualitative patterns of the net energy gain.
-When resource quality is high, the net energy gain increases with body mass (\crefp{fig2}c).
-When resource is low, the net energy gain again peaks at intermediate body size (\crefp{fig2}d).
-Furthermore, changing the exponent $b_3$ alters the qualitative pattern.
-Our analytical results show that the net energy gain peaks at intermediate body mass if and only if $b_3 < b_2$ and when resource quality is within a certain range (see Appendix).
-For instance, when resource quality is high, the net energy gain always increases with body mass (\crefp{fig2}c).
+Larger individuals expend less energy per unit mass (they have a lower mass-specific resting metabolic rate; $b_1 < 1$ in \crefp{eq:eb}), so it is intuitive that net energy gain increases with body size.
+Our model indeed shows this behavior, at least when resources are abundant and foraging time is not constrained (\crefp{fig2}a).
+(Note that even with unlimited resources available, we restrict an individual to gather only up to 50 times its body mass in order to avoid unreasonable outcomes.) % E: can you be more specific about why this is a wise constraint?
+In contrast, when resource quantity is more limited, net energy gain peaks at intermediate body mass (\crefp{fig2}b) because not enough energy can be obtained to sustain the high absolute metabolic cost of large-bodied individuals.
+The scaling of foraging rate, $b_3$, does not affect these qualitative patterns.
 
-At third scenario where the net energy gain can peak at intermediate body size is when the metabolic cost is high because the environmental temperature, the coefficient $a_2$, and the exponent $b_2$ are higher.
-Unlike the first scenario, the exponent $b_3$ dictates whether the net energy gain always increases or eventually decreases with body size (\crefp{fig2}ef).
-Even if resource are unlimited, a concave foraging rate ($b_3 < 1.$) means that foraging time increases with body size.
-Consequently, large individuals are active for a longer period of time and therefore pay a  higher metabolic cost.
-When foraging time is fixed, higher temperature does not change the qualitative pattern but the net energy gain peaks at lower body mass (\crefp{fig2}cg, and \crefp{fig2}d vs. \crefp{fig2}h).
+Alternatively, when foraging time is limited, resource quality determines the form of net energy gain.
+Net energy gain increases monotonically with body mass when resource quality is high (\crefp{fig2}d), as when resource quantity is high (\crefp{fig2}a).
+Net energy gain may peak at intermediate body size, however, when resource quality is not too high (\crefp{fig2}c).
+Furthermore, the foraging exponent $b_3$ affects these qualitative patterns.
+Our analytical results show that net energy gain peaks at intermediate body mass if and only if $b_3 < b_2$ and resource quality is within a certain range (see Appendix).
+
+Net energy gain can also peak at intermediate body size if the active metabolic rate is increased, because larger individuals are penalized more strongly (\crefp{fig2}e, cf.~\crefp{fig2}a).
+This effect is exaggerated at higher temperatures, where again larger individuals pay a higher price (\crefp{fig2}f).
+The exponent $b_3$ now dictates whether net energy gain always increases or eventually decreases with body size.
+% because the environmental temperature, the coefficient $a_2$, and the exponent $b_2$ are higher.
+% Unlike the first scenario, the exponent $b_3$ dictates whether the net energy gain always increases or eventually decreases with body size (\crefp{fig2}ef).
+Even if resources are unlimited, a concave foraging rate ($b_3 < 1$) means that foraging time increases with body size.
+Consequently, larger individuals are active for a longer period of time and therefore pay a higher metabolic cost.
+
+When foraging time is fixed, higher active metabolic rate again penalizes larger individuals (\crefp{fig2}g, cf.~\crefp{fig2}d).
+Higher temperature does not change the qualitative pattern in this case, but net energy gain peaks at lower body mass (\crefp{fig2}h).
 
 % E: Please feel free to edit this.  The goal is to give the reader a simple take-away message.
-Overall, we find that there may or may not be an intermediate optimal body size when considering only how metabolic costs and resource acquisition scale with body size and temperature.
+Overall, we find that there may or may not be an intermediate optimal body size when considering only how metabolic costs and foraging scale with body size and temperature.
 Small individuals generally have low net energy gain because they gather little resource.
 Large individuals may also have low net energy gain when resource quality is low or their metabolic costs are high.
 Otherwise, larger body size allows greater net energy gain.
