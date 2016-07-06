@@ -1,148 +1,165 @@
-\section*{Model Description} %\label{model description} \cref seems not to work when section*
+\section*{Model Description}
+
+%\label{model description} \cref seems not to work when section*
+% E: The proper solution is to use \section{} instead of \section*{}, and to use \setcounter{secnumdepth}{0} in the preamble to suppress numbering.
+
 The model investigates the daily performance of an adult insect with fixed body size.
-We define performance as net energy gain, which is the difference between energetic gain and cost.
-The energetic gain is the amount of energy acquired during solitary foraging, whereas  the energetic cost is the sum of metabolic costs incurred while resting and during activity (i.e., foraging).
+We define performance as net energy gain, which is the difference between energetic gain and loss during the day.
+The energetic gain is the amount of energy acquired during solitary foraging, whereas the energetic loss is the sum of metabolic costs incurred while resting and during foraging activity.
 The model contains a thermoregulation phase that precedes activity.
-The completion of warm-up is necessary because muscles are only operational when they are above a certain temperature.
-We note the model is only appropriate to insects that need to warm-up.
-The model is built on relationship between many variables (\cref{fig1}a).
+It thus applies to insects that must complete warm-up because muscles are only operational when they are above a certain temperature.
+The model is built by describing relationships among several variables (\crefp{fig1}a).
+% E: Side note: \crefp{} is for references inside parentheses; AmNat abbreviates them.
 First, we describe the external properties of the environment.
 Second, we use empirically derived relationships to model the rate of energetic loss and gain as a function of body size and temperature.
-Third, we use thermodynamical principles to describe changes in body temperature during warm-up.
+Third, we use thermodynamic principles to describe changes in body temperature during warm-up.
 Finally, we integrate these components to define net energy gain.
 We then further justify the functional forms and parameters employed by our model.
 
 \subsection*{Environment}
+
 We consider three properties of the environment: the temperature, the intensity of solar radiation, and the amount of available resource.
 We define environmental temperature $T_e$ as the temperature felt by the individual while inactive.
 %We implicitly assume that environmental temperature takes into account other factors such as humidity and so on.
 Because insects are small, we assume that environmental temperature does not depend on body size. % E: How would it for large individuals?  Self-shading? T: Dinosaurs are thought to be almost homeotherm because the loss of heat is so low.
 Our model derivation here does not account for temperature variation during the day, but we show in the Supplementary Figures that daily temperature changes do not affect the qualitative results.
 
-We assume that at any given time of the day, the intensity of solar radiation is \[S_R = S_0 \cos(\psi) \]
+We assume that at any given time of the day, the intensity of solar radiation is $S_R = S_0 \cos(\psi)$,
 where $\psi$ is the zenith angle and $S_0 = 1361 \, \rm{W m}^{-2}$ is the maximum solar radiation at noon.
 Solar radiation is needed to generate heat during the warm-up phase of the model.
-See Appendix and \citet{Campbell2012} for more details on how $\psi$ depends on latitude and the day of the year as well as how we obtained the time of sunrise.
+See the Appendix and \citet{Campbell2012} for more details on how $\psi$ depends on latitude and the day of the year as well as how we obtained the time of sunrise.
 
 We denote by $R$ the daily quantity of resource available.
 The energy density per unit of resource mass is $\rho$.
-Poor environment in terms of resource can thus be obtained by low quantity $R$ or low quality $\rho$.
+Poor environments in terms of resource can thus be obtained by low quantity $R$ or low quality $\rho$.
 
 \subsection*{Energetic cost}
+
 \subsubsection*{Resting metabolic rate}
+
 Following \citet{Brown2004}, we assume that resting metabolic rate increases with body size and temperature such that
 \begin{equation} \label{eq:eb}
 	e_b(z, t) = a_1 z^{b_1} \exp \left(\frac{-E}{k (T_b(t)+ 273.15)}\right),
 \end{equation}
-where $z$ is body mass, $T_b(t)$ is the body temperature at time $t$ in Celsius, $E$ and $k$ are respectively the activation energy and the Boltzman constant (this is the Arrhenius equation), and $a_1$ and $b_1$ are constants which we called respectively the coefficient and exponent.
+where $z$ is body mass, $T_b(t)$ is the body temperature at time $t$ in Celsius, $E$ and $k$ are respectively the activation energy and the Boltzman constant (this is the Arrhenius equation), and $a_1$ and $b_1$ are constants which we call respectively the coefficient and exponent.
 At rest, the body temperature of the individual matches that of the environment \citep[e.g.,][]{Bartholomew1978} so that $T_b(t)$ in \cref{eq:eb} can be replaced by $T_e(t)$.
 % T: I realize here that temperature in the beehive can differ from T_e!!! I would say it does not matter much but...if one wants to be picky???
+% E: Oh, right!  So then you warm up in one environment and go be active in another... too much complication for no clear gain, I think.
 
 \subsubsection*{Active metabolic rate}
+
 For simplicity and because it is poorly characterized empirically, we assume that the functional form of the active metabolic rate is the same as that of the resting metabolic rate, i.e.,
 \begin{equation} \label{eq:ea}
 	e_a(z,t) = a_2 z^{b_2}  \exp \left(\frac{-E}{k (\max[T_w(z_{th}), T_e(t)]+ 273.15)} \right),
 \end{equation}
 where $T_w$ is the minimum thoracic temperature that would permit foraging.
-The warm-up phase (see section Warm-up below) determines whether an individual is able to warm up and eventually forages. % should \cref with section but it did not work, later...
-Large-bodied individuals often have higher temperature during activity \citep{Bartholomew1977a}. % E: or "species"?
-For simplicity, we assume that $T_w$ depends linearly or $z_{th}$ \citep{Bartholomew1977a}, i.e.,
+The warm-up phase (see section Warm-up below) determines whether an individual is able to warm up and eventually forage. % should \cref with section but it did not work, later...
+Large-bodied individuals often have higher temperature during activity, so we allow $T_w$ to depend on $z_{th}$, as in \citet{Bartholomew1977a}:
 \begin{equation} \label{eq:Tw}
 	T_w(z_{th}) = c_0+ c_1 z_{th}.
 \end{equation}
 Here, $z_{th}$ is the mass of the thorax, and $c_0$ and $c_1$ are two free parameters.
-Thus, unlike resting metabolic rate (\cref{eq:eb}), the effect of temperature on active metabolic rate depends on body size.
+Thus, unlike resting metabolic rate (\crefp{eq:eb}), the effect of temperature on active metabolic rate depends on body size.
 The use of the function `maximum' ($\max$) is a rough approximation such that when the environmental temperature is too high, there is an additional cost of foraging, such as the additional energy used to avoid overheating.
-To ensure that the cost of activity exceeds that of resting, we assume that the parameters of the active metabolic rate are greater than the parameters of the resting metabolic rate, i.e., $a_2 \geq a_1$ and $b_2 \geq b_1$ .
+To ensure that the cost of activity exceeds that of resting, we assume that the parameters of the active metabolic rate are greater than the parameters of the resting metabolic rate, i.e., $a_2 \geq a_1$ and $b_2 \geq b_1$. % E: either "greater than" and ">" or "greater or equal to/not less than" and "\geq"
 
 \subsection*{Energetic gain: foraging}
+
 We define foraging rate $g(z)$ as the average amount of resource an individual collects per unit of time.
-Here, given that absolute metabolic cost increases with body size, we assume that foraging rate also increases with body size, and for simplicity, we assume a power law  % E: why are we not interested in the other cases? T: Is it OK now?
+Here, given that absolute metabolic cost increases with body size (\crefp{eq:ea}), we assume that foraging rate also increases with body size, and for simplicity, we assume a power law,
 \begin{equation} \label{eq:g}
 	g(z) = a_3 z^{b_3}.
 \end{equation}
-This equation pools together different activities such as searching time and handling time.
+This equation pools together different activities such as searching for and handling the resource.
 We will not assume any particular value for $b_3$, and our results explore its role in shaping thermal performance.
-If small individuals are more agile, \cref{eq:g} takes a concave shape (\cref{fig1}b).
-Alternatively, if large individuals have better searching ability (e.g., find more distant resources), \cref{eq:g} takes a convex shape.
+If small individuals are more agile, \cref{eq:g} takes a concave shape (\crefp{fig1}b).
+Alternatively, if large individuals have better searching ability (e.g., they find more distant resources), \cref{eq:g} takes a convex shape.
 Finally, the rate of energy gain includes both foraging rate and resource quality:
 \begin{equation} \label{eq:eg}
-	e_g(z) = a_3 z^{b_3}  \rho  = g(z) \rho.
+	e_g(z) = g(z) \rho = a_3 z^{b_3} \rho.
 \end{equation}
 
 \subsection*{Warm-up}
-As we mentioned earlier, when environmental temperature is low, an individual needs to reach $T_w$ to be active and thus forages and gains energy.
-In general, warm-up behavior would include the when, where, and how to warm up but here we are interested in if they can complete warm-up and the duration of warm-up.
+
+As we mentioned earlier, when environmental temperature is low, an individual needs to reach sufficient internal temperature to be active for foraging.
+In general, warm-up behavior would include the when, where, and how of warming up.
+Here, however, we focus on whether or not warm-up can be completed, and if so, the duration of warm-up.
 Furthermore, insects do not need to warm up the entire body, only the thorax where most of the muscles are \citep{Kammer1974, Heinrich1975, Bartholomew1978, Verdu2012}.
-Therefore, we track the temperature of the thorax $T_w$ (\cref{eq:Tw}) and so focus on thoracic mass rather than body mass.
+Therefore, we track the temperature of the thorax, $T_w$ (\crefp{eq:Tw}), and so focus on thoracic mass, $z_{th}$, rather than body mass.
 
 The most common strategy for warming up is to absorb solar radiation.
 Heat is transfered to the thorax from the surface of the body by passive conductance \citep{Bakken1976}.
 A second strategy is to endogenously generate heat by contracting muscles against each other, similar to shivering \citep[e.g.,][]{Kammer1974}.
-We assume that the frequency of contraction increases linearly with thoracic temperature: $f[T_{th}]  = a_w T_{th}$ for $T_{th}> 0$ and 0 otherwise.
-We loosely use the term ``endotherm'' for insects that have the ability to generate heat endogenously only during warm-up, and ``ectotherm'' for insects that do not generate heat (i.e., $a_w = 0$).
+We assume that the frequency of contraction increases linearly with thoracic temperature: $f(T_{th}) = a_w T_{th}$ for $T_{th} > 0$ and 0 otherwise.
+We loosely use the term ``endotherm'' for insects that have the ability to generate heat endogenously during warm-up ($a_w > 0$), and ``ectotherm'' for insects that do not generate heat ($a_w = 0$).
 
-Coupled differential equations  track changes in the thoracic temperature and non-thoracic temperature (i.e., the rest of the body).
+Coupled differential equations  track changes in the thoracic temperature and non-thoracic temperature (i.e., the rest of the body) during warm up.
 For geometrical simplicity, we assume that the body is half of a sphere and the thorax constitutes half of the body.
 The surface of the thorax and the non-thorax can be easily calculated given the mass and the density of the insect (see Appendix).
 
 Change in thoracic temperature, $T_{th}$, is based on heat exchange between the thorax and the non-thorax.
 We have
 \begin{equation} \label{eq:dTh}
-	\frac{dT_{th}}{dt} = \frac{1}{s z_{th}} (z_{th} e f[T_{th}] +  A_{th} K_1(T_r - T_{th})),
+	\frac{dT_{th}}{dt} = \frac{1}{s z_{th}} \left[ z_{th} e f(T_{th}) +  A_{th} K_1(T_r - T_{th}) \right],
 \end{equation}
-where $s$ is the specific heat capacity, $e$ is the calories generated per contraction and per gram of muscle \citep{Kammer1974}, $A_{th}$ is total surface of the thorax, and $K_1$ is the conductance between the thorax and the non-thorax.
+where $s$ is the specific heat capacity, $e$ is the calories generated per contraction and per gram of muscle \citep{Kammer1974}, $A_{th}$ is the total surface of the thorax, and $K_1$ is the conductance between the thorax and the non-thorax.
 
 Change in the  non-thorax temperature ($T_r$; the subscript $r$ is to remind us it is the rest of the body) is based on thermal exchange between the surface of the individual and the external environment.
 We have
 \begin{equation} \label{eq:dTn}
 	%\begin{split}
-		\frac{dT_r}{dt} =  \frac{1}{s z_{r}} \Bigl( - A_{th} K_1(T_r - T_{th})  \Bigr)
-			+ \frac{1}{s z_{r}} \Bigl( A_r \left[ - c_p K_2 h(T_r -T_e, V)- \sigma \varepsilon T_r^4 + \sigma \varepsilon T_e^4  + r_3 S_R  \right] \Bigr),
+		\frac{dT_r}{dt} =  \frac{1}{s z_{r}} \left[ - A_{th} K_1(T_r - T_{th})  \right]
+			+ \frac{1}{s z_{r}} \left( A_r \left[ - c_p K_2 h(T_r -T_e, V)- \sigma \varepsilon T_r^4 + \sigma \varepsilon T_e^4  + r_3 S_R  \right] \right),
 %\end{split}
 \end{equation}
 where $\varepsilon = 0.935$ is the emissivity of a gray body, $u$ is wind speed, $V$ is the volume of the insect, and $A_r$ is the surface area of the non-thorax (simply the surface of the whole body).
 We consider two forms of convection here, with $ h(T_r -T_e, V) = (T_r- T_e)^{1.25} (1/V)^{1/12 }$ for free convection (no wind) and $ h(T_r -T_e, V) =  1.4 \times 0.135 \sqrt{u/V^{1/3}} (T_r- T_e) $ for laminar convection \citep{Campbell2012}.
 %
-The conductance $K_1$ is defined above, and $c_p$ is the specific capacity of the air.
+The conductance $K_1$ is defined above, and $c_p$ is the specific capacity of the air. % E: "specific heat capacity"?
 The constant $K_2$ controls convection between the body and the air \citep{Campbell2012}.
 
 The last term of \cref{eq:dTn}  is an approximation of more the detailed equation in \citet{Campbell2012}.
-Here, we ignore view factors, reflected radiation and so on, and pool every source of radiation in $ \sigma \varepsilon T_e^4$ and $S_R$.
+Here, we ignore view factors, reflected radiation and so on, and pool every source of radiation into $ \sigma \varepsilon T_e^4$ and $S_R$.
 The parameter $r_3$ is used to scale and summarize the quantity of absorbed solar radiation.
 
-We solve the ODE system (\cref{eq:dTh,eq:dTn}) numerically using the function NDSolve in Mathematica \nocite{Mathematica10}.
+We solve the ODE system (\crefp{eq:dTh,eq:dTn}) numerically using the function NDSolve in \nocite{Mathematica10} Mathematica.
 By solving the equations through time, we can find if the minimum temperature  required for activity ($T_w$) is reached. % E: Be prepared to submit your Mathematica notebook as a supplemental file (as .nb and .pdf).
 If it is, we can also solve for the duration of the warm-up $\tau_w$ from $T_{th}(\tau_w) = T_w$.
 
 \subsection*{Net energy budget}
-We now integrate all the components above to calculate  the energy budget during a 24-hour period.
-Daily activity consists of resting, warming up, and foraging (activity).
-We assume continuous activity and thus require only one warm-up phase.
+
+We now integrate all the components above to calculate the energy budget during a 24-hour period.
+Daily activity consists of resting, warming up, and foraging activity.
+We assume activity occurs in one block of time and thus require only one warm-up phase. % E: as opposed to "continuous activity" meaning that it never ends
 We use $t$ to denote the time of the day and $\tau$ for duration.
 % We start the calculation at sunrise, $t = 0$ and end at $t = 24.$
-Total foraging time, $\tau_f$, can be fixed, or it can be a function of resource availability $R$, with $\tau_f = R/g(z)$ (we always assume that an individual can gather at most 50 times its body mass).
+Total foraging time, $\tau_f$, can be fixed, or it can be a function of resource availability $R$, with $\tau_f = R/g(z)$.
+(We always assume that an individual can gather at most 50 times its body mass.)
 If warm-up cannot be completed, foraging does not occur and $\tau_f = 0$.
 If warm-up is completed, we penalize the individual by subtracting the duration of warm-up $\tau_w$ from the total foraging time $\tau_f$.
-The total daily energetic gain is given by
-\[
+Referring to \cref{eq:eg}, the total daily energetic gain is given by
+\begin{equation} \label{eq:Eg}
 	E_g(z,\tau_f - \tau_w) = (\tau_f - \tau_w) e_g(z).
-\]
-If we assume that warm-up starts at $t_i$  the total daily  energetic cost is
-\begin{equation} \label{eq:et}
-	E_t(z, \tau_f) = \int_0^{t_i} e_b(z, t) dt + \int_{t_i + \tau_w}^{t_i + \tau_f } e_a(z,t) dt + \int_{t_i+\tau_f}^{24} e_b(z, t) dt,
+\end{equation}
+If we assume that warm-up starts at $t_i$ the total daily energetic cost is
+\begin{equation} \label{eq:Ed}
+	E_d(z, \tau_f) = \int_0^{t_i} e_b(z, t) dt + \int_{t_i + \tau_w}^{t_i + \tau_f } e_a(z,t) dt + \int_{t_i+\tau_f}^{24} e_b(z, t) dt,
+    % E: I presume the t subscript on E stood for "total", but it is a bit confusing with t also meaning time.  So I changed to E_d (for "daily") here and in the Appendix, or pick something else.
 \end{equation}
 where $e_b$ is defined in \cref{eq:eb}  and $e_a$ in \cref{eq:ea}.
 The first and the last term on the right hand side calculate the total energetic cost when the individual is at rest from $t = 0$ to $t = t_i$ (before foraging) and from $t = t_i + \tau_f$ to $t = 24$ (after foraging).
 The middle term calculates the total energetic cost of foraging from $t = t_i + \tau_w$ to $t = t_i + \tau_f$.
-Our calculations show that the energetic cost for warm-up (by shivering) which specific to endotherms is negligible, so it is omitted from \cref{eq:et}, in accord with empirical findings \citep{Heinrich1975}.
+% E: Consider dropping the "t =" in the previous sentences.  Or add it in the next sentence.
+Our calculations show that the energetic cost while warming up from $t_i$ to $t_i + \tau_w$ is negligible, for both endotherms (actively shivering) and ectotherms (passively basking).
+We thus omit it from \cref{eq:Ed}, in accord with empirical findings \citep{Heinrich1975}.
 
-Daily net energy gain is obtained from the  difference between energy gain from foraging and total energy expended, i.e.,
+Daily net energy gain is obtained from the difference between energy gain from foraging (\crefp{eq:Eg}) and total energy expended (\crefp{eq:Ed}), i.e.,
 \[
-	E_n(z, \tau_f) = E_g(z,\tau_f- \tau_w) - E_t(z, \tau_f).
+	E_n(z, \tau_f) = E_g(z,\tau_f- \tau_w) - E_d(z, \tau_f).
 \]
 
 \subsection*{Power law and parameter justifications}
+
 Our model assumes that the relationships between body size, metabolic rate, and foraging rate are represented by power laws.
 A general pattern is that resting metabolic rate scales with body size with an exponent $b_1 = 0.75$ (\cref{eq:eb})  which has been reported from unicellular organisms to mammals \citep{Kleiber1947, Peters1986,Gillooly2001,Brown2004}.
 % In \cref{eq:eb} $b_1$ is often suggested to be approximately 0.75 \citep{Kleiber1947, Peters1986, Brown2004}, which we use as a default value in our analyses.
