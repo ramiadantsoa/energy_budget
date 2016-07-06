@@ -161,68 +161,30 @@ Daily net energy gain is obtained from the difference between energy gain from f
 \subsection*{Power law and parameter justifications}
 
 Our model assumes that the relationships between body size, metabolic rate, and foraging rate are represented by power laws.
-A general pattern is that resting metabolic rate scales with body size with an exponent $b_1 = 0.75$ (\cref{eq:eb})  which has been reported from unicellular organisms to mammals \citep{Kleiber1947, Peters1986,Gillooly2001,Brown2004}.
-% In \cref{eq:eb} $b_1$ is often suggested to be approximately 0.75 \citep{Kleiber1947, Peters1986, Brown2004}, which we use as a default value in our analyses.
+A general pattern is that resting metabolic rate scales with body size with an exponent $b_1 = 0.75$ (\crefp{eq:eb}), which has been reported from unicellular organisms to mammals \citep{Kleiber1947, Peters1986,Gillooly2001,Brown2004}.
 Although there is a debate about the actual values \citep[e.g.,][]{Isaac2010}, we adopt that value to diminish the number of free parameters, allowing us to explore the values of other exponents that are less-well established.
 
 The power law relationship for active metabolic rate has much less empirical grounding, with few studies measuring it for a range of body sizes.
-A notable exception is a work by \citet{Bartholomew1978}, who found a power law with exponent $b_2 = 1.17$.
-In general, what is known is specific values of the metabolic scope, which is the ratio between maximum active metabolic and resting metabolic rate.
-Several studies have reported that oxygen consumption when active can be as much as 70 times greater than when resting \citep{Bartholomew1981}, almost the same as resting (refs) although a typical value is about 40 \citep{Bartholomew1981}.
+A notable exception is work by \citet{Bartholomew1978}, who found a power law with exponent $b_2 = 1.17$.
+More studied is metabolic scope, which is the ratio of maximum active metabolic rate to resting metabolic rate.
+Oxygen consumption when active can be as much as 70 times greater than when resting \citep{Bartholomew1981}, or barely more than when resting (refs), although a typical ratio is about 40 \citep{Bartholomew1981}. % E: refs!
 %LOOK AT NITTEPOLD 2010 A'N'D ZHAN 2014 NATURE, LIGHTON ANTS DON'T CONSUME MORE O2 WHEN WALKING.
-%In our model, metabolic scope can then be adjusted either by varying $a_2$  or $b_2$ whether it is mass independent or not. % E: I'm not sure what the last few words here mean.T: I would remove for the moment, simply because it does not really matter for the results. Beside, there also the temperature effect which is in the max function. These are assumptions and maybe it is not worth to draw attention to that (I added a figure in the supplement to look at the effect of a_2 and b_@
+%In our model, metabolic scope can then be adjusted either by varying $a_2$  or $b_2$ whether it is mass independent or not. % E: I'm not sure what the last few words here mean.T: I would remove for the moment, simply because it does not really matter for the results. Beside, there also the temperature effect which is in the max function. These are assumptions and maybe it is not worth to draw attention to that (I added a figure in the supplement to look at the effect of a_2 and b_2
 
-Recent studies have explored the rate of energetic gain and recovered a power law relationship \citep{Pawar2012, Maino2015}.
+Recent studies of the rate of energetic gain have recovered a power law relationship \citep{Pawar2012, Maino2015}.
 There seems to be no single exponent $b_3$.
 For instance, the exponent can depend on the dimension of the search space, with a value of 0.85 in two dimensions or 1.06 in three dimensions \citep{Pawar2012}.
 Body size can further influence other processes.
-For instance, walking speed  can scale with a power 0.29 \citep{Peters1986}, or dominance competition exerted by larger individual can yield an exponent greater than one.  % E: Is this what you mean by "superlinearly"?  To keep "scale superlinearly" instead, need to reiterate what is scaling (i.e., the dependent and independent variables). T: since I have nightmares about superexponential, I will try to remove ` super'  in my vocabulary... :D
+For instance, walking speed  can scale with a power 0.29 \citep{Peters1986}, or dominance competition exerted by larger individual can yield an exponent greater than one.
 Our goal, however, is not to assert the homogeneity of these values but instead to explore the consequences of their heterogeneities.
-% \cref{fig1} depicts how the exponent influences the shape of the power law. % E: or work this in earlier if you want
 
-The effect of temperature could instead be modeled by multiplying the body mass scaling metabolic rate with a factor $Q_{10}$ which denotes the change in metabolic rate with a $10^ {\circ} \rm{C}$ increase in the body temperature \citep{Precht1973}.
-We however opted for the Arhenius equation used by \citet{Brown2004} because it reduces the number of free parameters, and it also approximates the temperature effect for $Q_{10} = 2.45$.
-We acknowledge that in the real world, the model parameters are variable.
+The effect of temperature could be modeled by multiplying the body mass scaling metabolic rate with a factor $Q_{10}$, which denotes the change in metabolic rate with a $10^ {\circ} \rm{C}$ increase in the body temperature \citep{Precht1973}.
+We however opted for the Arrhenius equation (\crefp{eq:eb}) used by \citet{Brown2004} because it reduces the number of free parameters, and it also approximates the temperature effect for $Q_{10} = 2.45$.
+
+The model parameter values will of course vary across organisms and environments.
 For instance, the coefficient of resting metabolic rate or exponent of foraging rate might be different for ants and dung beetles.
-Thus, to ensure that the parameters are not too variable (negligible?), the model is more appropriate in comparing individuals or species of different body size but are closely related % E: This isn't clear here.  Elaborate, and put in next paragraph? T: does it work this way?
-\cref{table:table1} summarizes the different parameter values we used and explored.
+Our goal is not to predict specific energetic values, however, but to explore the effects of these general processes on thermal performance curves.
+Our conclusions are thus best interpreted as applying across individuals within species, or across species that are closely related.
+\cref{table:table1} summarizes the range of parameter values considered in our analyses.
 
-\begin{sidewaystable}
-\caption{Values and ranges of parameters used }
-\begin{tabular}{l l l l l}
-\hline
-Notation& Definition & Value or range & Unit & References \\
-\hline
-&\textbf{Intrinsic body size scaling} & & &  \\
-$a_1$ & Coefficient for resting metabolic rate  & $\propto 1$  & $\rm{J \, s}^{-1}$ & \citet{Heinrich1975} \\
-$b_1$ & Exponent for resting metabolic rate  & 0.75 &  & \citet{Kleiber1947,Peters1986,Gillooly2001} \\
-$a_2$ & Coefficient for active metabolic rate  & 5-40 $ \times a_1$ & $\rm{J \, s}^{-1}$ &  \citet{Bartholomew1981}* MORE REFS HERE \\
-$b_2$ & Exponent for active metabolic rate  & 0.75-1.25 & &  \citet{Heinrich1975} \\
-$a_3$ & Coefficient for foraging rate  & 1 & $\rm{g \, s}^{-1}$  & \\
-$b_3$ & Exponent  for foraging rate  & 0.5-1.25 &  &  \citet{Pawar2012, Nervo2014,Maino2015} \\
-$c_0$ & Intersect for minimum temperature for activity & 28 & $^{\circ}\rm{C}$  & \citep{Bartholomew1977a}* \\
-$c_1$ & Slope for minimum temperature for activity & 0.75 &  $\rm{g \,  ^{\circ}C^{-1}}$ &  \citep{Bartholomew1977a}* \\
-\hline
-& \textbf{Physical and thermodynamic constants} & & &  \\
-$\delta $ & mass density & $0.15 \times 10^6$  & $\rm{g \, m}^{-3}$  & personal data\\
-$a_w$& Constant for frequency of contraction & 0.25 & $\rm{s}^{-1}$   & \citet{Bartholomew1977b}*\\
-s & specific heat capacity & 3.3472 & $\rm{J \, g}^{-1}\,\rm{C}^{-1}$ & \citet{Heinrich1975} \\
-e & Energy per contraction & 0.04184 & $\rm{J \, g}^{-1}$ &\citet{Kammer1974} \\
-$K_1$& Conductance between the thorax and the rest-of-the-body & 0.05 $c_p$ & $\rm{J \,s}^{-1} \, \rm{m}^{-2} \, ^{\circ}\rm{C}$  & \citet{Campbell2012} \\
-$K_2$& Constant controlling convection & 1   & $\rm{J \,s}^{-1} \, \rm{m}^{-2} \, ^{\circ}\rm{C}$  & \citet{Campbell2012} \\
-\hline
-& \textbf{Extrinsic constants} & & &  \\
-$c_p$ & molar specific heat of air  & 29.3 &  $\rm{J \, mol}^ {-1} \, \rm{C}^ {-1}$ & \citet{Campbell2012} \\
-u &  wind speed & 0.1 & $\rm{m \, s}^{-1}$ & \\
-$\sigma$ & Stefan-Boltzman constant & $5.67 \times 10^{-8}$ &  $\rm{J \, m}^{-2} \rm{s}^{-1} \rm{K}^{-4}  $  &  \\
-$\varepsilon$& Emissivity of gray body & 0.93& & \citep{Campbell2012} \\
-$\rho$ &Energy density per gram of resource & 13-100 &  $\rm{J \, g}^{-1}$  &  \\  %  Energy density per gram  dry dung (40-80\%) of total weight, \citet{Nibaruta1980} \citet{Gittings1998}
-$r_3$  & Scale factor for the quantity of solar radiation absorbed & 0.5 &  &  \\
-\hline
-\label{table:table1}
-\end{tabular}
-\raggedright{*means that the value is approximated.}
-\end{sidewaystable}
-
-
-% E: You asked about figure (and table) placement.  The latex package endfloat allows figures/tables to be placed in the source file where they belong (like this table), but then printed at the end of the pdf when desired.
+% E: To print the table at the end of the manuscript, I moved it to a separate file.
