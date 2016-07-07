@@ -1,6 +1,6 @@
 \clearpage
 
-\begin{figure}[H]
+\begin{figure}
 \includegraphics[width=\textwidth]{fig1}
 \caption{
     \setstretch{\stretchby}
@@ -18,7 +18,7 @@
 
 \clearpage
 
-\begin{figure}[H]
+\begin{figure}
 \includegraphics[width=\textwidth]{fig2}
 \caption{
     \setstretch{\stretchby}
@@ -35,7 +35,7 @@
 \label{fig2}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}
 \includegraphics[width=\textwidth]{fig3}
 \caption{
     \setstretch{\stretchby}
@@ -56,7 +56,7 @@
 
 \clearpage
 
-\begin{figure}[H]
+\begin{figure}
 \centering \includegraphics[width=0.7\textwidth]{fig4}
 \caption{
     \setstretch{\stretchby}
@@ -76,9 +76,9 @@
 
 \clearpage
 
-\begin{figure}%[H]
-\begin{center}
-\scalebox{0.75}{\includegraphics{fig5}}
+\begin{figure}
+\centering \includegraphics[width=0.8\textwidth]{fig5}
+% E: Could remove the side legend to save a lot of space, and just define small and large body sizes in the caption (as in Fig 2).
 \caption{
     \setstretch{\stretchby}
 	Overlap of the thermal performance curves (or net energy gain) between large and small body sizes as function of: the timing of warm-up (a,b), the exponent of the foraging rate (c, d), and the quantity of resource available (e, f).
@@ -94,10 +94,12 @@
 	Other parameters:
 	Foraging time $\tau_f = 1$ and $a_2 = 10 a_1$, wind $u = 0.1$.
 	See \cref{table:table1} for units and default parameters.
+	% E: In a,b, is it a coincidence that net energy = 0 occurs at the same temperature for both body sizes?  Or is it obvious why it does?
 }
 \label{fig5}
-\end{center}
 \end{figure}
+
+% E: In Fig 5 especially (and to some extent all the figures), it is hard to distinguish the thin and thick solid lines.  I think it might be better to use solid, dashed, and dotted.
 
 %
 % \section*{Figure captions:}
