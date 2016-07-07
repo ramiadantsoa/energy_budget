@@ -1,6 +1,6 @@
 \clearpage
 
-\begin{figure}[H]
+\begin{figure}
 \includegraphics[width=\textwidth]{fig1}
 \caption{
     \setstretch{\stretchby}
@@ -18,7 +18,7 @@
 
 \clearpage
 
-\begin{figure}[H]
+\begin{figure}
 \includegraphics[width=\textwidth]{fig2}
 \caption{
     \setstretch{\stretchby}
@@ -35,47 +35,50 @@
 \label{fig2}
 \end{figure}
 
-\begin{figure}[H]
-\begin{center}
-\scalebox{0.85}{\includegraphics{fig3}}
+\begin{figure}
+\includegraphics[width=\textwidth]{fig3}
 \caption{
     \setstretch{\stretchby}
-	Lowest temperature required for the completion of warm-up as a function of body mass.
-	The individual is given a maximum of 6 hours to complete warm-up.
+	Lowest temperature that allows the completion of warm-up, as a function of body mass.
+	% The individual is given a maximum of 6 hours to complete warm-up.
 	To focus on the effect of solar radiation, daily temperature is constant.
-	Solar radiation increases linearly from 0 to 0.25 of the maximum value $S_0$ during a period of 6 hours.
+	Solar radiation increases linearly from 0 to 0.25 of the maximum value $S_0$ during a period of 6 hours, after which warm-up is deemed to have failed.
+	% E: Good up to here, but the following description of parameter values is not clear.  What are the "convection" values?  For the parameters that vary from panel to panel, say what they mean and what their default/standard values are.  Or just give the full set of values for each parameter.
 	a)  low value for conductance (0.1 $\times$ the default value).
 	b) default value for conductance, wind speed  $u = 0.1$.
 	c)  $a_w = 1.25$.
-	Fixed parameter values: default conductance $K_1 = 0.05 \, c_p, r_3 = 0.5$.
+	Fixed parameter values: default conductance $K_1 = 0.05c_p,\ r_3 = 0.5$.
 	Remaining parameters are in \cref{table:table1}.
 	See \cref{table:table1} for units and default parameters.
 }
 \label{fig3}
-\end{center}
 \end{figure}
-%
-\begin{figure}[H]
-\begin{center}
-\scalebox{0.85}{\includegraphics{fig4}}
+
+\clearpage
+
+\begin{figure}
+\centering \includegraphics[width=0.7\textwidth]{fig4}
 \caption{
     \setstretch{\stretchby}
-	Panel a) shows the duration of warm-up as a function of the timing of warm-up and body size for ecotherms (similar results for endotherms).
-	Panel b) shows the duration of warm-up as a function of the conductance for endotherms. Body size $z = 1$ , $a_w = 1.25$
-	Environmental temperature $ T_e = 15$.
-	Solar radiation during equinox at 30 degree latitude.
-	Default value $K_1$ in a) and $K_2$ a) and b).
-	See \cref{table:table1} for units and default parameters.
+    Duration of warm-up depending on the time of day at which warm-up commences, for both a) ectotherms and b) endotherms.
+	% note difference in vertical axis scales?
+    The dependence on body size for endotherms (not shown) is similar to that for ectotherms (a).
+    For endotherms, the duration of warm-up depends on conductance (b).
+	In both panels, the environmental temperature is $T_e = 15$ and solar radiation is during equinox at 30$^\circ$ latitude.
+    In a), please explain $K_1$ and $K_2$.  % Default value $K_1$ in a) and $K_2$ a) and b).
+    In b), body size is $z = 1$ and the constant controlling muscle contraction frequency is $a_w = 1.25$.
+	% E: Please add the conductance values in the legend for panel b.
+	See \cref{table:table1} for units and other parameter values.
+    % E: In panel b, (and also the panel a legend), the two solid lines did not have distinguishable thickness.  I tried to change.
 }
 \label{fig4}
-\end{center}
 \end{figure}
-\vspace{-0.8cm}
-%\newpage
-%%
-\begin{figure}%[H]
-\begin{center}
-\scalebox{0.75}{\includegraphics{fig5}}
+
+\clearpage
+
+\begin{figure}
+\centering \includegraphics[width=0.8\textwidth]{fig5}
+% E: Could remove the side legend to save a lot of space, and just define small and large body sizes in the caption (as in Fig 2).
 \caption{
     \setstretch{\stretchby}
 	Overlap of the thermal performance curves (or net energy gain) between large and small body sizes as function of: the timing of warm-up (a,b), the exponent of the foraging rate (c, d), and the quantity of resource available (e, f).
@@ -91,10 +94,12 @@
 	Other parameters:
 	Foraging time $\tau_f = 1$ and $a_2 = 10 a_1$, wind $u = 0.1$.
 	See \cref{table:table1} for units and default parameters.
+	% E: In a,b, is it a coincidence that net energy = 0 occurs at the same temperature for both body sizes?  Or is it obvious why it does?
 }
 \label{fig5}
-\end{center}
 \end{figure}
+
+% E: In Fig 5 especially (and to some extent all the figures), it is hard to distinguish the thin and thick solid lines.  I think it might be better to use solid, dashed, and dotted.
 
 %
 % \section*{Figure captions:}
