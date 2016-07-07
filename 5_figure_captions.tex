@@ -1,7 +1,8 @@
 \clearpage
 
-\begin{figure}
-\includegraphics[width=\textwidth]{fig1}
+\begin{figure}[H]
+\begin{center}
+\includegraphics{fig1}
 \caption{
     \setstretch{\stretchby}
     % E: For a figure to have multiple panels, the panels need to relate to one another.  Could (a) include, say, notes on the lines that depict power laws?
@@ -13,205 +14,81 @@
     The expression $z^b$ is concave when $0 < b < 1$ and convex when $b > 1$.
     % E: The caption and figure weren't agreeing before.  I changed in one way.  Please check!
 }
-\label{fig1} % E: the point of labels is that they can have more intuitive names and not need to be renumbered by hand... :)
+\label{fig1}
+\end{center}
 \end{figure}
 
 \clearpage
 
-\begin{figure}
+\begin{figure}[H]
+\begin{center}
 \includegraphics[width=\textwidth]{fig2}
 \caption{
     \setstretch{\stretchby}
-    Scenarios whereby net energy gain does or does not peak at intermediate body size.
-    In each panel, dashed, thin, and thick lines depict different foraging rate exponents ($b_3 = 0.5,\ 0.8,\ \text{and } 1.25$, respectively).
-    ``Standard'' extrinsic parameter values are 
-    resource quantity $R = 500$ (defined only when the resource amount is fixed; panels a,b,e,f),
-    resource quality $\rho = 12$,
-    foraging time $\tau_f = 45 \text{ min}$ (defined only when foraging time is fixed; panels c,d,g,h), 
-    and environmental temperature $T_e = 15^\circ C$.
-    Intrinsic parameter values for active metabolic rate are $a_2 = 20 a_1 \text{ and } b_2 = 0.75$ for ``standard'' (panels a--d), and $a_2 = 30 a_1 \text{ and } b_2  = 1.25$ for ``higher'' (panels e--h).
-    Additional parameter values and measurement units are provided in \cref{table:table1}.
+	Different scenarios where net energy gain peaks at intermediate body size as function of: resource quantity (a, b), resource quality (c, d), and metabolic cost (e, f, g, h) due to increase an in temperature and cost of activity.
+	Thick, thin, and dashed lines are for $b_3 = 0.5, 0.8, \rm{ and }\, 1.25$, respectively.
+	%
+	Extrinsic parameters:
+	For a) and b), high quantity $R = 500$ (an individual can collect at most 50 times its body mass), low quantity $R= 10$, resource quality $\rho = 12$, $T_e = 15$.
+	For c) and d), high quality $\rho = 24$, low quality $\rho = 12$, total foraging time $\tau_f = 45 \rm{min}$, $T_e = 15$.
+	For e) $T_e = 15$, for f) $T_e = 24.5$, $R = 500$, $\rho = 12$, and for g) $T_e = 17$
+	Intrinsic parameters:
+	For a), b), c), d), g), and h) $b_2 = 0.75, a_2 = 20 a_1$.
+	For e) and f) we assumed a high active metabolic rate $a_2 = 30 a_1, b_2  = 1.25$.
+	See \cref{table:table1} for units and default parameters.
 }
 \label{fig2}
+\end{center}
 \end{figure}
 
-\begin{figure}
-\includegraphics[width=\textwidth]{fig3}
+\begin{figure}[H]
+\begin{center}
+\scalebox{0.85}{\includegraphics{fig3}}
 \caption{
     \setstretch{\stretchby}
-	Lowest temperature that allows the completion of warm-up, as a function of body mass.
-	% The individual is given a maximum of 6 hours to complete warm-up.
-	To focus on the effect of solar radiation, daily temperature is constant.
-	Solar radiation increases linearly from 0 to 0.25 of the maximum value $S_0$ during a period of 6 hours, after which warm-up is deemed to have failed.
-	% E: Good up to here, but the following description of parameter values is not clear.  What are the "convection" values?  For the parameters that vary from panel to panel, say what they mean and what their default/standard values are.  Or just give the full set of values for each parameter.
-	a)  low value for conductance (0.1 $\times$ the default value).
-	b) default value for conductance, wind speed  $u = 0.1$.
-	c)  $a_w = 1.25$.
-	Fixed parameter values: default conductance $K_1 = 0.05c_p,\ r_3 = 0.5$.
-	Remaining parameters are in \cref{table:table1}.
+	a) Lowest temperature required for the completion of warm-up as a function of body mass.
+	The individual is given a maximum of 6 hours to complete warm-up.
+	To show how solar radiation can limit warm-up, solar radiation at 30 degree latitude during equinox is scaled with a factor 0.25.
+  Thick, thin, and dashed lines represent endotherms with laminar convection, ectotherms  with laminar convection, and ectotherms with free convection.
+  Convection factor $K_2 = 0.1 \times$ the default value.
+  b) Duration of warm-up for endotherms (thick lines) and ectotherms (dashed lines) as a function of body mass and temperature.
+  In the scenario, solar radiation is not scaled and $K_2$ takes default values.
+  Remaining parameters: wind speed  $u = 1$, $a_w = 1.25$.
+	% Fixed parameter values: default conductance $K_1 = 0.05 \, c_p, r_3 = 0.5$.
+	% Remaining parameters are in \cref{table:table1}.
 	See \cref{table:table1} for units and default parameters.
 }
 \label{fig3}
+\end{center}
 \end{figure}
-
-\clearpage
-
-\begin{figure}
-\centering \includegraphics[width=0.7\textwidth]{fig4}
+%
+\begin{figure}[H]
+\begin{center}
+\scalebox{0.85}{\includegraphics{fig4}}
 \caption{
     \setstretch{\stretchby}
-    Duration of warm-up depending on the time of day at which warm-up commences, for both a) ectotherms and b) endotherms.
-	% note difference in vertical axis scales?
-    The dependence on body size for endotherms (not shown) is similar to that for ectotherms (a).
-    For endotherms, the duration of warm-up depends on conductance (b).
-	In both panels, the environmental temperature is $T_e = 15$ and solar radiation is during equinox at 30$^\circ$ latitude.
-    In a), please explain $K_1$ and $K_2$.  % Default value $K_1$ in a) and $K_2$ a) and b).
-    In b), body size is $z = 1$ and the constant controlling muscle contraction frequency is $a_w = 1.25$.
-	% E: Please add the conductance values in the legend for panel b.
-	See \cref{table:table1} for units and other parameter values.
-    % E: In panel b, (and also the panel a legend), the two solid lines did not have distinguishable thickness.  I tried to change.
+Effect of warm-up on thermal performance for small (thin) and large (thick) body sizes ($z = 0.5 \mbox{ or } 2$) under free convection.
+Warm-up starts half an hour after sunrise with a total foraging time $\tau_f = 1, \rho = 24, a_2 = 10 a_1, b_1 = b_2 = b_3 = 0.75.$
+	See \cref{table:table1} for units and default parameters.
 }
 \label{fig4}
+\end{center}
 \end{figure}
-
-\clearpage
-
-\begin{figure}
-\centering \includegraphics[width=0.8\textwidth]{fig5}
-% E: Could remove the side legend to save a lot of space, and just define small and large body sizes in the caption (as in Fig 2).
+\vspace{-0.8cm}
+%\newpage
+%%
+\begin{figure}%[H]
+\begin{center}
+\scalebox{0.75}{\includegraphics{fig5}}
 \caption{
     \setstretch{\stretchby}
-	Overlap of the thermal performance curves (or net energy gain) between large and small body sizes as function of: the timing of warm-up (a,b), the exponent of the foraging rate (c, d), and the quantity of resource available (e, f).
-	Extrinsic parameters:
-	$\rho = 30, R = 30 \rm{g}$ expect for f) $R = 15 \rm{g}$.
-	%
-	Intrinsic parameters:
-	for c) and d) convex ($b_3 = 1.25$) concave ($b_3 = 0.5$).
-	For e) and d) $b_3 = b_2 = b_1 = 0.75$.
-	For a), b), c), and d) large $z = 2$, small $z = 0.5$.
-	For e) and f) large $z = 2 \rm$, small $z = 0.1$.
-	%
-	Other parameters:
-	Foraging time $\tau_f = 1$ and $a_2 = 10 a_1$, wind $u = 0.1$.
+	Qualitative results on how foraging rate and resource quantity affect the thermal performance curves for small (thin) and large (thick) body sizes.
+  We assumed free convection and warm-up starts half an hour after sunrise.
+  For a--d, $\tau_f = 1$, ($z = 0.5 \mbox{ or } 2$) .
+	For e--h, $b_1 = b_2 = b_3 = 0.75,$ ($z = 0.2 \mbox{ or } 2$)
+	Remaining parameters: $\rho = 24, a_2 = 10 a_1$.
 	See \cref{table:table1} for units and default parameters.
-	% E: In a,b, is it a coincidence that net energy = 0 occurs at the same temperature for both body sizes?  Or is it obvious why it does?
 }
 \label{fig5}
+\end{center}
 \end{figure}
-
-% E: In Fig 5 especially (and to some extent all the figures), it is hard to distinguish the thin and thick solid lines.  I think it might be better to use solid, dashed, and dotted.
-
-%
-% \section*{Figure captions:}
-% \begin{figure}[H]
-% \begin{center}
-% \scalebox{0.85}{\includegraphics{fig1}}
-% \caption{
-% 	Panel a) shows the link between the components of the model.
-% 	Unidirectional solid lines mean the first component affects the second component it points at.
-% 	Bidirectional dashed lines represent a correlation or an indirect link between the two components.
-% 	Panel b) visualizes the concavity ($b_3  = 1.25 > 1$) and convexity ($b_3 = 0.5 > 1$) of the power law relationship.
-% }
-% \label{fig1}
-% \end{center}
-% \end{figure}
-% %\vspace{-1.5cm} % E: consider \vfill
-% %\newpage
-% %
-% \begin{figure}[H]
-% \begin{center}
-% \scalebox{0.90}{\includegraphics{fig2}}
-% \caption{
-% 	Different scenarios where net energy gain peaks at intermediate body size as funtion of resource quantity (a, b), resource quality (c, d), and temperature (e, f, g).
-% 	%
-% 	Exogenous parameters:
-% 	For a) and b), abundant resource $R = 500 \rm{g}$ (an individual can collect at most 50 times its body mass), scrace resource $R= 10 \rm{g}$, resource quality $\rho = 12 \rm{J.g^{-1}}$, $T_e = = 15 ^{\circ} \rm{C}.$
-% 	For c) and d), high quality $\rho = 24 \rm{J.g^{-1}}$, low quality $\rho = 12 \rm{J.g^{-1}}$, total foraging time $\tau_f = 45 \rm{min}$, $T_e = = 15 ^{\circ} \rm{C}$.
-% 	For e)$T_e = 15 ^{\circ} \rm{C}$, for f) $T_e = 24.5 ^{\circ} \rm{C}$, $R = 500 \rm{g}$, $\rho = 12 \rm{J.g^{-1}}$, and for g) $T_e = 17 ^{\circ} \rm{C}$
-% 	Endogenous parameters:
-% 	For a), b), c), d), and g) $b_2 = 0.75, a_2 = 20 a_1$.
-% 	For e) and f) we assumed a high active metabolic rate $a_2 = 30 a_1, b_2  = 1.25$.
-% 	Fixed parameter values: $b_1 = 0.75$.
-% }
-% \label{fig2}
-% \end{center}
-% \end{figure}
-% %\vspace{-1.5cm}
-% %\newpage
-% %
-% % \begin{figure}[H]
-% % \begin{center}
-% % \scalebox{0.85}{\includegraphics{fig3}}
-% % \caption{
-% % 	 Daily net energy gain  $E_n$ as a function of body mass $z$ without warm-up, and foraging time limited to 0.5 hour.
-% % 	a) Daily net energy gain  $E_n$ as a function of body mass $z$ for different value of foraging exponent $b_3 = 0.5, 0.8, 1.25$, dashed, thin, thick lines respectively  at $T_e  = 15 ^{\circ} \rm{C}$.
-% % 	b) $E_n$ is maximized at an intermediate value of $z$  when shaded regions and resource quality $\rho$ intersect (i.e., \cref{eq:C1} is satisfied).
-% % 	Warm ($35^{\circ} \rm{C}$) and cold (15$^{\circ} \rm{C}$) environmental temperatures are denoted by red and cyan, respectively.
-% % 	The upper (lower) limit of the shaded region is $\widetilde{dE_n}$ ($\widetilde{E_n}$).
-% % 	c) Various shapes of $E_n$ based on b).
-% % 	In b) and c), $\rho = 13, 60, 100$ dashed, thin, and thick, respectively.
-% % 	Fixed parameter values: $b_1 = b_2 = 0.75, a_2 = 5 a_1, $.
-% % }
-% % \label{fig3}
-% % \end{center}
-% % \end{figure}
-% %\vspace{-1.5cm}
-% %\newpage
-% %
-% \begin{figure}[H]
-% \begin{center}
-% \scalebox{0.85}{\includegraphics{fig3}}
-% \caption{
-% 	Lowest temperature required for the completion of warm-up as a function of body mass.
-% 	a)  low value for conductance (0.1 $\times$ the default value).
-% 	b) default value for conductance, wind speed  = 0.1m/s.
-% 	c)  $a_w = 1.25$.
-% 	Fixed parameter values: default conductance $K_1 = 0.05 \, c_p, r_3 = 0.5$.
-% 	Remaining parameters are in \cref{table:table1}.
-% 	The individual is given a maximum of 6 hours to complete warm-up.
-% 	To focus on the effect of solar radiation, daily temperature is constant.
-% 	Solar radiation increases linearly from 0 to 0.25 of the maximum value $S_0$ during a period of 6 hours.
-% }% Add parameter values later
-% \label{fig3}
-% \end{center}
-% \end{figure}
-% %\vspace{-1.5cm}
-% %\newpage
-% %
-% \begin{figure}[H]
-% \begin{center}
-% \scalebox{0.85}{\includegraphics{fig4}}
-% \caption{
-% 	Panel a) shows the duration of warm-up as a function of the timing of warm-up and body size for ecotherm (similar results for endotherms).
-% 	Panel b) shows the duration of warm-up as a function of the conductance for endotherms. Body size $z = 1$ , $a_w = 1.25$
-% 	Solar radiation is equivalent to what would happen at 30 degree latitude during equinox.
-% 	Environmental temperature $ T_e = 15^{\circ}\rm{C}$.
-% 	Default value $K_1$ in a) and $K_2$ a) and b) .
-% }% Add parameter values later
-% \label{fig5}
-% \end{center}
-% \end{figure}
-% \vspace{-0.8cm}
-% %\newpage
-% %%
-% \begin{figure}%[H]
-% \begin{center}
-% \scalebox{0.85}{\includegraphics{fig5}}
-% \caption{
-% 	Overlap of the thermal performance curves (or net energy gain) between body sizes as function of: the timing of warm-up (a,b), the exponent of the foraging rate (c,d), and the quantity of resource available (e, f).
-% 	Exogenous parameters:
-% 	$\rho = 30, R = 30 \rm{g}$ expect for f) $R = 15 \rm{g}$.
-% 	%
-% 	Endogenous parameters:
-% 	For c) and d) convex ($b_3 = 1.25$) concave ($b_3 = 0.5$).
-% 	For e) and d) $b_3 = b_2 = b_1 = 0.75$.
-% 	For a), b), c), and d) large $z = 2 \rm{g}$, small $z = 0.5 \rm{g}$.
-% 	For e) and f) large $z = 2 \rm{g}$, small $z = 0.1 \rm{g}$.
-% 	%
-% 	Other parameters:
-% 	Foraging time $\tau_f = 1 \rm{hour}$ and $a_2 = 10 a_1$, wind $u = 1 \rm{m.s^{-1}}$.
-%
-% }% Add non trivial units later
-% \label{fig5}
-% \end{center}
-% \end{figure}
