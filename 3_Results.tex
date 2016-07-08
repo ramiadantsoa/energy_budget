@@ -2,35 +2,34 @@
 
 Our main interest is how net energy gain varies as a function of body mass and temperature.
 We investigate how the thermal performance curve differs---in width, location, and shape---for individuals of different body mass.
-% E: Maybe you can write this better.  But before, it sounded like the body mass of an individual might be changing.
 We start by exploring the role of scaling with body mass, temperature, and resource availability, without considering warm-up.
 We then focus on warm-up only.
 Finally, we report the combined effects of all processes on the thermal performance curve.
+Throughout, we emphasize the diverse outcomes that are possible from our model, rather than provide an exhaustive description of the effects of each parameter.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection*{Does net energy gain increase or decrease with body mass?}
 
-Intuitively, because large individuals acquire more energy and because mass-specific metabolic rate decreases with body mass, the net energy gain is expected to increase with body mass.
-We found that when resource quantity is unlimited the net energy gain, indeed, increases with body mass (\crefp{fig2}a).
-% We note that although resource are unlimited, we assumed an individual can only gather resource up to 50 times its body mass.
-% T: I prefer to remove the sentence above as it has been said already in the methods, the assumption is for convenience (I am trying to figure out why it would be unrealistic), we span up to  three orders of magnitude of body mass, it would be unrealistic that a 0.01 would gather as much resource as a 10 g insects?
-In contrast, when resource quantity is limited, the net energy gain peaks at intermediate body mass (\crefp{fig2}b) simply because there is not enough energy to sustain the high absolute metabolic cost of large-bodied individuals.
-In this scenario, the exponent $b_3$ does not affect the qualitative pattern (\crefp{fig2}ab).
+Larger individuals expend less energy per unit mass (they have a lower mass-specific resting metabolic rate; $b_1 < 1$ in \crefp{eq:eb}), so it is intuitive that net energy gain increases with body mass.
+Our model indeed shows this behavior, at least when resources are abundant and foraging time is not constrained (\crefp{fig2}a).
+In contrast, when resource quantity is more limited, net energy gain peaks at intermediate body mass (\crefp{fig2}b) because not enough energy can be obtained to sustain the high absolute metabolic cost of large-bodied individuals.
+The scaling of foraging rate, $b_3$, does not affect these qualitative patterns.
 
-An alternative scenario is to assume that foraging time is limited.
-In that case, resource quality determines the qualitative patterns of the net energy gain.
-When resource quality is high, the net energy gain increases with body mass (\crefp{fig2}c).
-When resource is low, the net energy gain again peaks at intermediate body mass (\crefp{fig2}d).
-Furthermore, changing the exponent $b_3$ alters the qualitative pattern.
-Our analytical results show that the net energy gain peaks at intermediate body mass if and only if $b_3 < b_2$ and when resource quality is within a certain range (see Appendix).
-For instance, when resource quality is high, the net energy gain always increases with body mass (\crefp{fig2}c).
+Alternatively, when foraging time is limited, resource quality determines the form of net energy gain.
+Net energy gain increases monotonically with body mass when resource quality is high (\crefp{fig2}d), as when resource quantity is high (\crefp{fig2}a).
+Net energy gain may peak at intermediate body size, however, when resource quality is not too high (\crefp{fig2}c).
+Furthermore, the foraging exponent $b_3$ affects these qualitative patterns.
+Our analytical results show that net energy gain peaks at intermediate body mass if and only if $b_3 < b_2$ and resource quality is within a certain range (see Appendix).
 
-At third scenario where the net energy gain can peak at intermediate body mass is when the metabolic cost is high because the environmental temperature, the coefficient $a_2$, and the exponent $b_2$ are higher.
-Unlike the first scenario, the exponent $b_3$ dictates whether the net energy gain always increases or eventually decreases with body mass (\crefp{fig2}ef).
-Even if resource are unlimited, a concave foraging rate ($b_3 < 1.$) means that foraging time increases with body mass.
-Consequently, large individuals are active for a longer period of time and therefore pay a higher metabolic cost.
-When foraging time is fixed, higher temperature does not change the qualitative pattern but the net energy gain peaks at lower body mass (\crefp{fig2}cg, and \crefp{fig2}d vs. \crefp{fig2}h).
+Net energy gain can also peak at intermediate body mass if the active metabolic rate is increased, because larger individuals are penalized more strongly (\crefp{fig2}e, cf.~\crefp{fig2}a).
+This effect is exaggerated at higher temperatures, where again larger individuals pay a higher price (\crefp{fig2}f).
+The exponent $b_3$ now dictates whether net energy gain always increases or eventually decreases with body mass.
+Even if resources are unlimited, a concave foraging rate ($b_3 < 1$) means that foraging time increases with body size.
+Consequently, larger individuals are active for a longer period of time and therefore pay a higher metabolic cost.
+
+When foraging time is fixed, higher active metabolic rate again penalizes larger individuals (\crefp{fig2}g, cf.~\crefp{fig2}d).
+Higher temperature does not change the qualitative pattern in this case, but net energy gain peaks at lower body mass (\crefp{fig2}h).
 
 % E: Please feel free to edit this.  The goal is to give the reader a simple take-away message.
 Overall, we find that there may or may not be an intermediate optimal body mass when considering only how metabolic costs and resource acquisition scale with body mass and temperature.
@@ -51,15 +50,14 @@ We now set aside the metabolic and foraging processes in order to focus on the w
 % T:  An important note here is that when solar radiation is high, warm-up can always be completed. Here I just explored conditions where we can get interesting results. I think it should be said somewhere...
 In cold environments, it might not be possible for an individual to elevate its body temperature to the level needed for activity.
 Here, we explore how the ability to complete warm-up depends on body mass.
-For ectotherms and in the absence of wind, small is advantageous as decreasing body mass increases the surface area-to-body mass ratio and thus increases the ability to absorb more heat from the environment per unit of mass (\crefp{fig3}a, dashed line).
+For ectotherms and in the absence of wind, smaller size is advantageous as decreasing body mass increases the surface area-to-body mass ratio and thus increases the ability to absorb more heat from the environment per unit of mass (\crefp{fig3}a, dashed line).
 However, wind elevates the minimum temperature for completing warm-up as convection has stronger effect in cooling the surface of the body.
 Unlike the wind-free case, ectotherms of intermediate masses are able to complete warm-up under colder temperatures because individual with small body masses are penalized due to increasing laminar convection ($h$ in \crefp{eq:dTn}; \crefp{fig3}b).
 Large masses are penalized because they have higher operative temperatures (\crefp{eq:Tw}); without the cost of higher operative temperature, large becomes better (Supplementary Figures).
+% For endotherms, larger size is advantageous for the opposite reason: more of the heat generated endogenously is retained within the body
 For endotherms, minimum temperature for completing warm-up decreases with increasing body mass because more of the heat generated endogenously is retained within the body due to small surface area-to-body mass ratio (\crefp{fig3}a, thick line).
 In fact, there is a threshold value where endogenous heat production cancels with heat dissipation (for reasonable environmental temperature), above that value the ability to complete warm-up becomes independent of body mass (\crefp{fig3}a, thick line).
 
-% E: What about endotherms with wind?  I presume it is similar to Fig 4c, but would be good to say.
-% T: this is now endotherm with wind
 \subsubsection*{Duration of warm-up}
 
 We also explore how the duration of warm-up changes with body mass and temperature.
@@ -80,6 +78,7 @@ The concavity arises because the dominant process regulating warm-up rate is the
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %\subsection*{Thermal performance across body mass}
 % \subsection*{Does thermal performance curve shrink, broaden, or shifts as a function of body mass?}
 \subsection*{How does the thermal performance curve change with body mass?}
