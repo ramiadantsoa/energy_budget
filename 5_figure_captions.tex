@@ -22,7 +22,7 @@
 \includegraphics[width=\textwidth]{fig2}
 \caption{
     \setstretch{\stretchby}
-    Scenarios whereby net energy gain does or does not peak at intermediate body size.
+    Scenarios whereby thermal performance does or does not peak at intermediate body size.
     In each panel, dashed, thin, and thick lines depict different foraging rate exponents ($b_3 = 0.5,\ 0.8,\ \text{and } 1.25$, respectively).
     ``Standard'' extrinsic parameter values are 
     resource quantity $R = 500$ (defined only when the resource amount is fixed; panels a,b,e,f),
@@ -31,6 +31,7 @@
     and environmental temperature $T_e = 15^\circ C$.
     Intrinsic parameter values for active metabolic rate are $a_2 = 20 a_1 \text{ and } b_2 = 0.75$ for ``standard'' (panels a--d), and $a_2 = 30 a_1 \text{ and } b_2  = 1.25$ for ``higher'' (panels e--h).
     Additional parameter values and measurement units are provided in \cref{table:table1}.
+    % todo: "Body mass" instead of "Body size"
 }
 \label{fig2}
 \end{figure}
@@ -39,17 +40,16 @@
 \centering \includegraphics[width=0.9\textwidth]{fig3}
 \caption{
     \setstretch{\stretchby}
-	a) Lowest temperature required for the completion of warm-up as a function of body mass.
-	The individual is given a maximum of 6 hours to complete warm-up.
-	To show how solar radiation can limit warm-up, solar radiation at 30 degree latitude during equinox is scaled with a factor 0.25.
-  Thick, thin, and dashed lines represent endotherms with laminar convection, ectotherms  with laminar convection, and ectotherms with free convection.
-  Convection factor $K_2 = 0.1 \times$ the default value.
-  b) Duration of warm-up for endotherms (thick lines) and ectotherms (dashed lines) as a function of body mass and temperature.
-  In the scenario, solar radiation is not scaled and $K_2$ takes default values.
-  Remaining parameters: wind speed  $u = 1$, $a_w = 1.25$.
+	Warm-up for ectotherms and endotherms.
+	a) Lowest temperature that allows the completion of warm-up, as a function of body mass.
+	The individual is given a maximum of six hours to complete warm-up.
+    Thick, thin, and dashed lines represent endotherms with laminar convection, ectotherms with laminar convection, and ectotherms with free convection, respectively.
+    Solar radiation is 1/4 the value at 30$^\circ$ latitude during equinox, and the convection factor is $K_2 = 0.1$.
+    b) Duration of warm-up for endotherms (thick lines) and ectotherms (dashed lines) as a function of body mass and temperature, for free convection.  % E: correct to add "free convection"?
+    Solar radiation is not reduced and $K_2 = 1$.
+    For a) and b), wind speed $u = 1$, contraction frequency constant $a_w = 1.25$, and other parameter values and units are in \cref{table:table1}.
 	% Fixed parameter values: default conductance $K_1 = 0.05 \, c_p, r_3 = 0.5$.
-	% Remaining parameters are in \cref{table:table1}.
-	See \cref{table:table1} for units and default parameters.
+    % todo: "Body mass" instead of "Body size"
 }
 \label{fig3}
 \end{figure}
@@ -58,9 +58,9 @@
 \centering \includegraphics[width=0.9\textwidth]{fig4}
 \caption{
     \setstretch{\stretchby}
-Effect of warm-up on thermal performance for small (thin) and large (thick) body sizes ($z = 0.5 \mbox{ or } 2$) under free convection.
-Warm-up starts half an hour after sunrise with a total foraging time $\tau_f = 1, \rho = 24, a_2 = 10 a_1, b_1 = b_2 = b_3 = 0.75.$
-	See \cref{table:table1} for units and default parameters.
+    Effect of warm-up on thermal performance for small (thin lines, $z = 0.5$) and large (thick lines, $z = 2$) individuals under free convection.
+    Warm-up starts half an hour after sunrise with a total foraging time $\tau_f = 1$.
+    Parameter values are $\rho = 24,\ a_2 = 10,\ a_1 = ??,\ b_1 = b_2 = b_3 = 0.75$, and otherwise as in \cref{table:table1}. % FIXME: need the value for a_1
 }
 \label{fig4}
 \end{figure}
@@ -71,12 +71,13 @@ Warm-up starts half an hour after sunrise with a total foraging time $\tau_f = 1
 \includegraphics[width=\textwidth]{fig5}
 \caption{
     \setstretch{\stretchby}
-	Qualitative results on how foraging rate and resource quantity affect the thermal performance curves for small (thin) and large (thick) body sizes.
-  We assumed free convection and warm-up starts half an hour after sunrise.
-  For a--d, $\tau_f = 1$, ($z = 0.5 \mbox{ or } 2$) .
-	For e--h, $b_1 = b_2 = b_3 = 0.75,$ ($z = 0.2 \mbox{ or } 2$)
-	Remaining parameters: $\rho = 24, a_2 = 10 a_1$.
-	See \cref{table:table1} for units and default parameters.
+	Foraging rate and resource quantity affect thermal performance curves.
+	Results are shown for small (thin lines, $z = 0.5$ in a--d, $z = 0.2$ in e--h) and large (thick lines, $z = 2$) individuals.
+	Other assumptions are free convection, warm-up starting half an hour after sunrise, $\rho = 24,\ a_2 = 10,\ a_1 = ??$. % FIXME: need the value for a_1, and b_2
+    For a--d, foraging time is $\tau_f = 1$.
+    For e--h, $b_3 = 0.75$.
+	% For e--h, $b_1 = b_2 = b_3 = 0.75$.  % E: What are b_1 and b_2 in a--d?  Also 0.75?
+    Units and other parameter values are in \cref{table:table1}.
 }
 \label{fig5}
 \end{figure}
