@@ -8,8 +8,8 @@
     Model components.
     (a) Unidirectional solid lines show one component affecting another.
     Bidirectional dashed lines show a correlation or indirect link between the two components.
-    Input variables are denoted by hexagons for intrinsic variables and the non-rhomboid parallelograms for environmental variables.
-    The main processes are denoted by rounded rectangles (metabolic and foraging rates) and the rhombus means that warm-up needs to be completed before foraging.
+    Input variables are denoted by hexagons for intrinsic variables and non-rhomboid parallelograms for environmental variables.
+    The main processes are denoted by rounded rectangles (metabolic and foraging rates)  and rhombus (warm-up needs to be completed before foraging).
     (b) Power law functions of body mass, $z$, are used throughout the model for the relationship between body mass and metabolic and foraging rates in (a).
     The expression $z^b$ is concave when $0 < b < 1$ and convex when $b > 1$.
 }
@@ -43,7 +43,7 @@
     Thick, thin, and dashed lines represent endotherms with laminar convection, ectotherms with laminar convection, and ectotherms with free convection, respectively.
     Solar radiation is 1/4 the value at 30$^\circ$ latitude during equinox, and the convection factor is $K_2 = 0.1$.
     b) Duration of warm-up for endotherms (thick lines) and ectotherms (dashed lines) as a function of body mass and temperature, for free convection.  % E: correct to add "free convection"?
-    Solar radiation is not reduced and $K_2 = 1$.
+    Solar radiation is halved and $K_2 = 1$.
     For a) and b), wind speed $u = 1$, contraction frequency constant $a_w = 1.25$, and other parameter values and units are in \cref{table:table1}.
 	% Fixed parameter values: default conductance $K_1 = 0.05 \, c_p, r_3 = 0.5$.
 }
@@ -56,7 +56,7 @@
     \setstretch{\stretchby}
     Effect of warm-up on thermal performance for small (thin lines, $z = 0.5$) and large (thick lines, $z = 2$) individuals under free convection.
     Warm-up starts half an hour after sunrise with a total foraging time $\tau_f = 1$.
-    Parameter values are $\rho = 24,\ a_2 = 10,\ a_1 = ??,\ b_1 = b_2 = b_3 = 0.75$, and otherwise as in \cref{table:table1}. % FIXME: need the value for a_1
+    Parameter values are $\rho = 24,\ a_2 = 10,\ a_1 = 1, \ b_1 = b_2 = b_3 = 0.75$, and otherwise as in \cref{table:table1}. % FIXME: need the value for a_1
 }
 \label{fig4}
 \end{figure}
@@ -69,7 +69,7 @@
     \setstretch{\stretchby}
 	Foraging rate and resource quantity affect thermal performance curves.
 	Results are shown for small (thin lines, $z = 0.5$ in a--d, $z = 0.2$ in e--h) and large (thick lines, $z = 2$) individuals.
-	Other assumptions are free convection, warm-up starting half an hour after sunrise, $\rho = 24,\ a_2 = 10,\ a_1 = 1, b_1 = b_2 = 0.75 $.
+	Other assumptions are free convection, warm-up starting half an hour after sunrise, $\rho = 24,\ a_2 = 10, \ a_1 = 1, \ b_1 = b_2 = 0.75 $.
     For a--d, foraging time is $\tau_f = 1$.
     For e--h, $b_3 = 0.75$.
     Units and other parameter values are in \cref{table:table1}.

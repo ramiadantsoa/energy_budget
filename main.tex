@@ -2,8 +2,8 @@
 \usepackage{amnat}
 \usepackage{rotating}
 \usepackage[english]{babel}
-%\usepackage[cp1250]{inputenc} % for Polish character
 \usepackage[T1]{fontenc} % for Polish character
+\usepackage{threeparttable} % for footnote below the table
 
 % Tell latex how it can introduce linebreaks if necessary.
 \hyphenation{Bar-thol-o-mew}
@@ -41,15 +41,14 @@
 \textit{Manuscript elements}:
 Figures 1--5.
 Table 1.
-Appendix and Supplementary file. FIXME
 No color.
+Appendix :  Mathematical definitions,  derivations, and sensitivity analyzes
 
 \bigskip
 
 \noindent
 \textit{Keywords}:
-% E: provide 4-6
-thermal performance, body mass, temperature, thermoregulation, metabolic rate, foraging rate
+thermal performance, body mass, temperature, warm-up, metabolic rate, foraging rate
 
 \bigskip
 
@@ -69,9 +68,7 @@ Article.
 \linenumbers{}
 \modulolinenumbers[2]
 
-\section*{Abstract}
-
-TODO
+\input{./0_Abstract.tex}
 
 \newpage
 
