@@ -53,6 +53,7 @@ Supplementary_file.pdf
 *.gz
 *.bak
 *.fff
+*.ttt
 
 #should ignore this or that folder
 analyses_fig/*/
