@@ -1,7 +1,9 @@
 \section*{Model Description}
 
-%\label{model description} \cref seems not to work when section*
+%\label{model_description} \cref seems not to work when section*
 % E: The proper solution is to use \section{} instead of \section*{}, and to use \setcounter{secnumdepth}{0} in the preamble to suppress numbering.
+
+% E: Side note: \crefp{} is for references inside parentheses; AmNat abbreviates them.
 
 The model investigates the daily performance of an adult insect with fixed body size.
 We define performance as net energy gain, which is the difference between energetic gain and loss during the day.
@@ -9,7 +11,6 @@ The energetic gain is the amount of energy acquired during solitary foraging, wh
 The model contains a thermoregulation phase that precedes activity.
 It thus applies to insects that must complete warm-up because muscles are only operational when they are above a certain temperature.
 The model is built by describing relationships among several variables (\crefp{fig1}a).
-% E: Side note: \crefp{} is for references inside parentheses; AmNat abbreviates them.
 First, we describe the external properties of the environment.
 Second, we use empirically derived relationships to model the rate of energetic loss and gain as a function of body size and temperature.
 Third, we use thermodynamic principles to describe changes in body temperature during warm-up.
@@ -21,7 +22,7 @@ We then further justify the functional forms and parameters employed by our mode
 We consider three properties of the environment: the temperature, the intensity of solar radiation, and the amount of available resource.
 We define environmental temperature $T_e$ as the temperature felt by the individual while inactive.
 %We implicitly assume that environmental temperature takes into account other factors such as humidity and so on.
-Because insects are small, we assume that environmental temperature does not depend on body size. % E: How would it for large individuals?  Self-shading? T: Dinosaurs are thought to be almost homeotherm because the loss of heat is so low.
+Because insects are small, we assume that environmental temperature does not depend on body size.
 Our model derivation here does not account for temperature variation during the day, but we show in the Appendix that daily temperature changes do not affect the qualitative results.
 
 We assume that at any given time of the day, the intensity of solar radiation is $S_R = S_0 \cos(\psi)$,
@@ -61,7 +62,7 @@ Large-bodied individuals often have higher temperature during activity, so we al
 Here, $z_{th}$ is the mass of the thorax, and $c_0$ and $c_1$ are two free parameters.
 Thus, unlike resting metabolic rate (\crefp{eq:eb}), the effect of temperature on active metabolic rate depends on body size.
 The use of the function `maximum' ($\max$) is a rough approximation such that when the environmental temperature is too high, there is an additional cost of foraging, such as the additional energy used to avoid overheating.
-To ensure that the cost of activity exceeds that of resting, we assume that the parameters of the active metabolic rate are not less than the parameters of the resting metabolic rate, i.e., $a_2 \geq a_1$ and $b_2 \geq b_1$. % E: either "greater than" and ">" or "greater or equal to/not less than" and "\geq"
+To ensure that the cost of activity exceeds that of resting, we assume that the parameters of the active metabolic rate are not less than the parameters of the resting metabolic rate, i.e., $a_2 \geq a_1$ and $b_2 \geq b_1$.
 
 \subsection*{Energetic gain: foraging}
 
@@ -81,7 +82,7 @@ Finally, the rate of energy gain includes both foraging rate and resource qualit
 
 \subsection*{Warm-up}
 
-As we mentioned earlier, when environmental temperature is low, an individual needs to reach sufficient internal temperature to be active for foraging.
+When environmental temperature is low, an individual needs to reach sufficient internal temperature to be active for foraging. % E: could add "as mentioned earlier" at the end if you want, but better to start with the point
 In general, warm-up behavior would include the when, where, and how of warming up.
 Here, however, we focus on whether or not warm-up can be completed, and if so, the duration of warm-up.
 Furthermore, insects do not need to warm up the entire body, only the thorax where most of the muscles are \citep{Kammer1974, Heinrich1975, Bartholomew1978, Verdu2012}.
@@ -107,7 +108,7 @@ where $s$ is the specific heat capacity, $e$ is the calories generated per contr
 Change in the  non-thorax temperature ($T_r$; the subscript $r$ is to remind us it is the rest of the body) is based on thermal exchange between the surface of the individual and the external environment.
 We have
 \begin{equation} \label{eq:dTn}
-	%\begin{split}
+%\begin{split}
 		\frac{dT_r}{dt} =  \frac{1}{s z_{r}} \left[ - A_{th} K_1(T_r - T_{th})  \right]
 			+ \frac{1}{s z_{r}} \left( A_r \left[ - c_p K_2 h(T_r -T_e, V)- \sigma \varepsilon T_r^4 + \sigma \varepsilon T_e^4  + r_3 S_R  \right] \right),
 %\end{split}
@@ -130,7 +131,7 @@ If it is, we can also solve for the duration of the warm-up $\tau_w$ from $T_{th
 
 We now integrate all the components above to calculate the energy budget during a 24-hour period.
 Daily activity consists of resting, warming up, and foraging activity.
-We assume activity occurs in one block of time and thus require only one warm-up phase. % E: as opposed to "continuous activity" meaning that it never ends
+We assume activity occurs in one block of time and thus require only one warm-up phase.
 We use $t$ to denote the time of the day and $\tau$ for duration.
 % We start the calculation at sunrise, $t = 0$ and end at $t = 24.$
 Total foraging time, $\tau_f$, can be fixed, or it can be a function of resource availability $R$, with $\tau_f = R/g(z)$.
@@ -144,12 +145,10 @@ Referring to \cref{eq:eg}, the total daily energetic gain is given by
 If we assume that warm-up starts at $t_i$ the total daily energetic cost is
 \begin{equation} \label{eq:Ed}
 	E_d(z, \tau_f) = \int_0^{t_i} e_b(z, t) dt + \int_{t_i + \tau_w}^{t_i + \tau_f } e_a(z,t) dt + \int_{t_i+\tau_f}^{24} e_b(z, t) dt,
-    % E: I presume the t subscript on E stood for "total", but it is a bit confusing with t also meaning time.  So I changed to E_d (for "daily") here and in the Appendix, or pick something else.
 \end{equation}
 where $e_b$ is defined in \cref{eq:eb}  and $e_a$ in \cref{eq:ea}.
 The first and the last term on the right hand side calculate the total energetic cost when the individual is at rest from $t = 0$ to $t = t_i$ (before foraging) and from $t = t_i + \tau_f$ to $t = 24$ (after foraging).
 The middle term calculates the total energetic cost of foraging from $t = t_i + \tau_w$ to $t = t_i + \tau_f$.
-% E: Consider dropping the "t =" in the previous sentences.  Or add it in the next sentence.
 Our calculations show that the energetic cost while warming up from $t = t_i$ to $t = t_i + \tau_w$ is negligible, for both endotherms (actively shivering) and ectotherms (passively basking).
 We thus omit it from \cref{eq:Ed}, in accord with empirical findings \citep{Heinrich1975}.
 
@@ -167,10 +166,10 @@ Although there is a debate about the actual values \citep[e.g.,][]{Isaac2010}, w
 The power law relationship for active metabolic rate has much less empirical grounding, with few studies measuring it for a range of body sizes.
 A notable exception is work by \citet{Bartholomew1978}, who found a power law with exponent $b_2 = 1.17$.
 More studied is metabolic scope, which is the ratio of maximum active metabolic rate to resting metabolic rate.
-Many factors such as foraging mode (flying vs. walking) yeild a substantial variation in metabolic scope.
+Many factors such as foraging mode (flying vs.\ walking) yield a substantial variation in metabolic scope.
 Oxygen consumption during activity can range from 2 to 100 times that of resting \citep{Bartholomew1978, Bartholomew1981, Bartholomew1985, Chown2004, Niitepold2010} although a typical value would be between 10 to 40-fold increase \citep{Bartholomew1981, Niitepold2010}. %Bartholomew and Lighton 1985 for 2 fold.
 
-Recent studies of the rate of energetic gain have recovered a power law relationship \citep{Pawar2012, Maino2015}.
+Recent studies of the rate of energetic gain have recovered a power law relationship to body size \citep{Pawar2012, Maino2015}.
 There seems to be no single exponent $b_3$.
 For instance, the exponent can depend on the dimension of the search space, with a value of 0.85 in two dimensions or 1.06 in three dimensions \citep{Pawar2012}.
 Body size can further influence other processes.
@@ -185,5 +184,3 @@ For instance, the coefficient of resting metabolic rate or exponent of foraging 
 Our goal is not to predict specific energetic values, however, but to explore the effects of these general processes on thermal performance curves.
 Our conclusions are thus best interpreted as applying across individuals within species, or across species that are closely related.
 \cref{table:table1} summarizes the range of parameter values considered in our analyses.
-
-% E: To print the table at the end of the manuscript, I moved it to a separate file.

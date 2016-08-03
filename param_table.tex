@@ -1,14 +1,14 @@
 % E: Some suggestions for fitting this on one page: prune words from Definition, smaller font, references as footnotes
 
 \begin{table}
-  \begin{threeparttable}[b]
+\begin{threeparttable}[b]
 \caption{Values and ranges of parameters used }
 \begin{tabular}{l l l l l}
-\hline
- & Definition & Value or range & Unit & References \\
-\hline
+\toprule
+ & Definition & Value or range & Units & Ref. \\
+\midrule
 &\textbf{Intrinsic body size scaling} & & &  \\
-$a_1$ & Coefficient for resting metabolic rate  & $\propto 1$  & $\rm{J \, s}^{-1}$ & \tnote{1} \\
+$a_1$ & Coefficient for resting metabolic rate  & $\propto 1$  & $\rm{J \, s}^{-1}$ & \tnote{1} \\ % E: what does "proportional to 1" mean?
 $b_1$ & Exponent for resting metabolic rate  & 0.75 &  & \tnote{2} \\
 $a_2$ & Coefficient for active metabolic rate  & 10-30 $ \times a_1$ & $\rm{J \, s}^{-1}$ &  \tnote{3} \\
 $b_2$ & Exponent for active metabolic rate  & 0.75-1.25 & &  \tnote{1} \\
@@ -16,7 +16,7 @@ $a_3$ & Coefficient for foraging rate  & 1 & $\rm{g \, s}^{-1}$  & \\
 $b_3$ & Exponent  for foraging rate  & 0.5-1.25 &  &  \tnote{4}  \\
 $c_0$ & Intercept for minimum temperature for activity & 28 & $^{\circ}\rm{C}$  & \tnote{5}\\
 $c_1$ & Slope for minimum temperature for activity & 0.75 &  $\rm{g \,  ^{\circ}C^{-1}}$ &  \tnote{5} \hspace{0.1cm}* \\
-%\hline
+%\midrule
 & \textbf{Physical and thermodynamic constants} & & &  \\
 $\delta $ & Mass density & $0.15 \times 10^6$  & $\rm{g \, m}^{-3}$  & \tnote{6}\\
 $a_w$& Frequency of contraction & 0.25 & $\rm{s}^{-1}$   & \tnote{7} \hspace{0.1cm}*\\
@@ -24,7 +24,8 @@ s & Specific heat capacity & 3.3472 & $\rm{J \, g}^{-1}\,\rm{C}^{-1}$ & \tnote{1
 e & Energy per contraction & 0.04184 & $\rm{J \, g}^{-1}$ & \tnote{8} \\
 $K_1$& Default conductance & 0.05 $c_p$ & $\rm{J \,s}^{-1} \, \rm{m}^{-2} \, ^{\circ}\rm{C}$  & \tnote{9} \\
 $K_2$& Default convection & 1   & $\rm{J \,s}^{-1} \, \rm{m}^{-2} \, ^{\circ}\rm{C}$  & \tnote{9} \\
-%\hline
+% E: Would it be okay to remove "default"?  It means something in the context of the figures, but not just here in the table.
+%\midrule
 & \textbf{Extrinsic constants} & & &  \\
 $c_p$ & Molar specific heat of air  & 29.3 &  $\rm{J \, mol}^ {-1} \, \rm{C}^ {-1}$ & \tnote{9} \\
 u &  Wind speed & 0.1 & $\rm{m \, s}^{-1}$ & \\
@@ -32,16 +33,17 @@ $\sigma$ & Stefan-Boltzman constant & $5.67 \times 10^{-8}$ &  $\rm{J \, m}^{-2}
 $\varepsilon$& Emissivity of gray body & 0.93& & \tnote{9} \\
 $\rho$ & Energy density per gram of resource & 10-100 &  $\rm{J \, g}^{-1}$  &  \\  %  Energy density per gram  dry dung (40-80\%) of total weight, \citet{Nibaruta1980} \citet{Gittings1998}
 $r_3$  & Scale factor for solar radiation & 0.5 &  &  \\
-\hline
+\bottomrule
 \label{table:table1}
 \end{tabular}
+% E: I think there is a fancier latex way of displaying numbered references in a table.  But this is good enough for now.
 \begin{tablenotes}
   \item[1] \citet{Heinrich1975}
   \item[2] \citet{Kleiber1947,Peters1986,Gillooly2001}
   \item[3] \citet{Bartholomew1981,Niitepold2010}
   \item[4] \citet{Pawar2012, Nervo2014, Maino2015}
   \item[5] \citet{Bartholomew1977a}
-  \item[6] personal data
+  \item[6] THR unpub.\ data
   \item[7] \citet{Bartholomew1977b}
   \item[8] \citet{Kammer1974}
   \item[9] \citet{Campbell2012}
