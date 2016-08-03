@@ -44,8 +44,6 @@ Following \citet{Brown2004}, we assume that resting metabolic rate increases wit
 \end{equation}
 where $z$ is body mass, $T_b(t)$ is the body temperature at time $t$ in Celsius, $E$ and $k$ are respectively the activation energy and the Boltzman constant (this is the Arrhenius equation), and $a_1$ and $b_1$ are constants which we call respectively the coefficient and exponent.
 At rest, the body temperature of the individual matches that of the environment \citep[e.g.,][]{Bartholomew1978} so that $T_b(t)$ in \cref{eq:eb} can be replaced by $T_e(t)$.
-% T: I realize here that temperature in the beehive can differ from T_e!!! I would say it does not matter much but...if one wants to be picky???
-% E: Oh, right!  So then you warm up in one environment and go be active in another... too much complication for no clear gain, I think.
 
 \subsubsection*{Active metabolic rate}
 
@@ -82,7 +80,7 @@ Finally, the rate of energy gain includes both foraging rate and resource qualit
 
 \subsection*{Warm-up}
 
-When environmental temperature is low, an individual needs to reach sufficient internal temperature to be active for foraging. % E: could add "as mentioned earlier" at the end if you want, but better to start with the point
+When environmental temperature is low, an individual needs to reach sufficient internal temperature to be active for foraging.
 In general, warm-up behavior would include the when, where, and how of warming up.
 Here, however, we focus on whether or not warm-up can be completed, and if so, the duration of warm-up.
 Furthermore, insects do not need to warm up the entire body, only the thorax where most of the muscles are \citep{Kammer1974, Heinrich1975, Bartholomew1978, Verdu2012}.
@@ -130,7 +128,7 @@ If it is, we can also solve for the duration of the warm-up $\tau_w$ from $T_{th
 \subsection*{Net energy budget}
 
 We now integrate all the components above to calculate the energy budget during a 24-hour period.
-Daily activity consists of resting, warming up, and foraging activity.
+Daily activity consists of resting, warming up, and foraging.
 We assume activity occurs in one block of time and thus require only one warm-up phase.
 We use $t$ to denote the time of the day and $\tau$ for duration.
 % We start the calculation at sunrise, $t = 0$ and end at $t = 24.$
@@ -142,15 +140,15 @@ Referring to \cref{eq:eg}, the total daily energetic gain is given by
 \begin{equation} \label{eq:Eg}
 	E_g(z,\tau_f - \tau_w) = (\tau_f - \tau_w) e_g(z).
 \end{equation}
-If we assume that warm-up starts at $t_i$ the total daily energetic cost is
+
+Our calculations show that the energetic cost while warming up from $t = t_i$ to $t = t_i + \tau_w$ is negligible, for both endotherms (actively shivering) and ectotherms (passively basking) in accord with empirical findings \citep{Heinrich1975}.
+We thus omit such quantity in our calculations of total daily energetic cost which gives
 \begin{equation} \label{eq:Ed}
-	E_d(z, \tau_f) = \int_0^{t_i} e_b(z, t) dt + \int_{t_i + \tau_w}^{t_i + \tau_f } e_a(z,t) dt + \int_{t_i+\tau_f}^{24} e_b(z, t) dt,
+	E_d(z, \tau_f) = \int_0^{t_i+ \tau_w} e_b(z, t) dt + \int_{t_i + \tau_w}^{t_i + \tau_f } e_a(z,t) dt + \int_{t_i+\tau_f}^{24} e_b(z, t) dt,
 \end{equation}
 where $e_b$ is defined in \cref{eq:eb}  and $e_a$ in \cref{eq:ea}.
-The first and the last term on the right hand side calculate the total energetic cost when the individual is at rest from $t = 0$ to $t = t_i$ (before foraging) and from $t = t_i + \tau_f$ to $t = 24$ (after foraging).
+The first and the last term on the right hand side calculate the total energetic cost when the individual is at rest from $t = 0$ to $t = t_i + tau_w$ (before foraging) and from $t = t_i + \tau_f$ to $t = 24$ (after foraging).
 The middle term calculates the total energetic cost of foraging from $t = t_i + \tau_w$ to $t = t_i + \tau_f$.
-Our calculations show that the energetic cost while warming up from $t = t_i$ to $t = t_i + \tau_w$ is negligible, for both endotherms (actively shivering) and ectotherms (passively basking).
-We thus omit it from \cref{eq:Ed}, in accord with empirical findings \citep{Heinrich1975}.
 
 Daily net energy gain is obtained from the difference between energy gain from foraging (\crefp{eq:Eg}) and total energy expended (\crefp{eq:Ed}), i.e.,
 \[
