@@ -1,0 +1,23 @@
+Dear Editor,
+
+We are submitting a manuscript entitled "Net energy gain as a function of body mass and temperature" for your consideration for publication in The American Naturalist.
+
+To understand how species perform in a thermal environment, we develop a mathematical model based on empirically-characterized processes in physiology, ecology, and behavior.  We use energy as currency and investigate the role of metabolism, foraging, and thermoregulation in shaping the performance of an individual as a function of temperature and body size.  Our model validates some intuitive notions on species performance and also generates new testable hypotheses.  Our work shows that evaluating thermal performance across body size requires the integration of multiple processes: physiology, ecology, and thermodynamics.  Because of this multidisciplinary perspective and strong theoretical link to empirical studies, we believe our manuscript fits well within the scope of this journal.
+
+As editors we suggest Alice Winn, Michael Kearney, and Priyanga Amarasekare.
+
+This manuscript describes original work and is not under consideration by any other journal.
+
+All authors have approved the manuscript and this submission.
+
+Thank you for your consideration.
+
+Best regards,
+Tanjona Ramiadantsoa,
+Emma Goldberg
+Department of Ecology, Evolution, and Behavior, University of Minnesota
+
+
+Acknowledgements section:
+
+The authors thank L. Burghardt, K. Niitepold, and E. Swanson for comments on the earlier versions of this article, and the Theory for Life group at the University of Minnesota for discussions.
