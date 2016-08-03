@@ -1,28 +1,35 @@
-\title{Appendix: Mathematical definitions for solar activity, geometric properties of the body, and the derivation of conditions allowing net energy gain to peak at intermediate body mass}
+\title{Appendix: Mathematical definitions, derivations, and sensitivity analyses}
 
-\documentclass[12pt]{article}
-\usepackage{amsmath}
-\usepackage{mathabx}
-\usepackage{graphics}
-\usepackage[top=0.75in, bottom=0.75in, left=1in, right=1in]{geometry}
-\usepackage{tabu}
-\usepackage[english]{babel}
-\usepackage{natbib}
-\bibliographystyle{evolution}
+% \documentclass[12pt]{article}
+% \usepackage{amsmath}
+% \usepackage{mathabx}
+% \usepackage{graphics}
+% \usepackage[top=0.75in, bottom=0.75in, left=1in, right=1in]{geometry}
+% \usepackage{tabu}
+% \usepackage[english]{babel}
+% \usepackage{natbib}
+% \bibliographystyle{evolution}
+% \usepackage{rotating}
+% \usepackage[capitalize, sort&compress]{cleveref}
+% \usepackage{float}
+% %\newcommand{\crefrangeconjunction}{--}
+% %\crefname{section}{Sect.}{Sects.}
+% %\crefname{equation}{Eq.}{Eqs.}
+% %\crefformat{equation}{Eq.~#2#1#3}
+% %\crefrangeformat{equation}{Eqs.~#3#1#4--#5#2#6}
+% %\crefmultiformat{equation}{Eqs.~#2#1#3}{--#2#1#3}{, #2#1#3}{ and~#2#1#3}
+%
+% % for comments visible in the compiled pdf
+% %\usepackage{color}
+% %\definecolor{orange}{rgb}{0.8,0.4,0}
+% %\newcommand{\eeg}[1]{{\em \color{orange} #1}}
+
+
+\documentclass[11pt]{article}
+\usepackage{amnat}
 \usepackage{rotating}
-\usepackage[capitalize, sort&compress]{cleveref}
-\usepackage{float}
-%\newcommand{\crefrangeconjunction}{--}
-%\crefname{section}{Sect.}{Sects.}
-%\crefname{equation}{Eq.}{Eqs.}
-%\crefformat{equation}{Eq.~#2#1#3}
-%\crefrangeformat{equation}{Eqs.~#3#1#4--#5#2#6}
-%\crefmultiformat{equation}{Eqs.~#2#1#3}{--#2#1#3}{, #2#1#3}{ and~#2#1#3}
-
-% for comments visible in the compiled pdf
-%\usepackage{color}
-%\definecolor{orange}{rgb}{0.8,0.4,0}
-%\newcommand{\eeg}[1]{{\em \color{orange} #1}}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc} % for Polish character
 
 % Tell latex how it can introduce linebreaks if necessary.
 \hyphenation{Bar-thol-o-mew}
@@ -158,6 +165,51 @@ We illustrate these analytical results with \cref{fig:ana}
 	}
 	\label{fig:ana}
 \end{center}
+\end{figure}
+
+\section{Sensitivity analyses}
+The section shows how Fig. 3a and Fig. 5 from the main manuscript are generally robust to parameter changes.
+We varied independently the parameters that controls convection ($K_2$) (\cref{fig:min}a--c), conductance $K_1$ (\cref{fig:min}d--f), and intensity of solar radiation (\cref{fig:min}g--i).
+The only qualitative difference is for endotherms when conductance is too high (thick line \cref{fig:min}f), most of the heat generated endogenously dissipates in the environment.
+As a consequence, there is not much difference between small and large individuals.
+
+We also relaxed the effect of constant temperature during the day (\cref{fig:therm}).
+The x-axis shows the initial temperature at sunrise (coldest) then increases linearly until it peaks at the middle of the afternoon (midpoint between noon and sunset). The hottest temperature is defined by an increase of $10 ^{\circ}\rm{C}$ from the temperature at sunrise.
+Varying in environmental temperature does not change the qualitative results (cf. Fig. 5 in the main text).
+For all the figures, the remaining parameters are the same as in the main text.
+
+\begin{figure}
+%\begin{center}
+	\scalebox{0.35}{\includegraphics{figS1}}
+	\caption{
+		\setstretch{\stretchby}
+		Lowest temperature that allows the completion of warm-up, as a function of body mass.
+		Panels a--c) and d--f) show sensitivity with respect to convection and conductance, respectively.
+		Thin lines represent default values (see Table 1 in the main text).
+		The default values are then multiplied by 10 (thick lines) or by 0.1 (dashed lines).
+		Panels g--i) shows how increasing solar radiation affects the minimum temperature to complete warm-up.
+		Solar radiation is 0.5 (dashed lines), 0.75 (thin lines) and 1 (thick lines) the value at 30$^\circ$ latitude during equinox.
+		Remaining parameters as in Table 1.
+	}
+	\label{fig:min}
+%\end{center}
+\end{figure}
+
+
+\begin{figure}
+%\begin{center}
+	\scalebox{0.85}{\includegraphics{figS2}}
+		\caption{
+			\setstretch{\stretchby}
+			Thermal performance curves does not change qualitatively when temperature during the day is constant.
+			Results are shown for small (thin lines, $z = 0.5$ in a--d, $z = 0.2$ in e--h) and large (thick lines, $z = 2$) individuals.
+			Other assumptions are free convection, warm-up starting half an hour after sunrise, $\rho = 24,\ a_2 = 10, \ a_1 = 1, \ b_1 = b_2 = 0.75 $.
+	    For a--d, foraging time is $\tau_f = 1$.
+	    For e--h, $b_3 = 0.75$.
+	    Units and other parameter values are in Table 1.
+		}
+	\label{fig:therm}
+%\end{center}
 \end{figure}
 
 \bibliography{refs_energy_budget}
