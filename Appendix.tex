@@ -1,13 +1,5 @@
-\title{Appendix: Mathematical definitions, derivations, and sensitivity analyses}
-
 \documentclass[11pt]{article}
 \usepackage{amnat}
-\usepackage{rotating}
-\usepackage[english]{babel}
-\usepackage[T1]{fontenc} % for Polish character
-
-% Tell latex how it can introduce linebreaks if necessary.
-\hyphenation{Bar-thol-o-mew}
 
 \crefname{ineq}{inequality}{inequalities}
 \creflabelformat{ineq}{#2{\upshape(#1)}#3}
@@ -15,39 +7,47 @@
 \linenumbers{}
 \modulolinenumbers[2]
 
+\renewcommand{\thefigure}{A\arabic{figure}}
+\renewcommand{\theequation}{A\arabic{equation}}
+
+
+\title{Appendix: Mathematical definitions, derivations, and sensitivity analyses}
 \date{\vspace{-5ex}}
 
 \begin{document}
+
 \maketitle
 
-
 \section{Zenith angle and time of sunrise}
+
 We use the same equation as in \citet{Campbell2012} to model zenith angle ($\psi$) as a function of the time of the day $t$ and latitude $\phi$.
 We have
 \begin{equation}  \label{eq:psi}
 \cos(\psi) = \sin(\phi) \sin(\delta) + \cos(\phi) \cos(\delta) \cos[15 (t- t_0)],
 \end{equation}
 where $\delta$ represents solar declination which varies between 23.45$^\circ$ and  -23.45$^\circ$ between summer and winter solstice, respectively ($\delta$ is given by equation 11.2 in \citet{Campbell2012} and only depends of the day of the year).
-The time of solar noon ($t_0$) and varies with longitude but since we are interested in latitudinal variation, we fix $t_0 = 12$.
+The time of solar noon ($t_0$) varies with longitude but since we are interested in latitudinal variation, we fix $t_0 = 12$.
 
-At any given latitude $\phi$ and day of the year, the time of sunrise ($t_{rise}$) is the solution of \cref{eq:trise} in the time interval $[0,12]$ when $\psi = 0$
+At any given latitude $\phi$ and day of the year, the time of sunrise ($t_\text{rise}$) is the solution of \cref{eq:trise} in the time interval $[0,12]$ when $\psi = 0$
 %
 \begin{equation} \label{eq:trise}
-t_{rise} =  \frac{1}{15} \left( t_0 +  \arccos \left[ \frac{\cos(\psi) - \sin(\phi) \sin(\delta)}{\cos(\phi) \cos(\delta)} \right] \right).
+t_\text{rise} =  \frac{1}{15} \left( t_0 +  \arccos \left[ \frac{\cos(\psi) - \sin(\phi) \sin(\delta)}{\cos(\phi) \cos(\delta)} \right] \right).
 \end{equation}
-%
-\section{Geometric property of the body}
-For simplicity we assume that the individual is shaped as a the half of sphere (\cref{fig:geo}, such approximation can be valid for insects like beetles).
-Considering a sphere is practical as we only have one free variable:  the radius $r$.
 
-The volume of half a sphere is $V = \frac{2}{3} \pi r^3$ and the surface $A = \pi r^2 + 2 \pi r^ 2 = 3 \pi r^2$ (the first and the second term of the summation represents  respectively the surface at the bottom and the cap).
+\section{Geometric properties of the body}
+
+For simplicity we assume that the individual is shaped as half of a sphere (\crefp{fig:geo}; this approximation can be valid for insects like beetles).
+Considering a sphere is practical as we only have one free variable: the radius $r$.
+
+The volume of half a sphere is $V = \frac{2}{3} \pi r^3$ and the surface area is $A = \pi r^2 + 2 \pi r^ 2 = 3 \pi r^2$ (the first and the second term of the summation represents  respectively the surface at the bottom and the cap).
 We assume that the thorax occupies half of the body with volume $V_{th} = V/2$ and surface $A_{th} = \pi r^2 + \pi r^2 = 2 \pi r^2$ (the second term is half of the cap whereas the first is the same as the surface of the bottom just folded upward).
 
 Knowing body mass $z$ and density $d$, we can convert mass into volume $ V = z/d$.
 The radius is then $r = \left( \frac{3V}{2 \pi} \right)^{1/3}$.
 
 \section{Derivation of  mathematical conditions for optimal body mass}
-In this section, we derive sufficient conditions where net energy gain peaks at intermediate body mass if foraging time is limited.
+
+We derive sufficient conditions where net energy gain peaks at intermediate body mass if foraging time is limited.
 Because we do not consider warm-up time, $\tau_w $ is 0 and  will be omitted in the formulas.
 We defined net energy gain by:
 \begin{equation} \label{eq:main}
@@ -66,7 +66,7 @@ The energetic cost is
 \begin{equation} \label{eq:ed}
 	E_d(z, \tau_f) = \int_0^{t_i} e_b(z, t) dt + \int_{t_i}^{t_i + \tau_f } e_a(z,t) dt + \int_{t_i+\tau_f}^{24} e_b(z, t) dt
 \end{equation}
-where,
+where
 \begin{equation} \label{eq:eb}
 	e_b(z, t) = a_1 z^{b_1} e^{-E/[k (T_b(t)+ 273.15)]} =  a_1 z^{b_1} \theta_1
 \end{equation}
@@ -83,7 +83,7 @@ By definition,
 	E_n(z,\tau_f) & = e_g(z) \times \tau_f  - \left( e_a(z) \times \tau_f + e_b(z) \times (24 - \tau_f ) \right) \\
 			&  = \rho a_3 z^{b_3} \times \tau_f  - \left( a_2 z^{b_2}  \theta_2 \times \tau_f +  a_1 z^{b_1} \theta_1 \times ( 24 -\tau_f) \right)
 \end{flalign*}
-After simple algebraic manipulation, $E_n$ is positive if and only if
+After algebraic manipulation, $E_n$ is positive if and only if
 \begin{equation}\label[ineq]{ineq:1}
 	\rho > c_1 z^ {b_1 - b_3}  \tfrac{24 - \tau_f}{\tau_f}  + c_2  z^ {b_2 - b_3},
 \end{equation}
@@ -104,24 +104,26 @@ Thus a non-monotonic net energy gain occurs only if
  \end{equation}
 
 The difference between the first and last term are only in the coefficients $(c_1, c_2)$ and $(c'_1, c'_2)$.
-Thus a necessary condition for \cref{ineq:2} given \cref{ineq:1} are
+Thus a necessary condition for \cref{ineq:2} given \cref{ineq:1} is
 \begin{equation}\label[ineq]{ineq:cond}
 	c'_1 > c_1  \textnormal{ or } c'_2 > c_2.
 \end{equation}
 In fact, we have  $c'_1 = \dfrac{ b_1}{ b_3} c_1$ and $c'_2 = \dfrac{ b_2}{ b_3} c_2$.
 Thus \cref{ineq:3} is true if $b_3 < b_1$ or $b_3 < b_2$ is true.
-If we assume that the exponents for active metabolic and resting metabolic rate are equal $b_2 = b_1$ and thus the condition mean that the exponent of foraging rate is smaller than the exponent of metabolic rate.
+If we assume that the exponents for active metabolic and resting metabolic rate are equal $b_2 = b_1$ and thus the condition means that the exponent of foraging rate is smaller than the exponent of metabolic rate.
 In addition,  the resource quality $\rho$ should also lie within a certain range.
 We illustrate these analytical results with \cref{fig:ana}
 
 \section{Sensitivity analyses}
-The section shows results from Fig. 3a and Fig. 5 from the main manuscript are generally robust to parameter changes.
+
+We show that results from Fig.~3a and Fig.~5 in the main text are generally robust to parameter changes.
 We varied independently the parameters that controls convection ($K_2$) (\crefp{fig:min}a--c), conductance $K_1$ (\crefp{fig:min}d--f), and intensity of solar radiation $r_3$ (\cref{fig:min}g--i).
 The only qualitative difference is for endotherms when conductance is too high (thick line \crefp{fig:min}f), most of the heat generated endogenously dissipates in the environment leading to minor difference between small and large individuals.
 
 We also relaxed the effect of constant temperature during the day (\crefp{fig:therm}).
-The x-axis shows the initial temperature at sunrise (coldest) then increases linearly until it peaks at the middle of the afternoon (midpoint between noon and sunset). The hottest temperature is defined by an increase of $10 ^{\circ}\rm{C}$ from the temperature at sunrise.
-Varying in environmental temperature does not change the qualitative results (\crefp{fig:therm} vs. fig. 5 in the main text).
+The horizontal axis shows temperature from sunrise (coldest), increasing linearly until mid-afternoon (midpoint between noon and sunset), and then decreasing.
+The hottest temperature is defined as $10 ^{\circ}\rm{C}$ hotter than the temperature at sunrise.
+Varying environmental temperature does not change the qualitative results (\crefp{fig:therm} vs. fig.~5 in the main text).
 For all the figures, the remaining parameters are the same as in the main text.
 
 \begin{figure}
@@ -141,12 +143,12 @@ For all the figures, the remaining parameters are the same as in the main text.
 	\scalebox{0.75}{\includegraphics{appendix_fig}}
 	\caption{
 		\setstretch{\stretchby}
-		a) illustrates the conditions in \cref{ineq:3} where $\rho$ needs to be within certain range.
+		a) The conditions in \cref{ineq:3} where $\rho$ needs to be within certain range.
 		Cyan and red colors represents two environmental temperatures $T_e = 15, \ 25^\circ \rm{C}$, respectively.
 	  The upper bound of the shaded area ($Q$) is the right-hand side of \cref{ineq:3}.
 	  The lower bound of the shaded area ($dQ$) is the left-hand side of \cref{ineq:3}.
 	  The black horizontal lines represent $\rho = 10 \textnormal{ (dashed)}, \ 24 \textnormal{ (thin)}, \ 45 \textnormal{ (thick)}$.
-	  b) shows how net energy gain peaks at intermediate body mass when $\rho$ is within a certain range based on the left panel.
+	  b) Net energy gain peaks at intermediate body mass when $\rho$ is within a certain range based on the left panel.
 	  Remaining parameters: $\tau_f = 0.75, \ a_1 = 1., \ a_2 = 20 a_1, \ a_3 = 1, \ b_1 = b_2 = 0.75, \ a_3 = 0.5$.
 	}
 	\label{fig:ana}
@@ -154,25 +156,22 @@ For all the figures, the remaining parameters are the same as in the main text.
 \end{figure}
 
 \begin{figure}
-%\begin{center}
-	\scalebox{0.35}{\includegraphics{figS1}}
+    \includegraphics[width=\textwidth]{figS1} % E: This is the generally-correct way to match the margins.
 	\caption{
 		\setstretch{\stretchby}
 		Lowest temperature that allows the completion of warm-up, as a function of body mass.
 		Panels a--c) and d--f) show sensitivity with respect to convection and conductance, respectively.
-		Thin lines represent default values (see Table 1 in the main text).
+		Thin lines represent default values (see Table~1 in the main text).
 		The default values are then multiplied by 10 (thick lines) or by 0.1 (dashed lines).
 		Panels g--i) shows how increasing solar radiation affects the minimum temperature to complete warm-up.
 		Solar radiation is 0.5 (dashed lines), 0.75 (thin lines) and 1 (thick lines) the value at 30$^\circ$ latitude during equinox.
-		Remaining parameters as in Table 1.
+		Remaining parameters as in Table~1.
 	}
 	\label{fig:min}
-%\end{center}
 \end{figure}
 
 \begin{figure}
-%\begin{center}
-	\scalebox{0.85}{\includegraphics{figS2}}
+    \includegraphics[width=\textwidth]{figS2}
 		\caption{
 			\setstretch{\stretchby}
 			Thermal performance curves does not change qualitatively when temperature during the day is constant.
@@ -180,11 +179,13 @@ For all the figures, the remaining parameters are the same as in the main text.
 			Other assumptions are free convection, warm-up starting half an hour after sunrise, $\rho = 24,\ a_2 = 10, \ a_1 = 1, \ b_1 = b_2 = 0.75 $.
 	    For a--d, foraging time is $\tau_f = 1$.
 	    For e--h, $b_3 = 0.75$.
-	    Units and other parameter values are in Table 1.
+	    Units and other parameter values are in Table~1.
 		}
 	\label{fig:therm}
-%\end{center}
 \end{figure}
 
 \bibliography{refs_energy_budget}
+\bibliographystyle{amnat}
+
+
 \end{document}

@@ -46,6 +46,7 @@ main.pdf
 main_notes.pdf
 appendix.pdf
 Supplementary_file.pdf
+Appendix.pdf
 *.log
 *.aux
 *.bbl
