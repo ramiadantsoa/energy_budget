@@ -1,4 +1,6 @@
-\section*{Modeling warm-up processes}
+\section*{Modeling warm-up process} % (fold)
+\label{sec:modeling_warm_up_process}
+%
 We make the following assumptions.
 First, daily air temperature is simplified to a sine function,
 \begin{equation} \label{eq:Ta}
@@ -34,7 +36,18 @@ By replacing $T_e(z,t)$ in \cref{eq:Tb0} by its expression in \cref{eq:Te}, and 
 where $\alpha = \alpha'/s$, and $f(z)$ is a time independent function $f(z) = \overline{T_a} + T_d(z_0) + \delta_T \log_{10} \left( \dfrac{z}{z_0} \right)$.
 %
 The advantage is that \cref{eq:Tb} has a closed form solution.
+% section modeling_warm_up_process (end)
 
+
+\section{Cost of warm-up} % (fold)
+\label{sec:cost_of_warm_up}
+In the preview version, we assumed that if $\tau_f$ is the total time to acquire a quantity of resource $R$, $\tau_f = R/g(z)$, then the actual foraging time is $\tau_f - \tau_w$. 
+I suggest we assume a depletion rate that is independent of body size. 
+If warm-up starts at time $t_0$ then the amount resource available decreases at a certain rate (whatever linear or exponential which can also be parameterized).
+It might be a better way of envisioning competition. 
+The motivation is to think about an elephant dung that is gradually depleted.
+
+% section warm_up (end)
 
 
 
