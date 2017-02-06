@@ -1,0 +1,42 @@
+\section*{Modeling warm-up processes}
+We make the following assumptions.
+First, daily air temperature is simplified to a sine function,
+\begin{equation} \label{eq:Ta}
+	T_a(t) = \overline{T_a} + \nu \sin(\omega t),
+\end{equation}
+where $t$ is time of the day starting at sunrise, $\overline{T_a}$ is the average daily temperature, $\nu$ is the amplitude of the fluctuation, and $\omega = 2 \pi /24 h$ is the period.
+
+Second, the operative temperature of an individual of mass $z$ is 
+\begin{equation} \label{eq:Te}
+	T_e(z,t) = T_a(t) + T_d(z),
+\end{equation}
+where $T_d(z)$ pools the effects of thermal environment (solar radiation, convection, conductance and so on) on the individual. 
+There are exact formulas for calculating and also approximating $T_d$ \citep[e.g.,][]{Stevenson1985, Angilletta2009} but instead we use the following simplified (justified?) equation
+\begin{equation} \label{eq:Td}
+ 	T_d(z) = T_d(z_0) + \delta_T \log_{10} \left(\frac{z}{z_0} \right).   
+\end{equation} 
+ The equation above states that for a 10-fold increase in body mass, the operative temperatue increases by $\delta_T$ degree Celsius.
+ The smallest individual we consider here has mass $z_0$ with a maximum increase $T_d(z_0)$.
+ The idea comes from \citet{Stevenson1985} which suggested that an 10-fold increase in body mass raises the maximum body temperature an individual can attain by $4.5 ^\circ \rm{C}$.
+ We are making an implicit assumption here that the maximum body temperature and maximum operative temperature are equal (justified?).
+
+ Third, the change in body temperature $T_b$ follows Newton's law of heating/cooling,
+ \begin{equation} \label{eq:Tb0}
+ 	\frac{T_b(z,t)}{dt} = \frac{k_c(z)}{Q(z)} \left( T_b(z,t) - T_e(z,t)\right),
+ \end{equation}
+ where $k_c(z)$ is the heat transfer coefficient and $Q(z)$ is the heat capacitance of the individual.
+The heat capacitance is simply mass times the specific heat capacity i.e., $Q(z) = z s$.
+We simplify the heat transfer coefficient such that it is proportional to the surface area of the individual i.e. $k_c(z) = \alpha' z^{2/3}$.
+By replacing $T_e(z,t)$ in \cref{eq:Tb0} by its expression in \cref{eq:Te}, and $T_a(t)$ and $T_d(t)$ by \cref{eq:Ta} and \cref{eq:Td}, respectively, we have
+\begin{equation} \label{eq:Tb}
+	\frac{T_b(z,t)}{dt} = \frac{\alpha}{z^{1/3}} \left[ T_b(z,t) - \nu \sin(\omega t) - f(z) \right],
+\end{equation} 
+where $\alpha = \alpha'/s$, and $f(z)$ is a time independent function $f(z) = \overline{T_a} + T_d(z_0) + \delta_T \log_{10} \left( \dfrac{z}{z_0} \right)$.
+%
+The advantage is that \cref{eq:Tb} has a closed form solution.
+
+
+
+
+
+
